@@ -1,0 +1,12 @@
+ligand,receptor,liana_consensus_present,liana_consensus_sources
+SPP1,ITGB1,FALSE,""
+SPP1,CD44,TRUE,Baccin2019;CellChatDB;CellPhoneDB;CellTalkDB;Cellinker;EMBRACE;Fantom5_LRdb;HPMR_Cellinker;HPMR_LRdb;HPMR_talklr;HPRD;HPRD_LRdb;HPRD_talklr;I2D_CellPhoneDB;ICELLNET;IMEx_CellPhoneDB;InnateDB-All_CellPhoneDB;IntAct_CellPhoneDB;LRdb;Lit-BM-17;Ramilowski2015;Ramilowski2015_Baccin2019;STRING_talklr;Wang;connectomeDB2020;iTALK;talklr
+APOE,LRP1,TRUE,AlzPathway;Baccin2019;CellTalkDB;Cellinker;EMBRACE;Fantom5_LRdb;HPRD;HPRD_LRdb;HPRD_talklr;IntAct;LRdb;Ramilowski2015;Ramilowski2015_Baccin2019;Reactome_LRdb;STRING_talklr;connectomeDB2020;iTALK;talklr
+MIF,CD74,FALSE,""
+MIF,CXCR4,FALSE,""
+TGFB1,TGFBR1,FALSE,""
+TGFB1,TGFBR2,FALSE,""
+VEGFA,KDR,FALSE,""
+VEGFA,FLT1,FALSE,""
+CSF1,CSF1R,FALSE,""
+CD47,SIRPA,TRUE,Adhesome;Baccin2019;CellPhoneDB;CellPhoneDB_Cellinker;Cellinker;HPRD;ICELLNET;InnateDB;Wang;Wojtowicz2020;connectomeDB2020

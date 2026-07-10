@@ -1,0 +1,112 @@
+# sample_type-dependent SPP1-CD44/ITGB1 LR niche analysis
+
+Project root: `D:/OC_spatiogenomics/infercnv/sample_type_LR_niche_analysis`
+
+## Completed status
+
+This report updates the previous placeholder external/scRNA and spatial sections using public data under `D:/OC_spatiogenomics/公开集`.
+
+## Integrated_oc exploratory analysis
+
+Integrated_oc remains exploratory because sample_type is one-to-one with sample_id in the available metadata. The strongest primary-axis opportunity scores are in the tumor sample type, especially toward CNV_Subclone_02/04.
+
+| sample_type | axis | target_group | axis_score | abundance_weighted_score | source_n | target_n |
+| --- | --- | --- | --- | --- | --- | --- |
+| ascites | SPP1-CD44 | CNV_Subclone_02 | 9.34842406684341e-10 | 5.73370009433063e-08 | 92 | 8 |
+| ascites | SPP1-ITGB1 | CNV_Subclone_02 | 3.0501201219443703e-09 | 1.12244420487553e-07 | 92 | 8 |
+| ascites | SPP1-CD44 | CNV_Subclone_04 | 5.601861468750431e-09 | 3.19306103718775e-07 | 92 | 57 |
+| ascites | SPP1-ITGB1 | CNV_Subclone_04 | 2.3681794660426e-08 | 7.39210304757582e-07 | 92 | 57 |
+| ascites | SPP1-CD44 | CNV_Subclone_02 | 1.69231040687266e-06 | 1.0610312576423e-05 | 616 | 8 |
+| ascites | SPP1-ITGB1 | CNV_Subclone_02 | 5.52151890807524e-06 | 2.07710268541945e-05 | 616 | 8 |
+| ascites | SPP1-CD44 | CNV_Subclone_04 | 1.0140841272968e-05 | 5.90881544600818e-05 | 616 | 57 |
+| ascites | SPP1-ITGB1 | CNV_Subclone_04 | 4.28702712571667e-05 | 0.000136792163248 | 616 | 57 |
+| ascites | SPP1-CD44 | CNV_Subclone_02 | 3.45390663013576e-08 | 4.25981817716743e-07 | 74 | 8 |
+| ascites | SPP1-ITGB1 | CNV_Subclone_02 | 1.1269097375737e-07 | 8.33913205804535e-07 | 74 | 8 |
+| ascites | SPP1-CD44 | CNV_Subclone_04 | 2.06968643374265e-07 | 2.37226559171916e-06 | 74 | 57 |
+| ascites | SPP1-ITGB1 | CNV_Subclone_04 | 8.74957180015664e-07 | 5.49191872813404e-06 | 74 | 57 |
+| ascites | SPP1-CD44 | CNV_Subclone_02 | 2.96998380641727e-09 | 1.18799352256691e-07 | 180 | 8 |
+| ascites | SPP1-ITGB1 | CNV_Subclone_02 | 9.69019730494642e-09 | 2.32564735318714e-07 | 180 | 8 |
+| ascites | SPP1-CD44 | CNV_Subclone_04 | 1.77970508494481e-08 | 6.61586020707743e-07 | 180 | 57 |
+| ascites | SPP1-ITGB1 | CNV_Subclone_04 | 7.523679514906e-08 | 1.53160618696301e-06 | 180 | 57 |
+| ascites | SPP1-CD44 | CNV_Subclone_02 | 8.62500320272332e-08 | 1.52743646461904e-06 | 518 | 8 |
+| ascites | SPP1-ITGB1 | CNV_Subclone_02 | 2.81408883811407e-07 | 2.99014978080634e-06 | 518 | 8 |
+| ascites | SPP1-CD44 | CNV_Subclone_04 | 5.16836557303281e-07 | 8.50619631601821e-06 | 518 | 57 |
+| ascites | SPP1-ITGB1 | CNV_Subclone_04 | 2.18491965417845e-06 | 1.96922886780442e-05 | 518 | 57 |
+| ascites | SPP1-CD44 | CNV_Subclone_02 | 6.31407383749608e-06 | 1.79377097656139e-05 | 375 | 8 |
+| ascites | SPP1-ITGB1 | CNV_Subclone_02 | 2.06009949115329e-05 | 3.51153322355674e-05 | 375 | 8 |
+| ascites | SPP1-CD44 | CNV_Subclone_04 | 3.78358605559682e-05 | 9.98939623744837e-05 | 375 | 57 |
+| ascites | SPP1-ITGB1 | CNV_Subclone_04 | 0.0001599505959733 | 0.000231259739511 | 375 | 57 |
+| ascites | SPP1-CD44 | CNV_Subclone_02 | 4.78496440996386e-07 | 1.956518780963e-06 | 69 | 8 |
+| ascites | SPP1-ITGB1 | CNV_Subclone_02 | 1.56119535498848e-06 | 3.83013260423839e-06 | 69 | 8 |
+| ascites | SPP1-CD44 | CNV_Subclone_04 | 2.86729694394037e-06 | 1.08957283869734e-05 | 69 | 57 |
+| ascites | SPP1-ITGB1 | CNV_Subclone_04 | 1.21214595961812e-05 | 2.52241802072914e-05 | 69 | 57 |
+| ascites | SPP1-CD44 | CNV_Subclone_02 | 3.49631995924121e-07 | 1.29964216666744e-06 | 46 | 8 |
+| ascites | SPP1-ITGB1 | CNV_Subclone_02 | 1.14074797893055e-06 | 2.54421367422086e-06 | 46 | 8 |
+
+## External scRNA validation: Zhang2022 ovarian
+
+Zhang2022 ovarian single-cell data were processed from `Cells.csv`, `Samples.csv`, `Genes.txt`, and the UMI MatrixMarket file by streaming selected genes only. Macrophage/dendritic cells were used as SPP1-source cells and malignant cells as target tumor cells. Peritoneum/omentum/mesentery were treated as implant-like solid/peritoneal niches.
+
+| sample_type | axis | axis_score |
+| --- | --- | --- |
+| peritoneal_implant | APOE-LRP1 | 0.0009389822901348605 |
+| peritoneal_implant | CXCL12-CXCR4 | 5.371330455967322e-07 |
+| peritoneal_implant | MIF-CD74 | 0.015222227144727738 |
+| peritoneal_implant | SPP1-CD44 | 0.005744113429321465 |
+| peritoneal_implant | SPP1-ITGB1 | 0.020217498062246115 |
+| peritoneal_implant | TGFB1-TGFBR1 | 3.2794593377537154e-05 |
+| tumor | APOE-LRP1 | 2.988358268574666e-05 |
+| tumor | CXCL12-CXCR4 | 4.167671234253384e-07 |
+| tumor | MIF-CD74 | 0.0204029068047464 |
+| tumor | SPP1-CD44 | 1.1494572310986865e-06 |
+| tumor | SPP1-ITGB1 | 1.864186632306587e-06 |
+| tumor | TGFB1-TGFBR1 | 0.0001500324024192 |
+
+Key outputs: `external_scRNA_all_datasets_sampletype_axis_scores.csv`, `external_scRNA_patient_sampletype_summary.csv`, `external_scRNA_target_signature_scores.csv`, and `external_scRNA_SPP1_myeloid_CD44_ITGB1_target_scores.csv`.
+
+## Spatial validation
+
+GSE203612 ovarian Visium samples with coordinates were used for spot-level SPP1-myeloid vs target-axis correlation and local neighborhood enrichment. GSE189843 HGSC Visium matrices were also scored, but the local copy lacks spot coordinate files, so they contribute only spot-level score correlations and LR expression-product summaries.
+
+| dataset | sample_id | n_spots | spearman_r | spearman_p | mean_SPP1_CD44_score | mean_SPP1_ITGB1_score |
+| --- | --- | --- | --- | --- | --- | --- |
+| GSE203612_OVCA | GSM6177614 | 1762 | -0.19669146415096 | 7.947673566595285e-17 | 0.2164254241358764 | 1.3376896097908888 |
+| GSE203612_OVCA | GSM6177617 | 1661 | 0.2210902738972936 | 7.731854931607179e-20 | 0.6643406167633227 | 0.947632443535974 |
+| GSE203612_OVCA | GSM6177618 | 1789 | 0.2876721853212961 | 1.9715633632638287e-35 | 0.965031730264816 | 1.517069151162671 |
+| GSE189843_HGSC | GSM5708485 | 439 | 0.0760655377868449 | 0.1114942879320932 | 0.0804460661883942 | 0.5665592641727889 |
+| GSE189843_HGSC | GSM5708486 | 382 | 0.0363377504636437 | 0.4788700008144537 | 2.235038071107262 | 1.8128495916561536 |
+| GSE189843_HGSC | GSM5708487 | 173 | 0.1853863964534797 | 0.014609964633637 | 0.6002546666266092 | 0.8631872435895591 |
+| GSE189843_HGSC | GSM5708488 | 356 | 0.1943592013923055 | 0.0002246878443254 | 1.2326302919413863 | 0.8329458197018443 |
+| GSE189843_HGSC | GSM5708489 | 598 | 0.2654102697419894 | 4.2405327995928303e-11 | 0.1712073597543498 | 0.46898618256598 |
+| GSE189843_HGSC | GSM5708490 | 285 | -0.024077255193674 | 0.6856663138431502 | 0.4524827658605374 | 1.0330385537101836 |
+| GSE189843_HGSC | GSM5708491 | 291 | -0.0508457573346333 | 0.38748374638404 | 0.5667538385404265 | 1.4876273366005883 |
+| GSE189843_HGSC | GSM5708492 | 355 | 0.2431796732365238 | 3.561356633439943e-06 | 0.1117176495218243 | 0.0654857636848948 |
+| GSE189843_HGSC | GSM5708493 | 500 | 0.1002578624747714 | 0.0249695108303984 | 0.2288884374682775 | 1.2181926527701203 |
+| GSE189843_HGSC | GSM5708494 | 1021 | 0.3372223433551284 | 1.4264179290842795e-28 | 0.4299502763201189 | 1.5860385238657642 |
+| GSE189843_HGSC | GSM5708495 | 429 | 0.1641789541900749 | 0.0006406424921065 | 0.7716151086192689 | 2.6017783431413446 |
+| GSE189843_HGSC | GSM5708496 | 176 | 0.1560612741736685 | 0.0386095390329781 | 0.3291034292311501 | 0.9334332194730398 |
+
+Neighborhood enrichment summary:
+
+| dataset | sample_id | source_class | target_class | radius_array_units | observed_neighbor_fraction | expected_global_fraction | enrichment_ratio | n_source_spots | n_target_spots | n_neighbor_edges |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| GSE203612_OVCA | GSM6177614 | SPP1_myeloid_high_or_double_high | Target_axis_high_or_double_high | 2.01 | 0.2235258724428399 | 0.2502837684449489 | 0.8930897669938412 | 441 | 441 | 3324 |
+| GSE203612_OVCA | GSM6177617 | SPP1_myeloid_high_or_double_high | Target_axis_high_or_double_high | 2.01 | 0.2755879430274925 | 0.2504515352197471 | 1.100364359059291 | 416 | 416 | 3019 |
+| GSE203612_OVCA | GSM6177618 | SPP1_myeloid_high_or_double_high | Target_axis_high_or_double_high | 2.01 | 0.2810250503887129 | 0.2504192286193404 | 1.1222183373781418 | 448 | 448 | 3473 |
+
+The spatial COMMOT-named outputs are simplified spatial LR expression-product maps/summaries, not full COMMOT optimal-transport inference.
+
+## Interpretation
+
+The completed public-data checks support a cautious niche model: SPP1-CD44/ITGB1 is strongest in tumor/implant-like contexts at the integrated_oc level, and public ovarian scRNA/spatial data provide additional expression-level support for SPP1-myeloid and CD44/ITGB1/KRAS-hypoxia target programs. This should be interpreted as a candidate sample_type/niche-dependent communication program, not as proof of physical interaction or a universal OS predictor.
+
+## Limitations
+
+| limitation | interpretation |
+| --- | --- |
+| sample_type_sample_id_confounding | In integrated_oc, sample_type is one-to-one with sample_id; integrated sample_type findings are exploratory. |
+| external_site_treatment_confounding | Zhang2022 external samples contain tumor and implant-like sites, but treatment phase and anatomical site are not fully balanced. |
+| spatial_coordinate_availability | GSE203612 OVCA Visium supports coordinate neighborhood analysis; local GSE189843 HGSC matrices lack spot coordinate files and were used only for spot-level score correlations. |
+| COMMOT_simplified | Spatial COMMOT deliverables here are expression-product LR score maps/summaries, not full optimal-transport COMMOT inference. |
+| LR_scores_are_potential_interactions | LR opportunity scores are expression-derived potentials and do not prove ligand-receptor binding or signaling. |
+| bulk_OS_not_primary | Bulk OS instability does not reject a local sample_type/niche-dependent mechanism. |
