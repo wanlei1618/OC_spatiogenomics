@@ -1,0 +1,2 @@
+source_table,n_positive_candidates_padj005,top_gene,top_rho,top_padj,required_for_upgrade,current_label
+CNV_expression_dosage_genes_positive_rho_padj005.csv,776,MSLN,0.822904687096245,3.83842172918941e-10,TCGA/GISTIC SNP-array or paired WES/WGS CNV plus matched RNA validation,RNA-derived CNV-expression coupling candidates

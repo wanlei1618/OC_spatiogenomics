@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>First-stage clone validity report</title>
+  <style>
+    body { font-family: Arial, "Microsoft YaHei", sans-serif; margin: 32px; line-height: 1.55; color: #222; }
+    h1, h2 { color: #243447; }
+    table { border-collapse: collapse; margin: 16px 0; }
+    th, td { border: 1px solid #cfd7df; padding: 7px 10px; text-align: left; }
+    th { background: #eef3f7; }
+    code { background: #f4f6f8; padding: 1px 4px; border-radius: 3px; }
+    .blocker { border-left: 4px solid #b23b3b; padding: 10px 14px; background: #fff4f4; }
+    .note { border-left: 4px solid #4f6f95; padding: 10px 14px; background: #f4f8fc; }
+  </style>
+</head>
+<body>
+  <h1>First-stage clone validity report</h1>
+  <p>Generated for <code>D:/OC_spatiogenomics/infercnv/06_rigorous_validation</code>.</p>
+
+  <h2>Input and Field Check</h2>
+  <table>
+    <tr><th>Metric</th><th>Value</th></tr>
+    <tr><td>Metadata input</td><td>D:/OC_spatiogenomics/infercnv/CNV_expression_joint_analysis_integrated_oc/tables/integrated_oc_metadata_with_CNV_clone_and_subtypes.csv</td></tr>
+    <tr><td>Metadata rows</td><td>49,326</td></tr>
+    <tr><td>Clone-labeled cells</td><td>6,507</td></tr>
+    <tr><td>Unique samples</td><td>4</td></tr>
+    <tr><td>Unique non-missing patients</td><td>0</td></tr>
+    <tr><td>Missing fields</td><td>patient_id, dataset, doublet_score, S.Score, G2M.Score</td></tr>
+  </table>
+
+  <div class="blocker">
+    <strong>Gate A preliminary decision:</strong>
+    <code>patient_id</code> is missing, so the current CNV_Subclone_01-05 labels cannot be called cross-patient CNV states from this metadata alone.
+    No patient mapping was inferred from <code>sample_id</code>.
+  </div>
+
+  <h2>Sample-Level Diagnostic</h2>
+  <table>
+    <tr><th>Clone</th><th>Cells</th><th>Samples detected</th><th>Max single-sample fraction</th><th>Dominant sample</th></tr>
+    <tr><td>CNV_Subclone_01</td><td>3,318</td><td>4</td><td>0.805</td><td>31V1</td></tr>
+    <tr><td>CNV_Subclone_02</td><td>1,071</td><td>3</td><td>0.992</td><td>31V1</td></tr>
+    <tr><td>CNV_Subclone_03</td><td>1,021</td><td>2</td><td>0.976</td><td>31V1</td></tr>
+    <tr><td>CNV_Subclone_04</td><td>1,001</td><td>2</td><td>0.943</td><td>31V1</td></tr>
+    <tr><td>CNV_Subclone_05</td><td>96</td><td>2</td><td>0.990</td><td>31V1</td></tr>
+  </table>
+
+  <p>The sample-level association was strong: Cramer's V = 0.156, BH-adjusted P = 5.07e-94 for sample_id, sample_type and batch. These three diagnostics are numerically identical in the current input, consistent with sample_id/sample_type/batch being highly overlapping in this table.</p>
+
+  <div class="note">
+    Sample-level composition is useful as a warning signal, but it is not a replacement for patient-level biological replication.
+    Before P0-2/P0-5 or any mechanism interpretation using the existing clone labels, an explicit patient_id mapping is required.
+  </div>
+
+  <h2>Generated Files</h2>
+  <ul>
+    <li><code>00_config/sample_metadata_checked.csv</code></li>
+    <li><code>00_config/metadata_field_mapping_report.csv</code></li>
+    <li><code>tables/input_file_manifest.csv</code></li>
+    <li><code>01_clone_patient_confounding/clone_by_sample_counts.csv</code></li>
+    <li><code>01_clone_patient_confounding/clone_patient_confounding_metrics.csv</code></li>
+    <li><code>01_clone_patient_confounding/clone_association_cramers_v.csv</code></li>
+    <li><code>figures/clone_by_sample_heatmap.png</code></li>
+    <li><code>figures/clone_by_sample_mosaic.png</code></li>
+    <li><code>figures/clone_by_sample_type_alluvial_like.png</code></li>
+  </ul>
+</body>
+</html>

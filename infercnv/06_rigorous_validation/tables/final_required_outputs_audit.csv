@@ -1,0 +1,7 @@
+required_file,exists,status
+reports/01_clone_validity_report.html,True,present
+reports/02_patient_level_functional_report.html,True,present
+reports/03_external_and_spatial_validation_report.html,True,present
+reports/04_ligand_target_and_virtual_KO_report.html,True,present
+reports/05_integrated_evidence_and_limitations.docx,True,present
+reports/FINAL_CODEX_EXECUTION_SUMMARY.md,True,present

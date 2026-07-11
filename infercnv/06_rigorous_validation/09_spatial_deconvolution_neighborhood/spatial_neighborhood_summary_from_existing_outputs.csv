@@ -1,0 +1,4 @@
+dataset,sample_id,source_class,target_class,enrichment_ratio,n_source_spots,n_target_spots
+GSE203612_OVCA,GSM6177614,SPP1_myeloid_high_or_double_high,Target_axis_high_or_double_high,0.8930897669938412,441,441
+GSE203612_OVCA,GSM6177617,SPP1_myeloid_high_or_double_high,Target_axis_high_or_double_high,1.100364359059291,416,416
+GSE203612_OVCA,GSM6177618,SPP1_myeloid_high_or_double_high,Target_axis_high_or_double_high,1.1222183373781418,448,448

@@ -1,0 +1,14 @@
+"clone_label","sample_type","n_cells"
+"CNV_Subclone_01","ascites",471
+"CNV_Subclone_02","ascites",8
+"CNV_Subclone_03","ascites",25
+"CNV_Subclone_04","ascites",57
+"CNV_Subclone_05","ascites",1
+"CNV_Subclone_01","blood",52
+"CNV_Subclone_01","pleural_effusion",123
+"CNV_Subclone_02","pleural_effusion",1
+"CNV_Subclone_01","tumor",2672
+"CNV_Subclone_02","tumor",1062
+"CNV_Subclone_03","tumor",996
+"CNV_Subclone_04","tumor",944
+"CNV_Subclone_05","tumor",95
