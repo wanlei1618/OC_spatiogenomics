@@ -1,0 +1,14 @@
+package,installed,version
+survival,TRUE,3.2-11
+edgeR,TRUE,3.32.1
+limma,TRUE,3.46.0
+copykat,TRUE,1.2.5
+CaSpER,TRUE,0.2.0
+liana,TRUE,0.1.11
+nichenetr,TRUE,2.2.1.1
+OmnipathR,TRUE,3.13.25
+org.Hs.eg.db,TRUE,3.12.0
+GSVA,FALSE,
+estimate,FALSE,
+MCPcounter,FALSE,
+survminer,FALSE,

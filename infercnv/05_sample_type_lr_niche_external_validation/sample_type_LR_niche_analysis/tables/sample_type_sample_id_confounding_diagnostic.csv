@@ -1,0 +1,4 @@
+diagnostic,value
+sample_id_one_to_one_with_sample_type,TRUE
+n_sample_ids,4
+n_sample_types,4

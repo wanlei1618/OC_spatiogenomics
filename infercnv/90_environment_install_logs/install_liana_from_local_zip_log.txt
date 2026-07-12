@@ -1,0 +1,96 @@
+
+Local install: OmnipathR D:/TEMP/OmnipathR-master.zip 
+Installing 2 packages: bookdown, gprofiler2
+also installing the dependencies 'knitr', 'rmarkdown', 'xfun'
+
+
+  There are binary versions available but the source versions are later:
+           binary source needs_compilation
+knitr        1.38   1.51             FALSE
+rmarkdown    2.13   2.31             FALSE
+xfun         0.30   0.59              TRUE
+bookdown     0.26   0.47             FALSE
+gprofiler2  0.2.1  0.2.4             FALSE
+
+  Binaries will be installed
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/xfun_0.30.zip'
+Content length 398028 bytes (388 KB)
+==================================================
+downloaded 388 KB
+
+package 'xfun' successfully unpacked and MD5 sums checked
+Warning: cannot remove prior installation of package 'xfun'
+Warning: restored 'xfun'
+
+The downloaded binary packages are in
+	D:\TEMP\Rtmpae8ar7\downloaded_packages
+installing the source packages 'knitr', 'rmarkdown', 'bookdown', 'gprofiler2'
+
+trying URL 'https://cran.rstudio.com/src/contrib/knitr_1.51.tar.gz'
+Content length 483744 bytes (472 KB)
+==================================================
+downloaded 472 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/rmarkdown_2.31.tar.gz'
+ length 2199845 bytes (2.1 MB)
+==================================================
+downloaded 2.1 MB
+
+trying URL 'https://cran.rstudio.com/src/contrib/bookdown_0.47.tar.gz'
+Content length 864497 bytes (844 KB)
+==================================================
+downloaded 844 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/gprofiler2_0.2.4.tar.gz'
+ length 1518268 bytes (1.4 MB)
+==================================================
+downloaded 1.4 MB
+
+
+The downloaded source packages are in
+	'D:\TEMP\Rtmpae8ar7\downloaded_packages'
+OmnipathR installed? FALSE 
+Warning messages:
+1: In file.copy(savedcopy, lib, recursive = TRUE) :
+  problem copying D:\Documents\R\win-library\4.0\00LOCK\xfun\libs\x64\xfun.dll to D:\Documents\R\win-library\4.0\xfun\libs\x64\xfun.dll: Permission denied
+2: In i.p(...) : installation of package 'knitr' had non-zero exit status
+3: In i.p(...) :
+  installation of package 'rmarkdown' had non-zero exit status
+4: In i.p(...) :
+  installation of package 'bookdown' had non-zero exit status
+5: In i.p(...) :
+  installation of package 'D:/TEMP/Rtmpae8ar7/remotes2d9844db259f/OmnipathR-master' had non-zero exit status
+
+Local install: liana D:/TEMP/liana-master.zip 
+liana failed: Failed to install 'liana-master.zip' from local:
+  HTTP error 403.
+  API rate limit exceeded for 220.196.98.45. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)
+
+  Rate limit remaining: 0/60
+  Rate limit reset at: 2026-07-08 16:05:04 UTC
+
+  To increase your GitHub API rate limit
+  - Use `usethis::browse_github_pat()` to create a Personal Access Token.
+  - Use `usethis::edit_r_environ()` and add the token as `GITHUB_PAT`. 
+liana installed? FALSE 
+OmnipathR load failed: there is no package called 'OmnipathR' 
+liana load failed: there is no package called 'liana' 
+There were 16 warnings (use warnings() to see them)
+      package load_ok
+1   OmnipathR   FALSE
+2       liana   FALSE
+3     copykat    TRUE
+4      CaSpER    TRUE
+5   nichenetr    TRUE
+6       dplyr    TRUE
+7 sessioninfo    TRUE
+8       purrr    TRUE
+      package installed version
+1   OmnipathR     FALSE    <NA>
+2       liana     FALSE    <NA>
+3     copykat      TRUE   1.2.5
+4      CaSpER      TRUE   0.2.0
+5   nichenetr      TRUE 2.2.1.1
+6       dplyr      TRUE   1.1.4
+7 sessioninfo      TRUE   1.2.2
+8       purrr      TRUE   1.0.2

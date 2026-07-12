@@ -1,0 +1,14 @@
+project_root: "D:/OC_spatiogenomics/infercnv"
+output_root: "D:/OC_spatiogenomics/infercnv/06_rigorous_validation"
+random_seed: 20260711
+primary_clone_labels: ["CNV_Subclone_02", "CNV_Subclone_04"]
+primary_lr_axis: "SPP1-CD44"
+secondary_state_axis: "SPP1-rich macrophage / ITGB1-high tumor adhesion state"
+biological_replicate_priority: ["patient_id", "sample_id", "section_id"]
+min_cells_per_pseudobulk: 20
+min_patients_per_state: 3
+max_single_patient_fraction_for_cross_patient_state: 0.5
+multiple_testing_method: "BH"
+large_temp_dir: "D:/OC_spatiogenomics/tmp"
+input_metadata_path: "D:/OC_spatiogenomics/infercnv/CNV_expression_joint_analysis_integrated_oc/tables/integrated_oc_metadata_with_CNV_clone_and_subtypes.csv"
+fallback_metadata_path: "D:/OC_spatiogenomics/infercnv/integrated_oc_plan_analysis/tables/integrated_oc_metadata_with_cnv_TNK_myeloid_B_subtypes.csv"

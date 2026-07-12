@@ -1,0 +1,6 @@
+dataset_id,n_expression_cells,n_annotation_cells,n_exact_matches,n_normalized_matches,n_unmatched_expression,n_unmatched_annotation,match_fraction_expression,match_fraction_annotation,duplicate_raw_barcode,duplicate_normalized_barcode,duplicate_cell_key,selected_match_method,status
+GSE147082,9796,9796,9796,9796,0,0,1.0,1.0,0,0,0,expression_h5_barcode_inventory,pass
+GSE151214,59446,59446,59446,59446,0,0,1.0,1.0,0,0,0,expression_h5_barcode_inventory,reference_only
+GSE154600,42253,42253,42253,42253,0,0,1.0,1.0,0,0,0,author_sce_self_contained,pass
+GSE154763,3888,3888,0,0,3888,3888,0.0,0.0,1,0,0,no_match,reference_only
+GSE158722,96846,63793,0,0,96846,63793,0.0,0.0,0,0,0,no_match,fail

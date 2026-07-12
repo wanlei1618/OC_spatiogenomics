@@ -1,0 +1,6 @@
+dataset_id,analysis_role,annotation_status,n_annotation_cells,primary_tumor_lr,sensitivity_tumor_lr,myeloid_source_reference,normal_reference,status
+GSE147082,sensitivity_secondary,secondary_reannotation_only,9796,no,yes,yes,no,available
+GSE151214,normal_reference,original_barcode_annotation_not_public,59446,no,no,no,yes,available
+GSE154600,tumor_ecosystem_primary,author_original_SCE,42253,yes_if_audit_passes,yes,yes,no,available
+GSE154763,myeloid_reference_only,author_original_GEO_metadata,3888,no,no,yes,no,available
+GSE158722,tumor_ecosystem_primary,author_original_GEO_annotations,63793,yes_if_audit_passes,yes,yes,no,available

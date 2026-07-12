@@ -1,0 +1,3 @@
+dataset,sample_id,n_spots,median_prediction_score,low_confidence_fraction,top_label,stability_scope
+GSE203612,GSM6177614,1760,0.66755685378065,0,CNV_Subclone_02_04_like,observed_predictions; rerun with downsampling seeds when Seurat runtime is available
+GSE203612,GSM6177617,1204,0.672968818888484,0,Uncertain,observed_predictions; rerun with downsampling seeds when Seurat runtime is available

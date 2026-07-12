@@ -1,0 +1,13 @@
+[2026-07-08 23:41:29] [INFO]    [OmnipathR] Welcome to OmnipathR!
+[2026-07-08 23:41:29] [INFO]    [OmnipathR] OmnipathR version: 3.13.25
+[2026-07-08 23:41:29] [TRACE]   [OmnipathR] Reading JSON from `C:\Users\chenfy12\AppData\Local\cache\OmnipathR/cache.json` (encoding: UTF-8).
+[2026-07-08 23:41:29] [TRACE]   [OmnipathR] JSON validation successful: TRUE
+[2026-07-08 23:41:29] [INFO]    [OmnipathR] Initialized cache: `C:\Users\chenfy12\AppData\Local\cache\OmnipathR`.
+[2026-07-08 23:41:29] [TRACE]   [OmnipathR] Reading JSON from `D:/Documents/R/win-library/4.0/OmnipathR/db/db_def.json` (encoding: UTF-8).
+[2026-07-08 23:41:29] [TRACE]   [OmnipathR] JSON validation successful: TRUE
+[2026-07-08 23:41:29] [TRACE]   [OmnipathR] Reading JSON from `D:/Documents/R/win-library/4.0/OmnipathR/internal/magic_bytes.json` (encoding: UTF-8).
+[2026-07-08 23:41:29] [TRACE]   [OmnipathR] JSON validation successful: TRUE
+[2026-07-08 23:41:29] [TRACE]   [OmnipathR] Reading JSON from `D:/Documents/R/win-library/4.0/OmnipathR/internal/urls.json` (encoding: UTF-8).
+[2026-07-08 23:41:29] [TRACE]   [OmnipathR] JSON validation successful: TRUE
+[2026-07-08 23:41:29] [TRACE]   [OmnipathR] Reading JSON from `D:/Documents/R/win-library/4.0/OmnipathR/internal/id_types.json` (encoding: UTF-8).
+[2026-07-08 23:41:29] [TRACE]   [OmnipathR] JSON validation successful: TRUE

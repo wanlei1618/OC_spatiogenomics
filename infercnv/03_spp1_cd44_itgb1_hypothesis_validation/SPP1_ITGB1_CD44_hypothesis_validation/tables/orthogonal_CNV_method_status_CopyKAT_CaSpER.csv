@@ -1,0 +1,4 @@
+"method","status","note"
+"inferCNV_HMM_existing","completed_from_existing_inferCNV_subclones_and_CNV_burden","Subclone_02/04 are cells with inferCNV-derived CNV labels; use CNV burden and event tables for malignant validation."
+"CopyKAT","not_installed","Install/run separately to provide orthogonal aneuploidy calls."
+"CaSpER","not_installed","Install/run separately to provide RNA-CNV orthogonal validation."

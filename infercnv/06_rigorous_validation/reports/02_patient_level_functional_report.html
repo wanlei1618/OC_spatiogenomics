@@ -1,0 +1,29 @@
+<!doctype html><meta charset='utf-8'><title>Patient-level functional validation report</title><body style='font-family:Arial,Microsoft YaHei,sans-serif;line-height:1.55;margin:32px'># Patient-level functional validation report<br>
+<br>
+Generated: 2026-07-11T20:38:38<br>
+<br>
+## Status<br>
+<br>
+P0-5 / Gate B is not fully completed because the required `patient_id` field is missing from the integrated_oc metadata and current CNV clone labels failed preliminary sample-confounding checks.<br>
+<br>
+## What is available<br>
+<br>
+- Existing sample-level CNV-expression outputs are present in `CNV_expression_joint_analysis_integrated_oc`.<br>
+- Existing functional score summaries and pseudobulk-style tables can be used only as exploratory sample-level evidence.<br>
+- These results must not be reported as patient-level biological replication or as primary P values from independent patients.<br>
+<br>
+## Why this is not marked complete<br>
+<br>
+The task book requires patient/sample-level pseudobulk and leave-one-patient-out/meta-analysis. Because `patient_id` is absent and only 4 sample IDs are available in the integrated metadata, Gate B cannot be judged as a validated patient-level 02/04 functional state.<br>
+<br>
+## Required to complete<br>
+<br>
+1. Provide a reviewed sample-to-patient mapping.<br>
+2. Rebuild patient-wise CNV programs or verify existing clone labels after Gate A.<br>
+3. Re-run pseudobulk DEG/GSEA/PROGENy/TF activity with patient/sample as the replicate unit.<br>
+4. Run leave-one-patient-out sensitivity analysis.<br>
+<br>
+## Conclusion<br>
+<br>
+Classification: 因数据结构无法判断 / blocked by missing patient-level replication.<br>
+</body>

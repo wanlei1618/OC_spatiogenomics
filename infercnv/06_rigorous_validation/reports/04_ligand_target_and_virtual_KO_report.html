@@ -1,0 +1,94 @@
+<!doctype html><meta charset='utf-8'><title>Ligand-target and virtual KO report</title><body style='font-family:Arial,Microsoft YaHei,sans-serif;line-height:1.55;margin:32px'># P1 ligand-target and virtual perturbation execution report<br>
+<br>
+Generated: 2026-07-11T17:36:30<br>
+<br>
+## Scope<br>
+<br>
+This run executes P1 analyses that are possible from existing local outputs. It does not overwrite the P0 warning: integrated_oc lacks `patient_id`, and current CNV clone labels are sample/sample_type/batch confounded.<br>
+<br>
+## P1 status<br>
+<br>
+| Task | Status | Main output | Limitation |<br>
+|---|---|---|---|<br>
+| P1-1 external scRNA projection | executed_from_existing_tables_partial | `06_external_scrna_projection/external_scrna_patient_level_associations.csv` | expression/signature projection; not validated CNV state transfer after patient-wise P0 |<br>
+| P1-2 LR competition | executed_from_existing_tables_partial | `07_ligand_receptor_competition/external_lr_competition_axis_ranking.csv` | SPP1 axes are candidate axes; integrated clone specificity remains sample-confounded |<br>
+| P1-3 full NicheNet ligand-target | blocked_not_completed | `08_nichenet_ligand_target/nichenet_execution_blocker.csv` | requires patient-level stable 02/04 DEG from P0/P0-5 |<br>
+| P1-4 spatial deconvolution/neighborhood | executed_sample_level_meta_partial | `09_spatial_deconvolution_neighborhood/spatial_random_effects_meta_analysis.csv` | uses existing scores and neighborhood table; no full deconvolution method found |<br>
+| P1-5 virtual perturbation | executed_score_dependency_summary | `10_virtual_perturbation_causal/virtual_perturbation_score_dependency_summary.csv` | score arithmetic dependency, not causal KO proof |<br>
+<br>
+## P1-1 External scRNA patient/sample-level association<br>
+<br>
+External rows used:<br>
+<br>
+- patient/sample summary: 22<br>
+- signature rows: 132<br>
+- axis-score rows: 132<br>
+<br>
+Primary association, all patient-samples:<br>
+<br>
+- `source_myeloid_fraction` vs `Subclone02_04_common_mean_target_tumor`: Spearman r = 0.0514, n = 22, BH q = 0.9956<br>
+<br>
+Output: `06_external_scrna_projection/external_scrna_patient_level_associations.csv`<br>
+<br>
+## P1-2 LR competition<br>
+<br>
+Top external LR axes by mean axis score:<br>
+<br>
+| sample_type | axis | n | mean score | rank |<br>
+|---|---|---:|---:|---:|<br>
+| tumor | MIF-CD74 | 1 | 0.0204 | 1 |<br>
+| peritoneal_implant | SPP1-ITGB1 | 21 | 0.0202 | 1 |<br>
+| peritoneal_implant | MIF-CD74 | 21 | 0.0152 | 2 |<br>
+| peritoneal_implant | SPP1-CD44 | 21 | 0.0057 | 3 |<br>
+| peritoneal_implant | APOE-LRP1 | 21 | 9.390e-04 | 4 |<br>
+| tumor | TGFB1-TGFBR1 | 1 | 1.500e-04 | 2 |<br>
+| peritoneal_implant | TGFB1-TGFBR1 | 21 | 3.279e-05 | 5 |<br>
+| tumor | APOE-LRP1 | 1 | 2.988e-05 | 3 |<br>
+| tumor | SPP1-ITGB1 | 1 | 1.864e-06 | 4 |<br>
+| tumor | SPP1-CD44 | 1 | 1.149e-06 | 5 |<br>
+<br>
+Interpretation: SPP1-CD44 and SPP1-ITGB1 remain candidate axes, but the competition table also keeps MIF/APOE/TGFB/CXCL12 controls. If controls outrank SPP1 in a stratum, the SPP1 claim should be downgraded for that stratum.<br>
+<br>
+## P1-3 NicheNet<br>
+<br>
+Full NicheNet was not run because the required patient-level stable 02/04 DEG target set is not available after Gate A/B. A blocker table was written to:<br>
+<br>
+`08_nichenet_ligand_target/nichenet_execution_blocker.csv`<br>
+<br>
+## P1-4 Spatial sample-level meta-analysis<br>
+<br>
+All spatial samples random-effects meta-analysis:<br>
+<br>
+- k = 15<br>
+- pooled Spearman r = 0.1356<br>
+- 95% CI = [0.0364, 0.2321]<br>
+- BH q = 0.0113<br>
+- I2 = 0.9593<br>
+<br>
+GSE203612 coordinate-available subset:<br>
+<br>
+- k = 3<br>
+- pooled Spearman r = 0.1068<br>
+- 95% CI = [-0.1953, 0.3903]<br>
+- BH q = 0.4910<br>
+<br>
+Neighborhood enrichment meta-analysis:<br>
+<br>
+- pooled enrichment ratio = 1.0329<br>
+- 95% CI = [0.8944, 1.1929]<br>
+<br>
+Output: `09_spatial_deconvolution_neighborhood/spatial_random_effects_meta_analysis.csv`<br>
+<br>
+## P1-5 Virtual perturbation<br>
+<br>
+Existing virtual KO tables were summarized as expression-score dependency, not causal perturbation. Output:<br>
+<br>
+`10_virtual_perturbation_causal/virtual_perturbation_score_dependency_summary.csv`<br>
+<br>
+## Conclusion Classification<br>
+<br>
+- Partially supported: spatial co-expression gradients across existing spatial samples; peritoneal-implant external LR ranking where SPP1-ITGB1 ranks first and SPP1-CD44 remains in the candidate set.<br>
+- Not supported in this execution: direct external patient-sample association between SPP1/myeloid fraction and 02/04-like tumor signature (`source_myeloid_fraction` vs `Subclone02_04_common_mean_target_tumor`, Spearman r = 0.0514, BH q = 0.9956).<br>
+- Not supported as complete: cross-patient CNV-state mechanism, full NicheNet mechanism, causal KO directionality.<br>
+- Cannot judge from current data structure: whether integrated_oc CNV_Subclone_02/04 are true cross-patient programs.<br>
+</body>

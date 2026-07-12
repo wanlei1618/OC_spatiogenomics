@@ -1,0 +1,2 @@
+required_output,status,reason,required_input_before_run
+ligand activity ranking / SPP1 regulatory potential / top SPP1 target genes,blocked_not_found,No complete NicheNet result table was found in project outputs.,patient-level stable 02/04 meta-DEG target gene set after P0 Gate A/B

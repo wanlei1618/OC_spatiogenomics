@@ -1,0 +1,9 @@
+"package","installed","version"
+"OmnipathR",FALSE,NA
+"liana",FALSE,NA
+"copykat",TRUE,"1.2.5"
+"CaSpER",TRUE,"0.2.0"
+"nichenetr",TRUE,"2.2.1.1"
+"dplyr",TRUE,"1.1.4"
+"sessioninfo",TRUE,"1.2.2"
+"purrr",TRUE,"1.0.2"

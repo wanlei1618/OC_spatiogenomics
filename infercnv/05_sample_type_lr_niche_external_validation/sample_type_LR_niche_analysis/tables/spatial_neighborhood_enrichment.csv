@@ -1,0 +1,4 @@
+dataset,sample_id,source_class,target_class,radius_array_units,observed_neighbor_fraction,expected_global_fraction,enrichment_ratio,n_source_spots,n_target_spots,n_neighbor_edges
+GSE203612_OVCA,GSM6177614,SPP1_myeloid_high_or_double_high,Target_axis_high_or_double_high,2.01,0.22352587244283995,0.25028376844494893,0.8930897669938412,441,441,3324
+GSE203612_OVCA,GSM6177617,SPP1_myeloid_high_or_double_high,Target_axis_high_or_double_high,2.01,0.27558794302749257,0.25045153521974717,1.100364359059291,416,416,3019
+GSE203612_OVCA,GSM6177618,SPP1_myeloid_high_or_double_high,Target_axis_high_or_double_high,2.01,0.28102505038871295,0.2504192286193404,1.1222183373781418,448,448,3473

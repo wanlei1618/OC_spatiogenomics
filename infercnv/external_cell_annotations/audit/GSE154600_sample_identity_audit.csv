@@ -1,0 +1,6 @@
+author_sample_id,source_file,n_cells_coldata,identity_resolution,primary_analysis_eligible
+T59,D:\OC_spatiogenomics\infercnv\external_cell_annotations\raw\GSE154600\sample59_sce.rds,13040,author_code_sample,yes
+T76,D:\OC_spatiogenomics\infercnv\external_cell_annotations\raw\GSE154600\sample76_sce.rds,13747,author_code_sample,yes
+T77,D:\OC_spatiogenomics\infercnv\external_cell_annotations\raw\GSE154600\sample77_sce.rds,6903,author_code_sample; T61_vs_T77 unresolved by GEO raw matrix unless optional RAW is downloaded,no
+T89,D:\OC_spatiogenomics\infercnv\external_cell_annotations\raw\GSE154600\sample89_sce.rds,4933,author_code_sample,yes
+T90,D:\OC_spatiogenomics\infercnv\external_cell_annotations\raw\GSE154600\sample90_sce.rds,3630,author_code_sample,yes

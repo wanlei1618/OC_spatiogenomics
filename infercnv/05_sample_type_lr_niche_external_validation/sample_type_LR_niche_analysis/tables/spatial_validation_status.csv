@@ -1,0 +1,2 @@
+dataset,status,note
+GSE203612_OVCA;GSE189843_HGSC,completed,"Computed spot-level scores; GSE203612 OVCA used for coordinate-based neighborhood enrichment. COMMOT outputs are simplified expression-product LR maps, not full COMMOT transport modeling."

@@ -1,0 +1,6 @@
+section,analysis,status
+5.1,malignant identity and receptor stability,"completed from integrated_oc plus prior CNV clone metadata; CopyKAT sampled validation completed, CaSpER package load confirmed but full run blocked by local biomaRt SSL"
+5.2,pseudo-bulk DEG/GSEA,completed and copied from prior focused validation
+5.3,LR reproduction with CellChat/Connectome plus LIANA/NicheNet focused checks,completed for Connectome-like and CellChat; LIANA consensus and NicheNet local gene-universe checks added
+5.4,five-cohort Cox interaction model,"completed in this run for TCGA_OV, GSE102094, GSE32062, GSE140082, GSE49997"
+5.5,spatial validation marker/scoring plan,completed and copied from prior focused validation

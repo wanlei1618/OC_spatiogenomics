@@ -1,0 +1,11 @@
+package,load_status,version,message
+scanpy,OK,1.11.5,
+squidpy,OK,1.6.5,
+pandas,OK,2.3.3,
+numpy,OK,1.26.4,
+scipy,OK,1.15.3,
+matplotlib,OK,3.10.9,
+seaborn,OK,0.13.2,
+anndata,OK,0.11.4,
+decoupler,OK,2.1.4,
+commot,OK,,

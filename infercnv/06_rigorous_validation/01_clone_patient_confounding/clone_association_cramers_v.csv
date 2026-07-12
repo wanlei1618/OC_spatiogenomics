@@ -1,0 +1,5 @@
+"grouping","cramers_v","p_value","status","p_adj_BH"
+"patient_id",NA,NA,"not_evaluable_missing_group",NA
+"sample_id",0.155957764740977,5.06608383394825e-94,"evaluated",5.06608383394825e-94
+"sample_type",0.155957764740977,5.06608383394825e-94,"evaluated",5.06608383394825e-94
+"batch",0.155957764740977,5.06608383394825e-94,"evaluated",5.06608383394825e-94

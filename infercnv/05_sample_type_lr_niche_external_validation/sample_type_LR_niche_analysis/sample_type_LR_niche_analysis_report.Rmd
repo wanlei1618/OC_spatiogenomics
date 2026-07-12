@@ -1,0 +1,211 @@
+---
+title: "sample_type LR niche analysis"
+output:
+  html_document: default
+  word_document: default
+---
+
+# sample_type-dependent SPP1-CD44/ITGB1 LR niche analysis
+
+Project root: `D:/OC_spatiogenomics/infercnv/sample_type_LR_niche_analysis`
+
+## Background and rationale
+
+This analysis tests whether SPP1+ myeloid cells show sample_type-dependent opportunity to communicate with CD44/ITGB1-expressing CNV-defined ovarian cancer subclones, especially CNV_Subclone_02 and CNV_Subclone_04. The analysis is exploratory inside integrated_oc because sample_type can be confounded with sample_id.
+
+## Sample type diagnostics
+
+                             diagnostic value
+1 sample_id_one_to_one_with_sample_type  TRUE
+2                          n_sample_ids     4
+3                        n_sample_types     4
+
+CNV clone composition and myeloid source-group composition tables are written to `tables/`.
+
+## Integrated_oc LR opportunity score
+
+         sample_type       axis    target_group   axis_score
+ 1:          ascites  SPP1-CD44 CNV_Subclone_02 1.676292e-05
+ 2:          ascites  SPP1-CD44 CNV_Subclone_04 1.004485e-04
+ 3:          ascites SPP1-ITGB1 CNV_Subclone_02 5.469255e-05
+ 4:          ascites SPP1-ITGB1 CNV_Subclone_04 4.246448e-04
+ 5:            blood  SPP1-CD44 CNV_Subclone_02 0.000000e+00
+ 6:            blood  SPP1-CD44 CNV_Subclone_04 0.000000e+00
+ 7:            blood SPP1-ITGB1 CNV_Subclone_02 0.000000e+00
+ 8:            blood SPP1-ITGB1 CNV_Subclone_04 0.000000e+00
+ 9: pleural_effusion  SPP1-CD44 CNV_Subclone_02 0.000000e+00
+10: pleural_effusion  SPP1-CD44 CNV_Subclone_04 0.000000e+00
+11: pleural_effusion SPP1-ITGB1 CNV_Subclone_02 2.970731e-05
+12: pleural_effusion SPP1-ITGB1 CNV_Subclone_04 0.000000e+00
+13:            tumor  SPP1-CD44 CNV_Subclone_02 8.804153e-04
+14:            tumor  SPP1-CD44 CNV_Subclone_04 4.119444e-03
+15:            tumor SPP1-ITGB1 CNV_Subclone_02 7.582130e-03
+16:            tumor SPP1-ITGB1 CNV_Subclone_04 6.395853e-03
+    abundance_weighted_score source_n_total target_n_total
+ 1:             7.519911e-05           4235             96
+ 2:             4.187791e-04           4235            684
+ 3:             1.472118e-04           4235             96
+ 4:             9.694954e-04           4235            684
+ 5:             0.000000e+00           1272              0
+ 6:             0.000000e+00           1272              0
+ 7:             0.000000e+00           1272              0
+ 8:             0.000000e+00           1272              0
+ 9:             0.000000e+00           4747             10
+10:             0.000000e+00           4747              0
+11:             5.217543e-05           4747             10
+12:             0.000000e+00           4747              0
+13:             6.022610e-03           5602          11682
+14:             1.312707e-02           5602          10384
+15:             1.918088e-02           5602          11682
+16:             1.561994e-02           5602          10384
+
+## Signature outputs
+
+- Subclone_02-like genes: 80
+- Subclone_04-like genes: 80
+- Subclone_02/04 common genes: 28
+- CD44/ITGB1 target genes: 21
+- KRAS/hypoxia target genes: 19
+
+## External scRNA validation
+
+  dataset                  status
+1    none no_external_scRNA_input
+                                                                      note
+1 No external scRNA files were found. Template tables were generated only.
+
+## Spatial validation
+
+  dataset           status
+1    none no_spatial_input
+                                                                               note
+1 No spatial transcriptomics files were found. Template tables were generated only.
+
+## Virtual KO
+
+         sample_type       axis             scenario control_axis_score
+ 1:          ascites  SPP1-CD44 CD44_ITGB1_double_KO       1.172114e-04
+ 2:          ascites  SPP1-CD44              CD44_KO       1.172114e-04
+ 3:          ascites  SPP1-CD44              Control       1.172114e-04
+ 4:          ascites  SPP1-CD44             ITGB1_KO       1.172114e-04
+ 5:          ascites  SPP1-CD44              SPP1_KO       1.172114e-04
+ 6:          ascites SPP1-ITGB1 CD44_ITGB1_double_KO       4.793373e-04
+ 7:          ascites SPP1-ITGB1              CD44_KO       4.793373e-04
+ 8:          ascites SPP1-ITGB1              Control       4.793373e-04
+ 9:          ascites SPP1-ITGB1             ITGB1_KO       4.793373e-04
+10:          ascites SPP1-ITGB1              SPP1_KO       4.793373e-04
+11:            blood  SPP1-CD44 CD44_ITGB1_double_KO       0.000000e+00
+12:            blood  SPP1-CD44              CD44_KO       0.000000e+00
+13:            blood  SPP1-CD44              Control       0.000000e+00
+14:            blood  SPP1-CD44             ITGB1_KO       0.000000e+00
+15:            blood  SPP1-CD44              SPP1_KO       0.000000e+00
+16:            blood SPP1-ITGB1 CD44_ITGB1_double_KO       0.000000e+00
+17:            blood SPP1-ITGB1              CD44_KO       0.000000e+00
+18:            blood SPP1-ITGB1              Control       0.000000e+00
+19:            blood SPP1-ITGB1             ITGB1_KO       0.000000e+00
+20:            blood SPP1-ITGB1              SPP1_KO       0.000000e+00
+21: pleural_effusion  SPP1-CD44 CD44_ITGB1_double_KO       0.000000e+00
+22: pleural_effusion  SPP1-CD44              CD44_KO       0.000000e+00
+23: pleural_effusion  SPP1-CD44              Control       0.000000e+00
+24: pleural_effusion  SPP1-CD44             ITGB1_KO       0.000000e+00
+25: pleural_effusion  SPP1-CD44              SPP1_KO       0.000000e+00
+26: pleural_effusion SPP1-ITGB1 CD44_ITGB1_double_KO       2.970731e-05
+27: pleural_effusion SPP1-ITGB1              CD44_KO       2.970731e-05
+28: pleural_effusion SPP1-ITGB1              Control       2.970731e-05
+29: pleural_effusion SPP1-ITGB1             ITGB1_KO       2.970731e-05
+30: pleural_effusion SPP1-ITGB1              SPP1_KO       2.970731e-05
+31:            tumor  SPP1-CD44 CD44_ITGB1_double_KO       4.999860e-03
+32:            tumor  SPP1-CD44              CD44_KO       4.999860e-03
+33:            tumor  SPP1-CD44              Control       4.999860e-03
+34:            tumor  SPP1-CD44             ITGB1_KO       4.999860e-03
+35:            tumor  SPP1-CD44              SPP1_KO       4.999860e-03
+36:            tumor SPP1-ITGB1 CD44_ITGB1_double_KO       1.397798e-02
+37:            tumor SPP1-ITGB1              CD44_KO       1.397798e-02
+38:            tumor SPP1-ITGB1              Control       1.397798e-02
+39:            tumor SPP1-ITGB1             ITGB1_KO       1.397798e-02
+40:            tumor SPP1-ITGB1              SPP1_KO       1.397798e-02
+         sample_type       axis             scenario control_axis_score
+    perturbed_axis_score absolute_reduction relative_reduction
+ 1:         0.000000e+00       1.172114e-04                  1
+ 2:         0.000000e+00       1.172114e-04                  1
+ 3:         1.172114e-04       0.000000e+00                  0
+ 4:         1.172114e-04       0.000000e+00                  0
+ 5:         0.000000e+00       1.172114e-04                  1
+ 6:         0.000000e+00       4.793373e-04                  1
+ 7:         4.793373e-04       0.000000e+00                  0
+ 8:         4.793373e-04       0.000000e+00                  0
+ 9:         0.000000e+00       4.793373e-04                  1
+10:         0.000000e+00       4.793373e-04                  1
+11:         0.000000e+00       0.000000e+00                 NA
+12:         0.000000e+00       0.000000e+00                 NA
+13:         0.000000e+00       0.000000e+00                 NA
+14:         0.000000e+00       0.000000e+00                 NA
+15:         0.000000e+00       0.000000e+00                 NA
+16:         0.000000e+00       0.000000e+00                 NA
+17:         0.000000e+00       0.000000e+00                 NA
+18:         0.000000e+00       0.000000e+00                 NA
+19:         0.000000e+00       0.000000e+00                 NA
+20:         0.000000e+00       0.000000e+00                 NA
+21:         0.000000e+00       0.000000e+00                 NA
+22:         0.000000e+00       0.000000e+00                 NA
+23:         0.000000e+00       0.000000e+00                 NA
+24:         0.000000e+00       0.000000e+00                 NA
+25:         0.000000e+00       0.000000e+00                 NA
+26:         0.000000e+00       2.970731e-05                  1
+27:         2.970731e-05       0.000000e+00                  0
+28:         2.970731e-05       0.000000e+00                  0
+29:         0.000000e+00       2.970731e-05                  1
+30:         0.000000e+00       2.970731e-05                  1
+31:         0.000000e+00       4.999860e-03                  1
+32:         0.000000e+00       4.999860e-03                  1
+33:         4.999860e-03       0.000000e+00                  0
+34:         4.999860e-03       0.000000e+00                  0
+35:         0.000000e+00       4.999860e-03                  1
+36:         0.000000e+00       1.397798e-02                  1
+37:         1.397798e-02       0.000000e+00                  0
+38:         1.397798e-02       0.000000e+00                  0
+39:         0.000000e+00       1.397798e-02                  1
+40:         0.000000e+00       1.397798e-02                  1
+    perturbed_axis_score absolute_reduction relative_reduction
+
+## Interpretation
+
+SPP1-CD44/ITGB1 should be interpreted as a sample_type- and niche-dependent candidate tumor-myeloid interaction program rather than a universal bulk OS predictor. In integrated_oc, LR opportunity scores combine source abundance, target abundance, ligand/receptor expression intensity, and expression fraction. Spatial and external scRNA validation remain required before claiming true physical proximity or broad cohort generalization.
+
+## Limitations
+
+                            limitation
+1    sample_type_sample_id_confounding
+2  expression_space_not_physical_space
+3 LR_scores_are_potential_interactions
+4           Subclone_05_low_cell_count
+5               external_scRNA_missing
+6                 spatial_data_missing
+7                  bulk_OS_not_primary
+                                                                                                                     interpretation
+1 In integrated_oc, sample_type may be partially or fully confounded with sample_id; sample_type-specific findings are exploratory.
+2                      PCA/UMAP/KNN proximity is expression-space proximity and should not be interpreted as true tissue adjacency.
+3                 Ligand-receptor opportunity scores are expression-derived potentials, not proof of physical binding or signaling.
+4                                      Subclone_05 has low cell number and is used as a reference rather than a primary conclusion.
+5                         No external scRNA input was provided in external_scRNA, so external validation tables are templates only.
+6                       No spatial input was provided in spatial, so spatial co-localization and COMMOT results are templates only.
+7                                        Bulk OS interaction instability does not reject local sample_type/niche-dependent biology.
+
+## Key deliverables
+
+- `tables/sample_type_LR_opportunity_scores_primary_axes.csv`
+- `tables/sample_type_LR_opportunity_scores_target_Subclone02_04.csv`
+- `figures/bubble_source_to_target_by_sample_type_SPP1_CD44_ITGB1.png`
+- `figures/heatmap_sample_type_by_axis_TargetSubclone02_04.png`
+- `tables/signature_Subclone02_like.csv`
+- `tables/signature_Subclone04_like.csv`
+- `tables/signature_Subclone02_04_common.csv`
+- `tables/external_scRNA_all_datasets_sampletype_axis_scores.csv`
+- `figures/external_boxplot_SPP1_CD44_by_sample_type.png`
+- `figures/external_boxplot_SPP1_ITGB1_by_sample_type.png`
+- `tables/spatial_correlation_SPP1_myeloid_Target_axis.csv`
+- `tables/spatial_neighborhood_enrichment.csv`
+- `figures/spatial_COMMOT_SPP1_CD44_map.png`
+- `figures/spatial_COMMOT_SPP1_ITGB1_map.png`
+- `tables/virtual_KO_LR_score_reduction_by_sample_type.csv`
+- `figures/virtual_KO_score_reduction_barplot_by_sample_type.png`

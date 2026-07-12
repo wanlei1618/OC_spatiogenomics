@@ -1,0 +1,7 @@
+limitation,interpretation
+sample_type_sample_id_confounding,"In integrated_oc, sample_type is one-to-one with sample_id; integrated sample_type findings are exploratory."
+external_site_treatment_confounding,"Zhang2022 external samples contain tumor and implant-like sites, but treatment phase and anatomical site are not fully balanced."
+spatial_coordinate_availability,GSE203612 OVCA Visium supports coordinate neighborhood analysis; local GSE189843 HGSC matrices lack spot coordinate files and were used only for spot-level score correlations.
+COMMOT_simplified,"Spatial COMMOT deliverables here are expression-product LR score maps/summaries, not full optimal-transport COMMOT inference."
+LR_scores_are_potential_interactions,LR opportunity scores are expression-derived potentials and do not prove ligand-receptor binding or signaling.
+bulk_OS_not_primary,Bulk OS instability does not reject a local sample_type/niche-dependent mechanism.

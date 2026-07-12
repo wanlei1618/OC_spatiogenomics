@@ -1,0 +1,147 @@
+R version: R version 4.0.3 (2020-10-10) 
+Library paths:
+[1] "D:/Documents/R/win-library/4.0" "D:/R/R-4.0.3/library"          
+Installing CRAN packages: parallelDist, dlm, mixtools, MCMCpack, transport, httr2, later, logger, fdrtool, ROCR, randomForest, DiagrammeR, mlrMBO, parallelMap, emoa, DiceKriging, ggnewscale 
+Warning: unable to access index for repository https://cloud.r-project.org/src/contrib:
+  cannot open URL 'https://cloud.r-project.org/src/contrib/PACKAGES'
+Warning: unable to access index for repository https://cloud.r-project.org/bin/windows/contrib/4.0:
+  cannot open URL 'https://cloud.r-project.org/bin/windows/contrib/4.0/PACKAGES'
+Warning message:
+packages 'parallelDist', 'dlm', 'mixtools', 'MCMCpack', 'transport', 'httr2', 'later', 'logger', 'fdrtool', 'ROCR', 'randomForest', 'DiagrammeR', 'mlrMBO', 'parallelMap', 'emoa', 'DiceKriging', 'ggnewscale' are not available for this version of R
+
+Versions of these packages for your version of R might be available elsewhere,
+see the ideas at
+https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages 
+
+==== Install compatible Seurat 4.0.6 ====
+Warning: unable to access index for repository https://cloud.r-project.org/src/contrib:
+  cannot open URL 'https://cloud.r-project.org/src/contrib/PACKAGES'
+Downloading package from url: https://cloud.r-project.org/src/contrib/Archive/SeuratObject/SeuratObject_4.0.4.tar.gz
+Warning: unable to access index for repository https://cloud.r-project.org/src/contrib:
+  cannot open URL 'https://cloud.r-project.org/src/contrib/PACKAGES'
+Downloading package from url: https://cloud.r-project.org/src/contrib/Archive/Seurat/Seurat_4.0.6.tar.gz
+Warning message:
+In i.p(...) :
+  installation of package 'D:/TEMP/RtmpohGRNs/remotes3b9870b766c2/Seurat' had non-zero exit status
+
+==== GitHub install: copykat navinlabcode/copykat ====
+Downloading GitHub repo navinlabcode/copykat@HEAD
+      v  checking for file 'D:\TEMP\RtmpohGRNs\remotes3b986fdc14a2\navinlabcode-copykat-01924c0/DESCRIPTION' (444ms)
+      -  preparing 'copykat': (723ms)
+   checking DESCRIPTION meta-information ...  v  checking DESCRIPTION meta-information
+      -  checking for LF line-endings in source and make files and shell scripts
+      -  checking for empty or unneeded directories
+     NB: this package now depends on R (>=        NB: this package now depends on R (>= 3.5.0)
+     WARNING: Added dependency on R >= 3.5.0 because serialized objects in       WARNING: Added dependency on R >= 3.5.0 because serialized objects in  serialize/load version 3 cannot be read in older versions of R.  File(s) containing such objects: 'copykat/data/sysdata.rda'  WARNING: Added dependency on R >= 3.5.0 because serialized objects in  serialize/load version 3 cannot be read in older versions of R.  File(s) containing such objects:  'copykat/vignettes/test_copykat_clustering_results.rds'
+-  building 'copykat_1.2.5.tar.gz'
+     
+copykat installed? FALSE 
+Warning message:
+In i.p(...) :
+  installation of package 'D:/TEMP/RtmpohGRNs/file3b984dd0113/copykat_1.2.5.tar.gz' had non-zero exit status
+
+==== GitHub install: nichenetr saeyslab/nichenetr ====
+Downloading GitHub repo saeyslab/nichenetr@HEAD
+         checking for file 'D:\TEMP\RtmpohGRNs\remotes3b983fcb2d1d\saeyslab-nichenetr-66f90d5/DESCRIPTION' ...  v  checking for file 'D:\TEMP\RtmpohGRNs\remotes3b983fcb2d1d\saeyslab-nichenetr-66f90d5/DESCRIPTION' (377ms)
+      -  preparing 'nichenetr': (640ms)
+   checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   v  checking DESCRIPTION meta-information
+      -  checking for LF line-endings in source and make files and shell scripts (697ms)
+      -  checking for empty or unneeded directories
+      -  building 'nichenetr_2.2.1.1.tar.gz'
+     
+nichenetr installed? FALSE 
+Warning message:
+In i.p(...) :
+  installation of package 'D:/TEMP/RtmpohGRNs/file3b98b8f221b/nichenetr_2.2.1.1.tar.gz' had non-zero exit status
+
+==== LIANA retry ====
+Downloading GitHub repo saezlab/OmnipathR@HEAD
+         checking for file 'D:\TEMP\RtmpohGRNs\remotes3b98ca9ec\saezlab-OmnipathR-3e11391/DESCRIPTION' ...     checking for file 'D:\TEMP\RtmpohGRNs\remotes3b98ca9ec\saezlab-OmnipathR-3e11391/DESCRIPTION' ...   v  checking for file 'D:\TEMP\RtmpohGRNs\remotes3b98ca9ec\saezlab-OmnipathR-3e11391/DESCRIPTION' (510ms)
+      -  preparing 'OmnipathR': (2s)
+     checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   v  checking DESCRIPTION meta-information
+      -  installing the package to process help pages (1s)
+           -----------------------------------
+     ERROR: dependencies 'httr2', 'later', 'logger' are not available for package 'OmnipathR'
+-  removing 'D:/TEMP/RtmpAborbE/Rinst235871e13b5d/OmnipathR'
+         -----------------------------------
+   ERROR: package installation failed
+OmnipathR failed: Failed to install 'OmnipathR' from GitHub:
+  System command 'Rcmd.exe' failed, exit status: 1, stdout + stderr:
+E> * checking for file 'D:\TEMP\RtmpohGRNs\remotes3b98ca9ec\saezlab-OmnipathR-3e11391/DESCRIPTION' ... OK
+E> * preparing 'OmnipathR':
+E> * checking DESCRIPTION meta-information ... OK
+E> * installing the package to process help pages
+E>       -----------------------------------
+E> ERROR: dependencies 'httr2', 'later', 'logger' are not available for package 'OmnipathR'
+E> * removing 'D:/TEMP/RtmpAborbE/Rinst235871e13b5d/OmnipathR'
+E>       -----------------------------------
+E> ERROR: package installation failed 
+
+==== GitHub install: liana saezlab/liana ====
+Downloading GitHub repo saezlab/liana@HEAD
+Downloading GitHub repo saezlab/OmnipathR@HEAD
+         checking for file 'D:\TEMP\RtmpohGRNs\remotes3b98b944440\saezlab-OmnipathR-3e11391/DESCRIPTION' ...  v  checking for file 'D:\TEMP\RtmpohGRNs\remotes3b98b944440\saezlab-OmnipathR-3e11391/DESCRIPTION' (405ms)
+      -  preparing 'OmnipathR': (1.4s)
+   checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   v  checking DESCRIPTION meta-information
+      -  installing the package to process help pages (849ms)
+           -----------------------------------
+     ERROR: dependencies 'httr2', 'later', 'logger' are not available for package 'OmnipathR'
+-  removing 'D:/TEMP/RtmpmAA9Zr/Rinst2aa85139569/OmnipathR'
+         -----------------------------------
+   ERROR: package installation failed
+FAILED: Failed to install 'liana' from GitHub:
+  Failed to install 'OmnipathR' from GitHub:
+  System command 'Rcmd.exe' failed, exit status: 1, stdout + stderr:
+E> * checking for file 'D:\TEMP\RtmpohGRNs\remotes3b98b944440\saezlab-OmnipathR-3e11391/DESCRIPTION' ... OK
+E> * preparing 'OmnipathR':
+E> * checking DESCRIPTION meta-information ... OK
+E> * installing the package to process help pages
+E>       -----------------------------------
+E> ERROR: dependencies 'httr2', 'later', 'logger' are not available for package 'OmnipathR'
+E> * removing 'D:/TEMP/RtmpmAA9Zr/Rinst2aa85139569/OmnipathR'
+E>       -----------------------------------
+E> ERROR: package installation failed 
+liana installed? FALSE 
+
+==== CaSpER retry ====
+BiocManager CaSpER failed: is.character(site_repository) is not TRUE 
+Downloading GitHub repo akdess/CaSpER@HEAD
+      v  checking for file 'D:\TEMP\RtmpohGRNs\remotes3b9816ff33bc\akdess-CaSpER-8aae116/DESCRIPTION' (609ms)
+      -  preparing 'CaSpER': (1.5s)
+   checking DESCRIPTION meta-information ...  v  checking DESCRIPTION meta-information
+-  cleaning src
+      -  checking for LF line-endings in source and make files and shell scripts (521ms)
+      -  checking for empty or unneeded directories
+     NB: this package now depends on R (>=        NB: this package now depends on R (>= 3.5.0)
+       WARNING: Added dependency on R >= 3.5.0 because serialized objects in  serialize/load version 3 cannot be read in older versions of R.  File(s) containing such objects: 'CaSpER/data/hg38_cytoband.rda'
+-  building 'CaSpER_0.2.0.tar.gz'
+     
+Warning message:
+In i.p(...) :
+  installation of package 'D:/TEMP/RtmpohGRNs/file3b98460b2a81/CaSpER_0.2.0.tar.gz' had non-zero exit status
+
+==== Final status ====
+        package installed version
+1       copykat     FALSE    <NA>
+2        CaSpER     FALSE    <NA>
+3         liana     FALSE    <NA>
+4     nichenetr     FALSE    <NA>
+5        Seurat     FALSE    <NA>
+6  SeuratObject      TRUE   4.0.4
+7  parallelDist     FALSE    <NA>
+8           dlm     FALSE    <NA>
+9      mixtools     FALSE    <NA>
+10     MCMCpack     FALSE    <NA>
+11    transport     FALSE    <NA>
+12        httr2     FALSE    <NA>
+13        later     FALSE    <NA>
+14       logger     FALSE    <NA>
+15      fdrtool     FALSE    <NA>
+16         ROCR     FALSE    <NA>
+17 randomForest     FALSE    <NA>
+18   DiagrammeR     FALSE    <NA>
+19       mlrMBO     FALSE    <NA>
+20  parallelMap     FALSE    <NA>
+21         emoa     FALSE    <NA>
+22  DiceKriging     FALSE    <NA>
+23   ggnewscale     FALSE    <NA>

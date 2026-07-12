@@ -1,0 +1,30 @@
+inferCNV subclone reclustering
+Method: HMM predicted CNV regions -> signed event matrix (-1 loss, 0 absent/neutral, +1 gain), PCA, k-means k=5.
+Observation subclusters: 52 
+Observation cells: 6507 
+
+Subclone cell counts:
+
+Subclone_01 Subclone_02 Subclone_03 Subclone_04 Subclone_05 
+       3318        1071        1021        1001          96 
+
+T cell object metadata rows: 15174 
+T cell_type counts:
+
+          CD4+ T naive        CD4+ T effector      T effector memory 
+                  1198                   2213                      0 
+     CD4+ T regulatory        CD8+ T effector          CD8+ T CXCL13 
+                   456                   1388                    215 
+      CD8+ T cytotoxic CD8+ T resident memory  CD56bright regulatory 
+                  2049                   1020                    602 
+  CD56dim cytotoxic NK                   Th17                    ¦Ã¦ÄT 
+                  1039                   1455                   2875 
+                  MAIT 
+                   664 
+
+T cells matched to inferCNV groups:
+
+reference 
+    15174 
+
+Note: integratedocTcells contains T/NK cells only. It has no tumor observation cells/expression, so a full CellChat run between tumor subclones and T cell_type requires the full OO/OC Seurat object containing malignant cells, or a separate tumor expression matrix with matching barcodes.

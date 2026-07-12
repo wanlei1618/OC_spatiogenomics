@@ -1,0 +1,728 @@
+R version: R version 4.0.3 (2020-10-10) 
+Library paths:
+[1] "D:/Documents/R/win-library/4.0" "D:/R/R-4.0.3/library"          
+Missing targeted deps: transport, httr2, randomForest, DiagrammeR, ggnewscale, ggridges, leiden, miniUI, plotly, shiny, spatstat.core, signal, mclust, bslib 
+
+  There are binary versions available (and will be installed) but the
+  source versions are later:
+            binary  source
+ggnewscale   0.4.7   0.5.2
+ggridges     0.5.3   0.5.7
+leiden       0.3.9 0.4.3.1
+miniUI     0.1.1.1   0.1.2
+plotly      4.10.0  4.12.0
+shiny        1.7.1  1.14.0
+signal       0.7-7   1.8-1
+mclust       5.4.9   6.1.3
+bslib        0.3.1  0.11.0
+
+also installing the dependencies 'misc3d', 'withr', 'showimage', 'wk', 'magick', 'multicool', 'plot3D', 'lifecycle', 'V8', 'testthat', 'vegan', 'permute', 'matrixcalc', 'hunspell', 'debugme', 'parsedate', 'pingr', 'webdriver', 'classInt', 's2', 'units', 'repr', 'xts', 'sysfonts', 'showtextdb', 'magic', 'lpSolve', 'linprog', 'animation', 'ks', 'docopt', 'jose', 'webfakes', 'dplyr', 'glue', 'igraph', 'influenceR', 'readr', 'viridis', 'visNetwork', 'DiagrammeRsvg', 'rsvg', 'vdiffr', 'ggplot2movies', 'bipartite', 'graphsim', 'multiplex', 'multinet', 'spelling', 'promises', 'hexbin', 'GGally', 'shinytest', 'webshot', 'listviewer', 'dendextend', 'rgeos', 'sf', 'IRdisplay', 'plotlyGeoAssets', 'palmerpenguins', 'reactlog', 'dygraphs', 'showtext', 'sm', 'gsl', 'locfit', 'RandomFields', 'RandomFieldsUtils', 'fftwtools', 'nleqslv', 'spatstat.linnet', 'spatstat', 'pracma', 'mix', 'geometry', 'thematic'
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/misc3d_0.9-1.zip'
+Content length 239929 bytes (234 KB)
+==================================================
+downloaded 234 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/withr_2.5.0.zip'
+Content length 232694 bytes (227 KB)
+==================================================
+downloaded 227 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/showimage_1.0.0.zip'
+Content length 14990 bytes (14 KB)
+==================================================
+downloaded 14 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/wk_0.6.0.zip'
+ length 1167519 bytes (1.1 MB)
+==================================================
+downloaded 1.1 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/magick_2.7.3.zip'
+ length 33808601 bytes (32.2 MB)
+==================================================
+downloaded 32.2 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/multicool_0.1-12.zip'
+Content length 829368 bytes (809 KB)
+==================================================
+downloaded 809 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/plot3D_1.4.zip'
+ length 2796715 bytes (2.7 MB)
+==================================================
+downloaded 2.7 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/lifecycle_1.0.1.zip'
+Content length 122980 bytes (120 KB)
+==================================================
+downloaded 120 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/V8_4.1.0.zip'
+ length 9204264 bytes (8.8 MB)
+==================================================
+downloaded 8.8 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/testthat_3.1.3.zip'
+ length 2559372 bytes (2.4 MB)
+==================================================
+downloaded 2.4 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/vegan_2.6-2.zip'
+ length 3891532 bytes (3.7 MB)
+==================================================
+downloaded 3.7 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/permute_0.9-7.zip'
+Content length 222447 bytes (217 KB)
+==================================================
+downloaded 217 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/matrixcalc_1.0-5.zip'
+Content length 202199 bytes (197 KB)
+==================================================
+downloaded 197 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/hunspell_3.0.1.zip'
+ length 2126462 bytes (2.0 MB)
+==================================================
+downloaded 2.0 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/debugme_1.1.0.zip'
+Content length 1019791 bytes (995 KB)
+==================================================
+downloaded 995 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/parsedate_1.3.0.zip'
+Content length 63210 bytes (61 KB)
+==================================================
+downloaded 61 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/pingr_2.0.1.zip'
+Content length 58961 bytes (57 KB)
+==================================================
+downloaded 57 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/webdriver_1.0.6.zip'
+Content length 196702 bytes (192 KB)
+==================================================
+downloaded 192 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/classInt_0.4-3.zip'
+Content length 466175 bytes (455 KB)
+==================================================
+downloaded 455 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/s2_1.0.7.zip'
+ length 5914423 bytes (5.6 MB)
+==================================================
+downloaded 5.6 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/units_0.8-0.zip'
+ length 1849479 bytes (1.8 MB)
+==================================================
+downloaded 1.8 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/repr_1.1.4.zip'
+Content length 121872 bytes (119 KB)
+==================================================
+downloaded 119 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/xts_0.12.1.zip'
+Content length 943619 bytes (921 KB)
+==================================================
+downloaded 921 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/sysfonts_0.8.8.zip'
+ length 1791384 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/showtextdb_3.0.zip'
+ length 2012273 bytes (1.9 MB)
+==================================================
+downloaded 1.9 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/magic_1.6-0.zip'
+Content length 401144 bytes (391 KB)
+==================================================
+downloaded 391 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/lpSolve_5.6.15.zip'
+Content length 698199 bytes (681 KB)
+==================================================
+downloaded 681 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/linprog_0.9-4.zip'
+Content length 65281 bytes (63 KB)
+==================================================
+downloaded 63 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/animation_2.7.zip'
+Content length 551189 bytes (538 KB)
+==================================================
+downloaded 538 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/ks_1.13.5.zip'
+ length 1833389 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/docopt_0.7.1.zip'
+Content length 245717 bytes (239 KB)
+==================================================
+downloaded 239 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/jose_1.2.0.zip'
+Content length 525179 bytes (512 KB)
+==================================================
+downloaded 512 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/webfakes_1.1.3.zip'
+Content length 753531 bytes (735 KB)
+==================================================
+downloaded 735 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/dplyr_1.0.8.zip'
+ length 1382058 bytes (1.3 MB)
+==================================================
+downloaded 1.3 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/glue_1.6.2.zip'
+Content length 171950 bytes (167 KB)
+==================================================
+downloaded 167 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/igraph_1.3.0.zip'
+ length 9092295 bytes (8.7 MB)
+==================================================
+downloaded 8.7 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/influenceR_0.1.0.1.zip'
+Content length 63233 bytes (61 KB)
+==================================================
+downloaded 61 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/readr_2.1.2.zip'
+ length 1816633 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/viridis_0.6.2.zip'
+ length 2999863 bytes (2.9 MB)
+==================================================
+downloaded 2.9 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/visNetwork_2.1.0.zip'
+ length 4923014 bytes (4.7 MB)
+==================================================
+downloaded 4.7 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/DiagrammeRsvg_0.1.zip'
+Content length 819296 bytes (800 KB)
+==================================================
+downloaded 800 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/rsvg_2.3.0.zip'
+ length 13437087 bytes (12.8 MB)
+==================================================
+downloaded 12.8 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/vdiffr_1.0.4.zip'
+ length 1158730 bytes (1.1 MB)
+==================================================
+downloaded 1.1 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/ggplot2movies_0.0.1.zip'
+ length 1250657 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/bipartite_2.17.zip'
+ length 2398338 bytes (2.3 MB)
+==================================================
+downloaded 2.3 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/graphsim_1.0.2.zip'
+ length 1807709 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/multiplex_2.9.8.zip'
+Content length 956156 bytes (933 KB)
+==================================================
+downloaded 933 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/multinet_4.0.1.zip'
+ length 2965293 bytes (2.8 MB)
+==================================================
+downloaded 2.8 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/spelling_2.2.zip'
+Content length 55089 bytes (53 KB)
+==================================================
+downloaded 53 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/promises_1.2.0.1.zip'
+ length 2320074 bytes (2.2 MB)
+==================================================
+downloaded 2.2 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/hexbin_1.28.2.zip'
+ length 1475185 bytes (1.4 MB)
+==================================================
+downloaded 1.4 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/GGally_2.1.2.zip'
+ length 1636690 bytes (1.6 MB)
+==================================================
+downloaded 1.6 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/shinytest_1.5.1.zip'
+Content length 413601 bytes (403 KB)
+==================================================
+downloaded 403 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/webshot_0.5.3.zip'
+Content length 215853 bytes (210 KB)
+==================================================
+downloaded 210 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/listviewer_3.0.0.zip'
+Content length 356587 bytes (348 KB)
+==================================================
+downloaded 348 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/dendextend_1.15.2.zip'
+ length 3890910 bytes (3.7 MB)
+==================================================
+downloaded 3.7 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/rgeos_0.5-9.zip'
+ length 2446728 bytes (2.3 MB)
+==================================================
+downloaded 2.3 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/sf_1.0-7.zip'
+ length 42018649 bytes (40.1 MB)
+==================================================
+downloaded 40.1 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/IRdisplay_1.1.zip'
+Content length 34010 bytes (33 KB)
+==================================================
+downloaded 33 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/plotlyGeoAssets_0.0.2.zip'
+ length 1155443 bytes (1.1 MB)
+==================================================
+downloaded 1.1 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/palmerpenguins_0.1.0.zip'
+ length 3002955 bytes (2.9 MB)
+==================================================
+downloaded 2.9 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/reactlog_1.1.0.zip'
+ length 2046588 bytes (2.0 MB)
+==================================================
+downloaded 2.0 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/dygraphs_1.1.1.6.zip'
+Content length 442957 bytes (432 KB)
+==================================================
+downloaded 432 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/showtext_0.9-5.zip'
+Content length 357927 bytes (349 KB)
+==================================================
+downloaded 349 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/sm_2.2-5.7.zip'
+ length 1174174 bytes (1.1 MB)
+==================================================
+downloaded 1.1 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/gsl_2.1-7.1.zip'
+Content length 1035504 bytes (1011 KB)
+==================================================
+downloaded 1011 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/locfit_1.5-9.4.zip'
+Content length 671342 bytes (655 KB)
+==================================================
+downloaded 655 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/RandomFields_3.3.14.zip'
+ length 4250546 bytes (4.1 MB)
+==================================================
+downloaded 4.1 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/RandomFieldsUtils_1.2.5.zip'
+Content length 703759 bytes (687 KB)
+==================================================
+downloaded 687 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/fftwtools_0.9-11.zip'
+Content length 884573 bytes (863 KB)
+==================================================
+downloaded 863 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/nleqslv_3.3.2.zip'
+Content length 156883 bytes (153 KB)
+==================================================
+downloaded 153 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/spatstat.linnet_2.3-2.zip'
+ length 1309646 bytes (1.2 MB)
+==================================================
+downloaded 1.2 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/spatstat_2.3-4.zip'
+ length 3592241 bytes (3.4 MB)
+==================================================
+downloaded 3.4 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/pracma_2.3.8.zip'
+ length 1724029 bytes (1.6 MB)
+==================================================
+downloaded 1.6 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/mix_1.0-10.zip'
+Content length 138109 bytes (134 KB)
+==================================================
+downloaded 134 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/geometry_0.4.6.zip'
+ length 1704255 bytes (1.6 MB)
+==================================================
+downloaded 1.6 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/thematic_0.1.2.1.zip'
+ length 1783072 bytes (1.7 MB)
+==================================================
+downloaded 1.7 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/transport_0.12-2.zip'
+ length 1546159 bytes (1.5 MB)
+==================================================
+downloaded 1.5 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/httr2_0.1.1.zip'
+Content length 417197 bytes (407 KB)
+==================================================
+downloaded 407 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/randomForest_4.6-14.zip'
+Content length 249887 bytes (244 KB)
+==================================================
+downloaded 244 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/DiagrammeR_1.0.9.zip'
+ length 2260809 bytes (2.2 MB)
+==================================================
+downloaded 2.2 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/ggnewscale_0.4.7.zip'
+Content length 350985 bytes (342 KB)
+==================================================
+downloaded 342 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/ggridges_0.5.3.zip'
+ length 2259092 bytes (2.2 MB)
+==================================================
+downloaded 2.2 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/leiden_0.3.9.zip'
+ length 3113037 bytes (3.0 MB)
+==================================================
+downloaded 3.0 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/miniUI_0.1.1.1.zip'
+Content length 36624 bytes (35 KB)
+==================================================
+downloaded 35 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/plotly_4.10.0.zip'
+ length 3176548 bytes (3.0 MB)
+==================================================
+downloaded 3.0 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/shiny_1.7.1.zip'
+ length 4230319 bytes (4.0 MB)
+==================================================
+downloaded 4.0 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/spatstat.core_2.4-2.zip'
+ length 6106413 bytes (5.8 MB)
+==================================================
+downloaded 5.8 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/signal_0.7-7.zip'
+Content length 348117 bytes (339 KB)
+==================================================
+downloaded 339 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/mclust_5.4.9.zip'
+ length 4564129 bytes (4.4 MB)
+==================================================
+downloaded 4.4 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/bslib_0.3.1.zip'
+ length 5038041 bytes (4.8 MB)
+==================================================
+downloaded 4.8 MB
+
+package 'misc3d' successfully unpacked and MD5 sums checked
+package 'withr' successfully unpacked and MD5 sums checked
+package 'showimage' successfully unpacked and MD5 sums checked
+package 'wk' successfully unpacked and MD5 sums checked
+package 'magick' successfully unpacked and MD5 sums checked
+package 'multicool' successfully unpacked and MD5 sums checked
+package 'plot3D' successfully unpacked and MD5 sums checked
+package 'lifecycle' successfully unpacked and MD5 sums checked
+package 'V8' successfully unpacked and MD5 sums checked
+package 'testthat' successfully unpacked and MD5 sums checked
+package 'vegan' successfully unpacked and MD5 sums checked
+package 'permute' successfully unpacked and MD5 sums checked
+package 'matrixcalc' successfully unpacked and MD5 sums checked
+package 'hunspell' successfully unpacked and MD5 sums checked
+package 'debugme' successfully unpacked and MD5 sums checked
+package 'parsedate' successfully unpacked and MD5 sums checked
+package 'pingr' successfully unpacked and MD5 sums checked
+package 'webdriver' successfully unpacked and MD5 sums checked
+package 'classInt' successfully unpacked and MD5 sums checked
+package 's2' successfully unpacked and MD5 sums checked
+package 'units' successfully unpacked and MD5 sums checked
+package 'repr' successfully unpacked and MD5 sums checked
+package 'xts' successfully unpacked and MD5 sums checked
+package 'sysfonts' successfully unpacked and MD5 sums checked
+package 'showtextdb' successfully unpacked and MD5 sums checked
+package 'magic' successfully unpacked and MD5 sums checked
+package 'lpSolve' successfully unpacked and MD5 sums checked
+package 'linprog' successfully unpacked and MD5 sums checked
+package 'animation' successfully unpacked and MD5 sums checked
+package 'ks' successfully unpacked and MD5 sums checked
+package 'docopt' successfully unpacked and MD5 sums checked
+package 'jose' successfully unpacked and MD5 sums checked
+package 'webfakes' successfully unpacked and MD5 sums checked
+package 'dplyr' successfully unpacked and MD5 sums checked
+package 'glue' successfully unpacked and MD5 sums checked
+package 'igraph' successfully unpacked and MD5 sums checked
+package 'influenceR' successfully unpacked and MD5 sums checked
+package 'readr' successfully unpacked and MD5 sums checked
+package 'viridis' successfully unpacked and MD5 sums checked
+package 'visNetwork' successfully unpacked and MD5 sums checked
+package 'DiagrammeRsvg' successfully unpacked and MD5 sums checked
+package 'rsvg' successfully unpacked and MD5 sums checked
+package 'vdiffr' successfully unpacked and MD5 sums checked
+package 'ggplot2movies' successfully unpacked and MD5 sums checked
+package 'bipartite' successfully unpacked and MD5 sums checked
+package 'graphsim' successfully unpacked and MD5 sums checked
+package 'multiplex' successfully unpacked and MD5 sums checked
+package 'multinet' successfully unpacked and MD5 sums checked
+package 'spelling' successfully unpacked and MD5 sums checked
+package 'promises' successfully unpacked and MD5 sums checked
+package 'hexbin' successfully unpacked and MD5 sums checked
+package 'GGally' successfully unpacked and MD5 sums checked
+package 'shinytest' successfully unpacked and MD5 sums checked
+package 'webshot' successfully unpacked and MD5 sums checked
+package 'listviewer' successfully unpacked and MD5 sums checked
+package 'dendextend' successfully unpacked and MD5 sums checked
+package 'rgeos' successfully unpacked and MD5 sums checked
+package 'sf' successfully unpacked and MD5 sums checked
+package 'IRdisplay' successfully unpacked and MD5 sums checked
+package 'plotlyGeoAssets' successfully unpacked and MD5 sums checked
+package 'palmerpenguins' successfully unpacked and MD5 sums checked
+package 'reactlog' successfully unpacked and MD5 sums checked
+package 'dygraphs' successfully unpacked and MD5 sums checked
+package 'showtext' successfully unpacked and MD5 sums checked
+package 'sm' successfully unpacked and MD5 sums checked
+package 'gsl' successfully unpacked and MD5 sums checked
+package 'locfit' successfully unpacked and MD5 sums checked
+package 'RandomFields' successfully unpacked and MD5 sums checked
+package 'RandomFieldsUtils' successfully unpacked and MD5 sums checked
+package 'fftwtools' successfully unpacked and MD5 sums checked
+package 'nleqslv' successfully unpacked and MD5 sums checked
+package 'spatstat.linnet' successfully unpacked and MD5 sums checked
+package 'spatstat' successfully unpacked and MD5 sums checked
+package 'pracma' successfully unpacked and MD5 sums checked
+package 'mix' successfully unpacked and MD5 sums checked
+package 'geometry' successfully unpacked and MD5 sums checked
+package 'thematic' successfully unpacked and MD5 sums checked
+package 'transport' successfully unpacked and MD5 sums checked
+package 'httr2' successfully unpacked and MD5 sums checked
+package 'randomForest' successfully unpacked and MD5 sums checked
+package 'DiagrammeR' successfully unpacked and MD5 sums checked
+package 'ggnewscale' successfully unpacked and MD5 sums checked
+package 'ggridges' successfully unpacked and MD5 sums checked
+package 'leiden' successfully unpacked and MD5 sums checked
+package 'miniUI' successfully unpacked and MD5 sums checked
+package 'plotly' successfully unpacked and MD5 sums checked
+package 'shiny' successfully unpacked and MD5 sums checked
+package 'spatstat.core' successfully unpacked and MD5 sums checked
+package 'signal' successfully unpacked and MD5 sums checked
+package 'mclust' successfully unpacked and MD5 sums checked
+package 'bslib' successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	D:\TEMP\Rtmp6BnOLz\downloaded_packages
+
+==== GitHub install: copykat navinlabcode/copykat ====
+Downloading GitHub repo navinlabcode/copykat@HEAD
+      v  checking for file 'D:\TEMP\Rtmp6BnOLz\remotes4e2831652c6d\navinlabcode-copykat-01924c0/DESCRIPTION' (851ms)
+      -  preparing 'copykat': (1.6s)
+   checking DESCRIPTION meta-information ...  v  checking DESCRIPTION meta-information
+      -  checking for LF line-endings in source and make files and shell scripts
+      -  checking for empty or unneeded directories
+     NB: this package now depends on R (>=        NB: this package now depends on R (>= 3.5.0)
+     WARNING: Added dependency on R >= 3.5.0 because serialized objects in       WARNING: Added dependency on R >= 3.5.0 because serialized objects in  serialize/load version 3 cannot be read in older versions of R.  File(s) containing such objects: 'copykat/data/sysdata.rda'  WARNING: Added dependency on R >= 3.5.0 because serialized objects in  serialize/load version 3 cannot be read in older versions of R.  File(s) containing such objects:  'copykat/vignettes/test_copykat_clustering_results.rds'
+-  building 'copykat_1.2.5.tar.gz'
+     
+copykat installed? TRUE 
+copykat version: 1.2.5 
+
+==== GitHub install: nichenetr saeyslab/nichenetr ====
+Downloading GitHub repo saeyslab/nichenetr@HEAD
+Installing 2 packages: S7, spatstat.explore
+also installing the dependencies 'spatstat.geom', 'spatstat.random', 'spatstat.sparse'
+
+
+  There are binary versions available but the source versions are later:
+                binary source needs_compilation
+spatstat.geom    2.4-0  3.8-1              TRUE
+spatstat.random  2.2-0  3.5-0              TRUE
+spatstat.sparse  2.1-1  3.2-0              TRUE
+
+  Binaries will be installed
+Packages which are only available in source form, and may need
+  compilation of C/C++/Fortran: 'S7' 'spatstat.explore'
+  These will not be installed
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/spatstat.geom_2.4-0.zip'
+ length 3926347 bytes (3.7 MB)
+==================================================
+downloaded 3.7 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/spatstat.random_2.2-0.zip'
+Content length 1029792 bytes (1005 KB)
+==================================================
+downloaded 1005 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/spatstat.sparse_2.1-1.zip'
+Content length 227042 bytes (221 KB)
+==================================================
+downloaded 221 KB
+
+package 'spatstat.geom' successfully unpacked and MD5 sums checked
+package 'spatstat.random' successfully unpacked and MD5 sums checked
+package 'spatstat.sparse' successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	D:\TEMP\Rtmp6BnOLz\downloaded_packages
+         checking for file 'D:\TEMP\Rtmp6BnOLz\remotes4e287dfa1853\saeyslab-nichenetr-66f90d5/DESCRIPTION' ...     checking for file 'D:\TEMP\Rtmp6BnOLz\remotes4e287dfa1853\saeyslab-nichenetr-66f90d5/DESCRIPTION' ...   v  checking for file 'D:\TEMP\Rtmp6BnOLz\remotes4e287dfa1853\saeyslab-nichenetr-66f90d5/DESCRIPTION' (721ms)
+      -  preparing 'nichenetr': (1.1s)
+   checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   v  checking DESCRIPTION meta-information
+      -  checking for LF line-endings in source and make files and shell scripts (1s)
+      -  checking for empty or unneeded directories
+      -  building 'nichenetr_2.2.1.1.tar.gz' (380ms)
+     
+nichenetr installed? TRUE 
+nichenetr version: 2.2.1.1 
+
+==== GitHub install: liana saezlab/liana ====
+Downloading GitHub repo saezlab/liana@HEAD
+Downloading GitHub repo saezlab/OmnipathR@HEAD
+         checking for file 'D:\TEMP\Rtmp6BnOLz\remotes4e286b1e266f\saezlab-OmnipathR-3e11391/DESCRIPTION' ...  v  checking for file 'D:\TEMP\Rtmp6BnOLz\remotes4e286b1e266f\saezlab-OmnipathR-3e11391/DESCRIPTION' (568ms)
+      -  preparing 'OmnipathR': (1.4s)
+   checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   v  checking DESCRIPTION meta-information
+      -  installing the package to process help pages (855ms)
+           -----------------------------------
+  -  installing *source* package 'OmnipathR' ...
+   ** using staged installation
+   ** R
+   ** inst
+   ** byte-compile and prepare package for lazy loading
+   Error in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]) : 
+     namespace 'dplyr' 1.0.8 is being loaded, but >= 1.1.0 is required
+   Calls: <Anonymous> ... namespaceImportFrom -> asNamespace -> loadNamespace
+   停止执行
+   ERROR: lazy loading failed for package 'OmnipathR'
+-  removing 'D:/TEMP/Rtmp6vPfg9/Rinst31cc6b203c8c/OmnipathR'
+         -----------------------------------
+   ERROR: package installation failed
+FAILED: Failed to install 'liana' from GitHub:
+  Failed to install 'OmnipathR' from GitHub:
+  System command 'Rcmd.exe' failed, exit status: 1, stdout + stderr:
+E> * checking for file 'D:\TEMP\Rtmp6BnOLz\remotes4e286b1e266f\saezlab-OmnipathR-3e11391/DESCRIPTION' ... OK
+E> * preparing 'OmnipathR':
+E> * checking DESCRIPTION meta-information ... OK
+E> * installing the package to process help pages
+E>       -----------------------------------
+E> * installing *source* package 'OmnipathR' ...
+E> ** using staged installation
+E> ** R
+E> ** inst
+E> ** byte-compile and prepare package for lazy loading
+E> Error in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]) : 
+E>   namespace 'dplyr' 1.0.8 is being loaded, but >= 1.1.0 is required
+E> Calls: <Anonymous> ... namespaceImportFrom -> asNamespace -> loadNamespace
+E> 停止执行
+E> ERROR: lazy loading failed for package 'OmnipathR'
+E> * removing 'D:/TEMP/Rtmp6vPfg9/Rinst31cc6b203c8c/OmnipathR'
+E>       -----------------------------------
+E> ERROR: package installation failed 
+liana installed? FALSE 
+
+==== GitHub install: CaSpER akdess/CaSpER ====
+Downloading GitHub repo akdess/CaSpER@HEAD
+         checking for file 'D:\TEMP\Rtmp6BnOLz\remotes4e28302a3703\akdess-CaSpER-8aae116/DESCRIPTION' ...  v  checking for file 'D:\TEMP\Rtmp6BnOLz\remotes4e28302a3703\akdess-CaSpER-8aae116/DESCRIPTION' (526ms)
+         preparing   -  preparing 'CaSpER': (1.4s)
+     checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   v  checking DESCRIPTION meta-information
+-  cleaning src
+      -  checking for LF line-endings in source and make files and shell scripts (380ms)
+      -  checking for empty or unneeded directories
+     NB: this package now depends on R (>=        NB: this package now depends on R (>= 3.5.0)
+       WARNING: Added dependency on R >= 3.5.0 because serialized objects in  serialize/load version 3 cannot be read in older versions of R.  File(s) containing such objects: 'CaSpER/data/hg38_cytoband.rda'
+-  building 'CaSpER_0.2.0.tar.gz'
+     
+CaSpER installed? TRUE 
+CaSpER version: 0.2.0 
+
+==== Load tests ====
+copykat load failed: there is no package called 'copykat' 
+Possible Ensembl SSL connectivity problems detected.
+Please see the 'Connection Troubleshooting' section of the biomaRt vignette
+vignette('accessing_ensembl', package = 'biomaRt')Error in curl::curl_fetch_memory(url, handle = handle) : 
+  schannel: next InitializeSecurityContext failed: SEC_E_CERT_EXPIRED (0x80090328) - 收到的证书已过期。
+
+liana load failed: there is no package called 'liana' 
+There were 16 warnings (use warnings() to see them)
+    package load_ok
+1   copykat   FALSE
+2    CaSpER    TRUE
+3     liana   FALSE
+4 nichenetr    TRUE
+
+==== Final status ====
+         package installed version
+1        copykat     FALSE    <NA>
+2         CaSpER      TRUE   0.2.0
+3          liana     FALSE    <NA>
+4      nichenetr      TRUE 2.2.1.1
+5         Seurat      TRUE   4.0.2
+6   SeuratObject      TRUE   4.0.4
+7      transport      TRUE  0.14-7
+8          httr2      TRUE   0.1.1
+9   randomForest      TRUE  4.6-14
+10    DiagrammeR      TRUE   1.0.9
+11    ggnewscale      TRUE   0.4.7
+12      ggridges      TRUE   0.5.3
+13        leiden      TRUE   0.3.9
+14        miniUI      TRUE 0.1.1.1
+15        plotly      TRUE  4.10.0
+16         shiny      TRUE   1.7.1
+17 spatstat.core      TRUE   2.4-2
+18        signal      TRUE   0.7-7
+19        mclust      TRUE   6.1.3
+20         bslib      TRUE   0.3.1
+21          sass      TRUE   0.4.1

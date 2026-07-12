@@ -1,0 +1,35 @@
+<!doctype html><meta charset='utf-8'><title>Taskbook completion audit</title><body style='font-family:Arial,Microsoft YaHei,sans-serif;line-height:1.55;margin:32px'># Taskbook completion audit<br>
+<br>
+Generated: 2026-07-11T20:38:38<br>
+<br>
+## Executive status<br>
+<br>
+All taskbook parts have now been either executed where possible or explicitly accounted for with a blocker/limitation. The full taskbook is not scientifically complete because key prerequisites are missing, most importantly `patient_id` for integrated_oc and patient-wise CNV reconstruction.<br>
+<br>
+## Audit table<br>
+<br>
+| Section | Item | Status | Evidence | Limitation |<br>
+|---|---|---|---|---|<br>
+| Directory/config | Create 06_rigorous_validation directory structure and project_config.yaml | completed | `00_config/project_config.yaml; required directories created` |  |<br>
+| P0-1 | Clone x patient/sample confounding diagnosis | completed_with_patient_blocker | `01_clone_patient_confounding/*.csv; reports/01_clone_validity_report.html` | patient_id missing; patient-level diagnosis not evaluable |<br>
+| P0-2 | Patient-wise CNV reconstruction | blocked_not_completed | `reports/01_clone_validity_report.html` | requires explicit patient_id and patient-wise malignant/reference cell grouping |<br>
+| P0-3 | Clone stability and multi-algorithm consistency | blocked_not_completed | `No stability/ARI/bootstrap outputs in 03_clone_stability_consensus` | should follow patient-wise CNV reconstruction; current clone labels sample-confounded |<br>
+| P0-4 | QC, contamination and transcription-state deconfounding | partial_field_check_only | `00_config/metadata_field_mapping_report.csv` | doublet_score, S.Score, G2M.Score and patient_id missing; no mixed model deconfounding completed |<br>
+| P0-5 | Patient/sample-level functional validation | blocked_exploratory_only | `reports/02_patient_level_functional_report.html` | patient-level pseudobulk and leave-one-patient-out cannot be validated without patient_id |<br>
+| P1-1 | External scRNA projection of 02/04-like state | partial_completed_from_existing_tables | `06_external_scrna_projection/external_scrna_patient_level_associations.csv` | expression/signature projection; not validated CNV program transfer |<br>
+| P1-2 | LR competition axis analysis | partial_completed_from_existing_tables | `07_ligand_receptor_competition/external_lr_competition_axis_ranking.csv` | SPP1 axis is candidate only; integrated clone specificity sample-confounded |<br>
+| P1-3 | Full NicheNet ligand-target analysis | blocked_not_completed | `08_nichenet_ligand_target/nichenet_execution_blocker.csv` | requires patient-level stable 02/04 meta-DEG target set |<br>
+| P1-4 | Spatial deconvolution and neighborhood analysis | partial_completed | `09_spatial_deconvolution_neighborhood/spatial_random_effects_meta_analysis.csv` | sample-level meta and existing neighborhood only; no full deconvolution method completed |<br>
+| P1-5 | Virtual perturbation and directionality | partial_score_dependency_only | `10_virtual_perturbation_causal/virtual_perturbation_score_dependency_summary.csv` | score arithmetic; not causal KO evidence |<br>
+| P2-1 | Bulk result repositioning | completed | `11_bulk_negative_validation/bulk_survival_interaction_negative_results_retained.csv` | OS/PFS retained as negative/not primary |<br>
+| P2-2 | CNV-expression dosage independent validation | partial_relabel_completed | `12_integrated_evidence_scoring/RNA_derived_CNV_expression_coupling_candidates.csv` | no independent DNA CNV + RNA validation found locally |<br>
+| P2-3 | Statistical mediation / SEM exploration | partial_bulk_exploratory_completed | `12_integrated_evidence_scoring/bulk_exploratory_mediation_bootstrap.csv` | bulk statistical mediation only; not causal proof |<br>
+| Final reports | Required final report file set | completed_as_reports_with_limitations | `reports/01..05 plus FINAL_CODEX_EXECUTION_SUMMARY.md` | reports include blocked/partial classifications where data requirements are unmet |<br>
+<br>
+## Final conclusion classes<br>
+<br>
+- Supported: directory/config setup, P0-1 sample-level confounding diagnosis, P2 bulk repositioning.<br>
+- Partially supported: P1 external/LR/spatial/virtual-perturbation evidence, P2 bulk covariation, P2 exploratory mediation, RNA-derived CNV-expression coupling candidates.<br>
+- Not supported: direct external SPP1-myeloid to 02/04-like association, OS/PFS interaction, complete NicheNet mechanism.<br>
+- Not judgeable from current data structure: cross-patient CNV clone validity and patient-level 02/04 functional state, due to missing patient_id.<br>
+</body>

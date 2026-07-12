@@ -1,0 +1,1396 @@
+CNV + 表达联合分析生信方案
+
+对象：integrated_oc；目标：inferCNV clone 与转录状态、EMT、Hypoxia、TF activity 的耦合分析
+
+本文档整理了可直接围绕 Seurat 对象 integrated_oc 实现的分析方案。整体思路参考上传文献中“inferCNV 识别 CNV clone，并联合差异表达、EMT/hypoxia score 与 TF activity 构建克隆演化模型”的分析逻辑。
+
+0. 总体分析框架
+
+目标是将 inferCNV 得到的肿瘤 CNV clone 与表达状态、功能 signature、转录因子活性结合，构建“基因组拷贝数改变 → 转录状态改变 → 功能克隆演化模型”。
+
+integrated_oc
+
+├── CNV_clone
+
+├── CNV_burden
+
+├── chromosome-level CNV score
+
+├── clone-specific DEG
+
+├── EMT_score
+
+├── Hypoxia_score
+
+├── KRAS_score / LAPTM5 expression
+
+├── TF activity
+
+└── CNV-transcriptome coupling model
+
+不同 CNV clone 是否对应不同表达程序？
+
+哪个 clone 更 EMT-high、hypoxia-high、KRAS-active、LAPTM5-high？
+
+哪些 TF 可能驱动这些 clone 的表型？
+
+CNV burden 是否与 EMT/Hypoxia/KRAS 等恶性程序耦合？
+
+1. 推荐使用的 R packages
+
+用途	推荐包
+单细胞基础分析	Seurat, dplyr, tidyr, Matrix, ggplot2, patchwork
+CNV 矩阵处理与热图	matrixStats, ComplexHeatmap, circlize, pheatmap
+Signature score	msigdbr, UCell
+DEG 与富集分析	clusterProfiler, org.Hs.eg.db, fgsea
+Pseudo-bulk 差异分析	edgeR, limma
+TF activity	dorothea, decoupleR
+统计与可视化	ggpubr, rstatix, corrplot, lme4
+
+# 单细胞基础分析
+
+library(Seurat)
+
+library(dplyr)
+
+library(tidyr)
+
+library(Matrix)
+
+library(ggplot2)
+
+library(patchwork)
+
+# CNV矩阵处理与热图
+
+library(matrixStats)
+
+library(ComplexHeatmap)
+
+library(circlize)
+
+library(pheatmap)
+
+# signature score
+
+library(msigdbr)
+
+library(UCell)
+
+# DEG与富集分析
+
+library(clusterProfiler)
+
+library(org.Hs.eg.db)
+
+library(fgsea)
+
+# pseudo-bulk差异分析
+
+library(edgeR)
+
+library(limma)
+
+# TF activity
+
+library(dorothea)
+
+library(decoupleR)
+
+# 统计与可视化
+
+library(ggpubr)
+
+library(rstatix)
+
+library(corrplot)
+
+library(lme4)
+
+# 如未安装，可运行：
+
+install.packages(c(
+
+"Seurat", "dplyr", "tidyr", "Matrix", "ggplot2", "patchwork",
+
+"pheatmap", "ggpubr", "rstatix", "corrplot", "lme4"
+
+))
+
+BiocManager::install(c(
+
+"ComplexHeatmap", "circlize", "msigdbr", "UCell",
+
+"clusterProfiler", "org.Hs.eg.db", "fgsea",
+
+"edgeR", "limma", "dorothea", "decoupleR"
+
+))
+
+2. 准备 integrated_oc 中的肿瘤细胞
+
+假设 integrated_oc@meta.data 中至少已经包含 cell_type、sample、CNV_clone。其中 CNV_clone 是前一步根据 inferCNV 得到的分组，如 CNV1、CNV2、CNV3、CNV4。
+
+table(integrated_oc$cell_type)
+
+table(integrated_oc$CNV_clone, useNA = "ifany")
+
+DefaultAssay(integrated_oc) <- "RNA"
+
+tumor_cells <- colnames(integrated_oc)[
+
+!is.na(integrated_oc$CNV_clone)
+
+]
+
+tumor_oc <- subset(integrated_oc, cells = tumor_cells)
+
+Idents(tumor_oc) <- "CNV_clone"
+
+table(tumor_oc$CNV_clone)
+
+如果 CNV_clone 只存在于肿瘤细胞、非肿瘤细胞为 NA，上述写法即可。如果你的 metadata 中使用的是 Malignant_clone 或 inferCNV_group，请对应替换列名。
+
+3. CNV clone ↔ gene expression 分析
+
+3.1 不同 CNV clone 的单细胞差异基因
+
+先做探索性单细胞 DEG。若数据来自多个样本，建议在模型中加入 sample 作为 latent.vars。
+
+Idents(tumor_oc) <- "CNV_clone"
+
+markers_cnv <- FindAllMarkers(
+
+tumor_oc,
+
+assay = "RNA",
+
+slot = "data",
+
+only.pos = TRUE,
+
+test.use = "MAST",
+
+latent.vars = "sample",
+
+logfc.threshold = 0.25,
+
+min.pct = 0.1
+
+)
+
+head(markers_cnv)
+
+write.csv(
+
+markers_cnv,
+
+"CNV_clone_DEG_single_cell_MAST.csv",
+
+row.names = FALSE
+
+)
+
+如果没有 sample 这一列，删去 latent.vars 参数：
+
+markers_cnv <- FindAllMarkers(
+
+tumor_oc,
+
+assay = "RNA",
+
+slot = "data",
+
+only.pos = TRUE,
+
+test.use = "MAST",
+
+logfc.threshold = 0.25,
+
+min.pct = 0.1
+
+)
+
+3.2 每个 CNV clone 的 top marker 热图
+
+top_markers <- markers_cnv %>%
+
+group_by(cluster) %>%
+
+slice_max(order_by = avg_log2FC, n = 20)
+
+tumor_oc <- ScaleData(
+
+tumor_oc,
+
+features = unique(top_markers$gene)
+
+)
+
+DoHeatmap(
+
+tumor_oc,
+
+features = unique(top_markers$gene),
+
+group.by = "CNV_clone",
+
+assay = "RNA",
+
+slot = "scale.data"
+
+) + NoLegend()
+
+3.3 更推荐：sample × CNV_clone 的 pseudo-bulk DEG
+
+单细胞直接 DEG 容易受到细胞数量影响。更稳妥的方式是按 sample × CNV_clone 聚合成 pseudo-bulk，再用 edgeR-limma 做差异分析。
+
+tumor_oc$pb_group <- paste(
+
+tumor_oc$sample,
+
+tumor_oc$CNV_clone,
+
+sep = "|"
+
+)
+
+pb_counts <- AggregateExpression(
+
+tumor_oc,
+
+group.by = "pb_group",
+
+assays = "RNA",
+
+slot = "counts",
+
+return.seurat = FALSE
+
+)$RNA
+
+pb_meta <- data.frame(
+
+pb_group = colnames(pb_counts)
+
+) %>%
+
+tidyr::separate(
+
+pb_group,
+
+into = c("sample", "CNV_clone"),
+
+sep = "\|",
+
+remove = FALSE
+
+)
+
+head(pb_meta)
+
+y <- DGEList(counts = pb_counts)
+
+keep <- filterByExpr(y, group = pb_meta$CNV_clone)
+
+y <- y[keep, , keep.lib.sizes = FALSE]
+
+y <- calcNormFactors(y)
+
+design <- model.matrix(
+
+~ 0 + CNV_clone + sample,
+
+data = pb_meta
+
+)
+
+colnames(design) <- make.names(colnames(design))
+
+v <- voom(y, design, plot = TRUE)
+
+fit <- lmFit(v, design)
+
+示例：比较 CNV3 vs CNV1。实际运行时请先用 unique(pb_meta$CNV_clone) 查看你的 clone 名称。
+
+unique(pb_meta$CNV_clone)
+
+contrast_mat <- makeContrasts(
+
+CNV3_vs_CNV1 = CNV_cloneCNV3 - CNV_cloneCNV1,
+
+levels = design
+
+)
+
+fit2 <- contrasts.fit(fit, contrast_mat)
+
+fit2 <- eBayes(fit2)
+
+deg_CNV3_vs_CNV1 <- topTable(
+
+fit2,
+
+coef = "CNV3_vs_CNV1",
+
+number = Inf,
+
+adjust.method = "BH"
+
+)
+
+write.csv(
+
+deg_CNV3_vs_CNV1,
+
+"pseudo_bulk_DEG_CNV3_vs_CNV1.csv"
+
+)
+
+4. CNV burden 与表达的耦合分析
+
+这一步将 inferCNV 输出的 CNV 矩阵转化为每个细胞的 CNV 强度，并分析 CNV 强度与表达程序的相关性。
+
+4.1 提取 inferCNV 矩阵并计算 CNV_burden
+
+# 如果之前保存过 inferCNV 对象：
+
+infercnv_obj <- readRDS("infercnv_integrated_oc/run.final.infercnv_obj")
+
+cnv_mat <- infercnv_obj@expr.data
+
+common_cells <- intersect(
+
+colnames(cnv_mat),
+
+colnames(tumor_oc)
+
+)
+
+cnv_mat <- cnv_mat[, common_cells]
+
+# 对每个基因的 CNV 信号做中心化
+
+cnv_centered <- cnv_mat - matrixStats::rowMedians(as.matrix(cnv_mat))
+
+# 每个细胞总体 CNV burden
+
+cnv_burden <- Matrix::colMeans(abs(cnv_centered))
+
+tumor_oc$CNV_burden <- NA
+
+tumor_oc$CNV_burden[names(cnv_burden)] <- cnv_burden
+
+VlnPlot(
+
+tumor_oc,
+
+features = "CNV_burden",
+
+group.by = "CNV_clone",
+
+pt.size = 0
+
+) +
+
+stat_compare_means(method = "kruskal.test")
+
+FeaturePlot(
+
+tumor_oc,
+
+features = "CNV_burden",
+
+reduction = "umap"
+
+)
+
+4.2 染色体水平 CNV score
+
+需要 gene order 文件，例如 gene_order_hg38.txt，格式通常为：gene、chr、start、end。
+
+gene_order <- read.table(
+
+"gene_order_hg38.txt",
+
+header = FALSE,
+
+sep = "	",
+
+stringsAsFactors = FALSE
+
+)
+
+colnames(gene_order) <- c("gene", "chr", "start", "end")
+
+common_genes <- intersect(
+
+rownames(cnv_centered),
+
+gene_order$gene
+
+)
+
+cnv_centered2 <- cnv_centered[common_genes, ]
+
+gene_order2 <- gene_order[
+
+match(common_genes, gene_order$gene),
+
+]
+
+chr_list <- split(
+
+gene_order2$gene,
+
+gene_order2$chr
+
+)
+
+chr_score <- sapply(chr_list, function(genes) {
+
+Matrix::colMeans(cnv_centered2[genes, , drop = FALSE])
+
+})
+
+chr_score <- t(chr_score)
+
+meta_tumor <- tumor_oc@meta.data[colnames(chr_score), ]
+
+chr_clone_score <- sapply(unique(meta_tumor$CNV_clone), function(cl) {
+
+cells <- rownames(meta_tumor)[meta_tumor$CNV_clone == cl]
+
+rowMeans(chr_score[, cells, drop = FALSE])
+
+})
+
+pheatmap(
+
+chr_clone_score,
+
+scale = "none",
+
+cluster_rows = FALSE,
+
+cluster_cols = TRUE,
+
+main = "Chromosome-level CNV score by CNV clone"
+
+)
+
+这个图用于描述不同 clone 的染色体层面事件，例如 chr8q gain、chr17p loss、chr3q gain 等。
+
+4.3 CNV dosage effect：CNV 与基因表达相关性
+
+分析每个基因的 CNV signal 是否与其表达量相关。拷贝数升高伴随表达升高的基因可作为候选 CNV-dosage genes。
+
+expr_mat <- GetAssayData(
+
+tumor_oc,
+
+assay = "RNA",
+
+slot = "data"
+
+)
+
+common_genes2 <- intersect(
+
+rownames(expr_mat),
+
+rownames(cnv_centered)
+
+)
+
+common_cells2 <- intersect(
+
+colnames(expr_mat),
+
+colnames(cnv_centered)
+
+)
+
+expr_mat2 <- expr_mat[common_genes2, common_cells2]
+
+cnv_mat2 <- cnv_centered[common_genes2, common_cells2]
+
+cor_res <- lapply(common_genes2, function(g) {
+
+x <- as.numeric(cnv_mat2[g, ])
+
+y <- as.numeric(expr_mat2[g, ])
+
+ct <- suppressWarnings(
+
+cor.test(x, y, method = "spearman")
+
+)
+
+data.frame(
+
+gene = g,
+
+rho = ct$estimate,
+
+p.value = ct$p.value
+
+)
+
+})
+
+cor_res <- bind_rows(cor_res)
+
+cor_res$padj <- p.adjust(cor_res$p.value, method = "BH")
+
+cor_res <- cor_res %>% arrange(desc(rho))
+
+write.csv(
+
+cor_res,
+
+"CNV_expression_dosage_correlation.csv",
+
+row.names = FALSE
+
+)
+
+dosage_genes <- cor_res %>%
+
+filter(
+
+padj < 0.05,
+
+rho > 0.25
+
+)
+
+head(dosage_genes)
+
+genes_check <- c(
+
+"MYC", "KRAS", "CCNE1", "MUC16", "PAX8",
+
+"EPCAM", "KRT8", "KRT18", "KRT19",
+
+"LAPTM5", "VIM", "SNAI1", "SNAI2", "ZEB1"
+
+)
+
+genes_check <- intersect(genes_check, rownames(tumor_oc))
+
+DotPlot(
+
+tumor_oc,
+
+features = genes_check,
+
+group.by = "CNV_clone"
+
+) + RotatedAxis()
+
+5. EMT score 分析
+
+EMT 是解释侵袭、转移、M2 互作的重要 signature。推荐使用 MSigDB Hallmark gene set，并用 UCell 计算更加稳健的单细胞 signature score。
+
+hallmark <- msigdbr(
+
+species = "Homo sapiens",
+
+category = "H"
+
+)
+
+emt_genes <- hallmark %>%
+
+filter(gs_name == "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION") %>%
+
+pull(gene_symbol) %>%
+
+unique()
+
+emt_genes <- intersect(emt_genes, rownames(tumor_oc))
+
+length(emt_genes)
+
+tumor_oc <- AddModuleScore_UCell(
+
+tumor_oc,
+
+features = list(EMT = emt_genes),
+
+assay = "RNA",
+
+name = NULL
+
+)
+
+grep("EMT", colnames(tumor_oc@meta.data), value = TRUE)
+
+VlnPlot(
+
+tumor_oc,
+
+features = "EMT_UCell",
+
+group.by = "CNV_clone",
+
+pt.size = 0
+
+) +
+
+stat_compare_means(method = "kruskal.test")
+
+FeaturePlot(
+
+tumor_oc,
+
+features = "EMT_UCell",
+
+reduction = "umap"
+
+)
+
+emt_stat <- tumor_oc@meta.data %>%
+
+filter(!is.na(CNV_clone)) %>%
+
+wilcox_test(EMT_UCell ~ CNV_clone) %>%
+
+adjust_pvalue(method = "BH")
+
+emt_stat
+
+若某个 clone 的 EMT score 最高，可命名为 EMT-high invasive clone。
+
+6. Hypoxia score 分析
+
+hypoxia_genes <- hallmark %>%
+
+filter(gs_name == "HALLMARK_HYPOXIA") %>%
+
+pull(gene_symbol) %>%
+
+unique()
+
+hypoxia_genes <- intersect(hypoxia_genes, rownames(tumor_oc))
+
+length(hypoxia_genes)
+
+tumor_oc <- AddModuleScore_UCell(
+
+tumor_oc,
+
+features = list(Hypoxia = hypoxia_genes),
+
+assay = "RNA",
+
+name = NULL
+
+)
+
+VlnPlot(
+
+tumor_oc,
+
+features = "Hypoxia_UCell",
+
+group.by = "CNV_clone",
+
+pt.size = 0
+
+) +
+
+stat_compare_means(method = "kruskal.test")
+
+FeaturePlot(
+
+tumor_oc,
+
+features = "Hypoxia_UCell",
+
+reduction = "umap"
+
+)
+
+meta_tumor <- tumor_oc@meta.data
+
+ggplot(
+
+meta_tumor,
+
+aes(x = CNV_burden, y = Hypoxia_UCell, color = CNV_clone)
+
+) +
+
+geom_point(alpha = 0.4, size = 0.5) +
+
+geom_smooth(method = "lm", se = FALSE) +
+
+theme_classic()
+
+cor.test(
+
+meta_tumor$CNV_burden,
+
+meta_tumor$Hypoxia_UCell,
+
+method = "spearman"
+
+)
+
+7. KRAS / LAPTM5 / M2相关表达程序
+
+7.1 KRAS activation score
+
+kras_up_genes <- hallmark %>%
+
+filter(gs_name == "HALLMARK_KRAS_SIGNALING_UP") %>%
+
+pull(gene_symbol) %>%
+
+unique()
+
+kras_dn_genes <- hallmark %>%
+
+filter(gs_name == "HALLMARK_KRAS_SIGNALING_DN") %>%
+
+pull(gene_symbol) %>%
+
+unique()
+
+kras_up_genes <- intersect(kras_up_genes, rownames(tumor_oc))
+
+kras_dn_genes <- intersect(kras_dn_genes, rownames(tumor_oc))
+
+tumor_oc <- AddModuleScore_UCell(
+
+tumor_oc,
+
+features = list(
+
+KRAS_UP = kras_up_genes,
+
+KRAS_DN = kras_dn_genes
+
+),
+
+assay = "RNA",
+
+name = NULL
+
+)
+
+VlnPlot(
+
+tumor_oc,
+
+features = c("KRAS_UP_UCell", "KRAS_DN_UCell"),
+
+group.by = "CNV_clone",
+
+pt.size = 0,
+
+ncol = 2
+
+)
+
+7.2 LAPTM5 表达
+
+FeaturePlot(
+
+tumor_oc,
+
+features = "LAPTM5",
+
+reduction = "umap"
+
+)
+
+VlnPlot(
+
+tumor_oc,
+
+features = "LAPTM5",
+
+group.by = "CNV_clone",
+
+pt.size = 0
+
+)
+
+如果 LAPTM5 在肿瘤细胞中表达较低，需要确认是否主要来自 macrophage。
+
+FeaturePlot(
+
+integrated_oc,
+
+features = c("LAPTM5", "LYZ", "CD68", "MRC1", "CD163"),
+
+reduction = "umap",
+
+ncol = 3
+
+)
+
+8. TF activity 分析
+
+推荐使用 DoRothEA + VIPER / decoupleR 计算转录因子活性。该分析可以解释 high-CNV clone 是否伴随 SNAI2、ATF3、HIF1A、STAT3、MYC 等 TF 活性增强。
+
+8.1 准备表达矩阵
+
+expr_tumor <- GetAssayData(
+
+tumor_oc,
+
+assay = "RNA",
+
+slot = "data"
+
+)
+
+expr_tumor <- as.matrix(expr_tumor)
+
+如果细胞很多，建议按 clone 分层抽样，以避免内存压力。
+
+set.seed(123)
+
+cells_use <- unlist(
+
+lapply(split(colnames(tumor_oc), tumor_oc$CNV_clone), function(x) {
+
+sample(x, min(length(x), 1000))
+
+})
+
+)
+
+tumor_sub <- subset(tumor_oc, cells = cells_use)
+
+expr_tumor <- GetAssayData(
+
+tumor_sub,
+
+assay = "RNA",
+
+slot = "data"
+
+)
+
+expr_tumor <- as.matrix(expr_tumor)
+
+8.2 载入 DoRothEA regulon
+
+data(dorothea_hs, package = "dorothea")
+
+regulons <- dorothea_hs %>%
+
+filter(confidence %in% c("A", "B", "C"))
+
+head(regulons)
+
+8.3 使用 decoupleR 计算 TF activity
+
+tf_act <- run_viper(
+
+mat = expr_tumor,
+
+network = regulons,
+
+.source = "tf",
+
+.target = "target",
+
+.mor = "mor",
+
+.likelihood = "likelihood",
+
+minsize = 5
+
+)
+
+tf_mat <- tf_act %>%
+
+dplyr::select(source, condition, score) %>%
+
+tidyr::pivot_wider(
+
+names_from = condition,
+
+values_from = score
+
+) %>%
+
+as.data.frame()
+
+rownames(tf_mat) <- tf_mat$source
+
+tf_mat$source <- NULL
+
+tf_mat <- as.matrix(tf_mat)
+
+8.4 按 CNV clone 计算平均 TF activity
+
+meta_tf <- tumor_sub@meta.data[colnames(tf_mat), ]
+
+tf_clone_avg <- sapply(unique(meta_tf$CNV_clone), function(cl) {
+
+cells <- rownames(meta_tf)[meta_tf$CNV_clone == cl]
+
+rowMeans(tf_mat[, cells, drop = FALSE])
+
+})
+
+tf_clone_avg <- as.matrix(tf_clone_avg)
+
+tf_var <- apply(tf_clone_avg, 1, var)
+
+top_tfs <- names(sort(tf_var, decreasing = TRUE))[1:50]
+
+pheatmap(
+
+tf_clone_avg[top_tfs, ],
+
+scale = "row",
+
+cluster_rows = TRUE,
+
+cluster_cols = TRUE,
+
+main = "Top variable TF activity across CNV clones"
+
+)
+
+8.5 重点查看 EMT / hypoxia / KRAS 相关 TF
+
+tf_interest <- c(
+
+"SNAI1", "SNAI2", "ZEB1", "ZEB2", "TWIST1",
+
+"HIF1A", "EPAS1",
+
+"JUN", "FOS", "ATF3",
+
+"KLF4", "EGR1",
+
+"STAT3", "NFKB1", "RELA",
+
+"MYC", "TP53", "FOXM1"
+
+)
+
+tf_interest <- intersect(tf_interest, rownames(tf_clone_avg))
+
+pheatmap(
+
+tf_clone_avg[tf_interest, ],
+
+scale = "row",
+
+cluster_rows = TRUE,
+
+cluster_cols = TRUE,
+
+main = "Selected TF activity across CNV clones"
+
+)
+
+tf_to_add <- c("SNAI2", "ATF3", "HIF1A", "STAT3", "MYC")
+
+tf_to_add <- intersect(tf_to_add, rownames(tf_mat))
+
+for (tf in tf_to_add) {
+
+tumor_sub@meta.data[colnames(tf_mat), paste0("TF_", tf)] <- tf_mat[tf, ]
+
+}
+
+FeaturePlot(
+
+tumor_sub,
+
+features = paste0("TF_", tf_to_add),
+
+reduction = "umap",
+
+ncol = 3
+
+)
+
+VlnPlot(
+
+tumor_sub,
+
+features = paste0("TF_", tf_to_add),
+
+group.by = "CNV_clone",
+
+pt.size = 0,
+
+ncol = 3
+
+)
+
+9. CNV clone 功能注释表
+
+把 CNV、EMT、Hypoxia、KRAS、LAPTM5、TF activity 整合到一个 clone-level summary。
+
+# 先将 LAPTM5 表达加到 metadata
+
+if ("LAPTM5" %in% rownames(tumor_oc)) {
+
+tumor_oc$LAPTM5 <- FetchData(tumor_oc, vars = "LAPTM5")[, 1]
+
+}
+
+meta_model <- tumor_oc@meta.data %>%
+
+filter(!is.na(CNV_clone))
+
+clone_summary <- meta_model %>%
+
+group_by(CNV_clone) %>%
+
+summarise(
+
+n_cells = n(),
+
+CNV_burden = mean(CNV_burden, na.rm = TRUE),
+
+EMT_score = mean(EMT_UCell, na.rm = TRUE),
+
+Hypoxia_score = mean(Hypoxia_UCell, na.rm = TRUE),
+
+KRAS_UP_score = mean(KRAS_UP_UCell, na.rm = TRUE),
+
+KRAS_DN_score = mean(KRAS_DN_UCell, na.rm = TRUE),
+
+LAPTM5_expr = mean(LAPTM5, na.rm = TRUE)
+
+)
+
+clone_summary
+
+write.csv(
+
+clone_summary,
+
+"CNV_clone_functional_summary.csv",
+
+row.names = FALSE
+
+)
+
+10. 构建“CNV + 转录组耦合模型”
+
+10.1 相关性矩阵
+
+model_vars <- meta_model %>%
+
+dplyr::select(
+
+CNV_burden,
+
+EMT_UCell,
+
+Hypoxia_UCell,
+
+KRAS_UP_UCell,
+
+KRAS_DN_UCell,
+
+LAPTM5
+
+)
+
+cor_mat <- cor(
+
+model_vars,
+
+method = "spearman",
+
+use = "pairwise.complete.obs"
+
+)
+
+corrplot(
+
+cor_mat,
+
+method = "color",
+
+type = "upper",
+
+tl.col = "black",
+
+tl.srt = 45
+
+)
+
+10.2 控制 sample 的线性混合模型
+
+如果数据来自多个样本，建议控制 sample 或 patient。
+
+model_df <- meta_model %>%
+
+filter(
+
+!is.na(CNV_burden),
+
+!is.na(EMT_UCell),
+
+!is.na(Hypoxia_UCell),
+
+!is.na(sample)
+
+)
+
+fit_emt <- lmer(
+
+EMT_UCell ~ CNV_burden + (1 | sample),
+
+data = model_df
+
+)
+
+summary(fit_emt)
+
+fit_hypoxia <- lmer(
+
+Hypoxia_UCell ~ CNV_burden + (1 | sample),
+
+data = model_df
+
+)
+
+summary(fit_hypoxia)
+
+fit_kras <- lmer(
+
+KRAS_UP_UCell ~ CNV_burden + (1 | sample),
+
+data = model_df
+
+)
+
+summary(fit_kras)
+
+如果 metadata 中有 patient，推荐：
+
+fit_emt <- lmer(
+
+EMT_UCell ~ CNV_burden + (1 | patient) + (1 | sample),
+
+data = model_df
+
+)
+
+解释模板：CNV_burden 与 EMT_score 正相关，且在控制 sample/patient 后仍显著，提示高 CNV 肿瘤亚克隆可能伴随 EMT 程序激活。
+
+11. CNV clone 轨迹 / 演化模型
+
+如果不同 CNV clone 在 UMAP 或 PCA 上呈连续变化，可以尝试用 slingshot 做 clone trajectory。
+
+library(SingleCellExperiment)
+
+library(slingshot)
+
+sce <- as.SingleCellExperiment(tumor_oc)
+
+reducedDims(sce)$UMAP <- Embeddings(tumor_oc, "umap")
+
+sce <- slingshot(
+
+sce,
+
+clusterLabels = tumor_oc$CNV_clone,
+
+reducedDim = "UMAP",
+
+start.clus = "CNV1"
+
+)
+
+pt <- slingPseudotime(sce)
+
+tumor_oc$CNV_pseudotime <- pt[, 1]
+
+plot_df <- tumor_oc@meta.data %>%
+
+filter(!is.na(CNV_pseudotime))
+
+ggplot(
+
+plot_df,
+
+aes(
+
+x = CNV_pseudotime,
+
+y = EMT_UCell,
+
+color = CNV_clone
+
+)
+
+) +
+
+geom_point(alpha = 0.4, size = 0.5) +
+
+geom_smooth(method = "loess", se = FALSE) +
+
+theme_classic()
+
+ggplot(
+
+plot_df,
+
+aes(
+
+x = CNV_pseudotime,
+
+y = Hypoxia_UCell,
+
+color = CNV_clone
+
+)
+
+) +
+
+geom_point(alpha = 0.4, size = 0.5) +
+
+geom_smooth(method = "loess", se = FALSE) +
+
+theme_classic()
+
+ggplot(
+
+plot_df,
+
+aes(
+
+x = CNV_pseudotime,
+
+y = LAPTM5,
+
+color = CNV_clone
+
+)
+
+) +
+
+geom_point(alpha = 0.4, size = 0.5) +
+
+geom_smooth(method = "loess", se = FALSE) +
+
+theme_classic()
+
+解释模板：CNV1 → CNV2 → CNV3 的轨迹中，CNV burden、EMT score、Hypoxia score 和 KRAS score 逐渐升高，提示存在由低 CNV epithelial-like clone 向 high-CNV invasive-like clone 转变的趋势。
+
+12. 通路富集：解释每个 CNV clone 的表达程序
+
+12.1 使用 clusterProfiler 做 GO 富集
+
+markers_sig <- markers_cnv %>%
+
+filter(
+
+p_val_adj < 0.05,
+
+avg_log2FC > 0.25
+
+)
+
+ego_clone <- compareCluster(
+
+gene ~ cluster,
+
+data = markers_sig,
+
+fun = "enrichGO",
+
+OrgDb = org.Hs.eg.db,
+
+keyType = "SYMBOL",
+
+ont = "BP",
+
+pAdjustMethod = "BH",
+
+qvalueCutoff = 0.05
+
+)
+
+dotplot(ego_clone, showCategory = 10)
+
+12.2 Hallmark GSEA
+
+以 CNV3 vs CNV1 为例。
+
+deg <- deg_CNV3_vs_CNV1
+
+ranks <- deg$t
+
+names(ranks) <- rownames(deg)
+
+ranks <- sort(ranks, decreasing = TRUE)
+
+hallmark_list <- hallmark %>%
+
+split(x = .$gene_symbol, f = .$gs_name)
+
+fgsea_res <- fgsea(
+
+pathways = hallmark_list,
+
+stats = ranks,
+
+minSize = 15,
+
+maxSize = 500
+
+)
+
+fgsea_res <- fgsea_res %>%
+
+arrange(padj)
+
+head(fgsea_res[, c("pathway", "NES", "padj")])
+
+重点查看：HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION、HALLMARK_HYPOXIA、HALLMARK_KRAS_SIGNALING_UP、HALLMARK_TNFA_SIGNALING_VIA_NFKB、HALLMARK_IL6_JAK_STAT3_SIGNALING、HALLMARK_ANGIOGENESIS、HALLMARK_P53_PATHWAY。
+
+13. 最终结果表述模板
+
+CNV clone	CNV特征	表达特征	TF activity	生物学解释
+CNV1	CNV burden低	epithelial-like	FOXA1/ELF3较高	原始上皮样克隆
+CNV2	中等CNV	proliferative	MYC/FOXM1较高	增殖型克隆
+CNV3	CNV burden高	EMT-high / hypoxia-high	SNAI2/ATF3/HIF1A较高	侵袭/缺氧适应型克隆
+CNV4	特定染色体gain/loss	KRAS-high / LAPTM5-high	STAT3/NF-kB较高	免疫调控/M2相关克隆
+
+14. 推荐最终出图
+
+Figure 1. CNV clone UMAP + CNV burden violin
+
+Figure 2. CNV clone DEG heatmap
+
+Figure 3. EMT / Hypoxia / KRAS score violin + UMAP
+
+Figure 4. chromosome-level CNV score heatmap
+
+Figure 5. TF activity heatmap
+
+Figure 6. CNV burden → EMT/Hypoxia/KRAS/LAPTM5 coupling model
+
+15. 可写入论文/课题汇报的结论框架
+
+首先，基于 inferCNV 推断的拷贝数变异模式，我们将 integrated_oc 中的肿瘤细胞划分为多个 CNV-defined subclones。
+
+随后，通过差异表达分析发现，不同 CNV clone 具有显著不同的转录特征。
+
+其中，CNV3/CNV4 等 high-CNV clone 表现出更高的 EMT score、Hypoxia score 和 KRAS signaling score。
+
+进一步的 TF activity 分析显示，SNAI2、ATF3、HIF1A、STAT3、MYC 等转录因子在 high-CNV clone 中活性增强。
+
+CNV burden 与 EMT/Hypoxia/KRAS score 的正相关提示，基因组拷贝数异常可能与肿瘤细胞侵袭性转录状态耦合。
+
+因此，可构建 CNV-driven transcriptional evolution model：低 CNV epithelial-like clone 逐渐演化为 high-CNV EMT/hypoxia/KRAS-active clone，并可能进一步参与 M2 macrophage-associated tumor microenvironment remodeling。

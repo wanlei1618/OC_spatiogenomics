@@ -1,0 +1,71 @@
+project_root: "D:/OC_spatiogenomics/spatial_data"
+seed: 20260712
+qc:
+  min_features: 200
+  min_counts: 500
+  max_percent_mt: 30
+normalization:
+  method: "LogNormalize"
+  scale_factor: 10000
+spatial_statistics:
+  top_fraction: 0.25
+  k_neighbors: 6
+  permutations: 1000
+gene_sets:
+  spp1_myeloid:
+    - SPP1
+    - LST1
+    - TYROBP
+    - FCER1G
+    - CTSS
+    - CD68
+    - C1QA
+    - C1QB
+    - C1QC
+    - APOE
+    - CSF1R
+  target_subclone_02_04:
+    - MSLN
+    - CLDN4
+    - EPCAM
+    - CLDN7
+    - CLDN3
+    - FOLR1
+    - ELF3
+    - WFDC2
+    - TACSTD2
+    - ITGB1
+    - CD44
+  target_core_without_receptors:
+    - MSLN
+    - CLDN4
+    - EPCAM
+    - CLDN7
+    - CLDN3
+    - FOLR1
+    - ELF3
+    - WFDC2
+    - TACSTD2
+  kras_hypoxia:
+    - ATF3
+    - DDIT4
+    - VEGFA
+    - CA9
+    - EGLN3
+    - BNIP3
+    - NDRG1
+    - ADM
+    - LDHA
+    - JUN
+    - FOS
+  spp1_myeloid_without_spp1:
+    - LST1
+    - TYROBP
+    - FCER1G
+    - CTSS
+    - CD68
+    - C1QA
+    - C1QB
+    - C1QC
+    - APOE
+    - CSF1R

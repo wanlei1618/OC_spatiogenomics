@@ -1,0 +1,6 @@
+"clone_label","grouping","n_cells","n_groups","max_single_group_fraction","shannon_diversity","simpson_diversity","dominant_group","status","gate_a_cross_patient_status"
+"CNV_Subclone_01","patient_id",3318,NA,NA,NA,NA,NA,"not_evaluable_missing_group","not_judgable_missing_patient_id"
+"CNV_Subclone_02","patient_id",1071,NA,NA,NA,NA,NA,"not_evaluable_missing_group","not_judgable_missing_patient_id"
+"CNV_Subclone_03","patient_id",1021,NA,NA,NA,NA,NA,"not_evaluable_missing_group","not_judgable_missing_patient_id"
+"CNV_Subclone_04","patient_id",1001,NA,NA,NA,NA,NA,"not_evaluable_missing_group","not_judgable_missing_patient_id"
+"CNV_Subclone_05","patient_id",96,NA,NA,NA,NA,NA,"not_evaluable_missing_group","not_judgable_missing_patient_id"

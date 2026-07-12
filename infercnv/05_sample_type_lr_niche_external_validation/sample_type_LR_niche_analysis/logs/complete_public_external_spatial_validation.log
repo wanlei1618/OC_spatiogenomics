@@ -1,0 +1,19 @@
+Starting public external/spatial completion
+External scRNA: using D:\OC_spatiogenomics\公开集\单细胞\Data_Zhang2022_Ovarian
+External scRNA: extracting 192 selected genes from MatrixMarket
+External scRNA: streamed selected matrix entries; selected rows present=192
+Spatial: processing GSM6177614
+Starting public external/spatial completion
+External scRNA: using D:\OC_spatiogenomics\公开集\单细胞\Data_Zhang2022_Ovarian
+External scRNA: extracting 192 selected genes from MatrixMarket
+External scRNA: streamed selected matrix entries; selected rows present=192
+Spatial: processing GSM6177614
+Spatial: processing GSM6177617
+Spatial: processing GSM6177618
+Starting public external/spatial completion
+External scRNA: reusing existing completed table
+Spatial: reusing existing completed tables
+Starting public external/spatial completion
+External scRNA: reusing existing completed table
+Spatial: reusing existing completed tables
+Completed public external/spatial completion

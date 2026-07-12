@@ -1,0 +1,3 @@
+dataset_id,analysis_role,cell_type_major,n_cells,fraction
+GSE154763,myeloid_reference_only,Myeloid/Macrophage,185,0.04758230452674897
+GSE154763,myeloid_reference_only,Unknown,3703,0.9524176954732511

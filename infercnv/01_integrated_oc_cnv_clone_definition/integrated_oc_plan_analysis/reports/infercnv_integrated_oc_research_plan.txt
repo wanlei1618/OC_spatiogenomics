@@ -1,0 +1,262 @@
+integrated_oc 基于 inferCNV 的肿瘤CNV亚克隆分组与TME互作分析方案
+
+研究设计文件 | 适用于 Seurat integrated_oc 对象
+
+核心目标： 利用 inferCNV 将 integrated_oc 中的肿瘤细胞划分为 CNV-defined subclones，再比较这些肿瘤亚克隆与巨噬细胞、M2巨噬细胞、CAF、内皮细胞、T/NK细胞等 TME 细胞在表达空间中的邻近性和潜在配体-受体互作。
+
+1. 研究问题与总体假设
+
+本方案的核心不是单纯给肿瘤细胞重新分群，而是把 CNV 作为“基因组层面的克隆标签”，再把这些克隆放回单细胞转录组生态位中，分析其与肿瘤微环境细胞的关系。
+
+问题1：integrated_oc 中是否存在多个 CNV-defined tumor clones？
+
+问题2：哪些 CNV clone 具有 EMT、hypoxia、KRAS activation、LAPTM5-high 或 immune-modulatory 特征？
+
+问题3：哪些 CNV clone 在表达空间/kNN图上更靠近 M2 macrophage、CAF、endothelial 或 T/NK cell？
+
+问题4：哪些 CNV clone 与特定 cell_type 存在更强的配体-受体互作，例如 SPP1-CD44、MIF-CD74、CSF1-CSF1R、TGFB-TGFBR、VEGFA-VEGFR 等？
+
+推荐主线命名：基于 inferCNV 识别卵巢癌肿瘤细胞 CNV 亚克隆并解析其与肿瘤微环境细胞的邻近和互作关系。
+
+2. 总体技术路线
+
+步骤	模块	核心输出
+1	integrated_oc 对象准备	使用 RNA raw counts；整理 cell_type、sample、patient、condition 等 metadata
+2	肿瘤/参考细胞定义	肿瘤细胞优先选 epithelial/malignant；参考细胞选择 T/NK、B、endothelial、fibroblast 等非恶性细胞
+3	inferCNV 推断 CNV	按样本分别跑 + 合并跑；使用 subcluster 模式获得肿瘤 CNV 亚克隆
+4	CNV clone 回填 Seurat	将 Tumor_CNV1/2/3... 加入 integrated_oc@meta.data 并投射回 UMAP
+5	功能注释	比较 EMT、hypoxia、KRAS、LAPTM5、stemness、proliferation、immune escape 等评分
+6	邻近性分析	基于 PCA/kNN 计算每个 tumor clone 周围的 cell_type 富集，使用 permutation test 验证
+7	互作分析	用 CellChat/Connectome/NicheNet 分析 Tumor_CNV clone 与 TME cell_type 的配体-受体通讯
+8	机制模型	构建“CNV clone - LAPTM5/KRAS - M2 macrophage - invasion/metastasis”模型
+
+3. 数据与 metadata 准备
+
+inferCNV 必须使用 RNA assay 的 raw counts，不建议使用 integrated assay 或 SCT corrected data 作为输入。integrated assay 适合降维和聚类，但不适合推断 CNV。
+
+DefaultAssay(integrated_oc) <- "RNA"
+counts_mat <- GetAssayData(integrated_oc, assay = "RNA", slot = "counts")
+
+# 建议检查 metadata
+colnames(integrated_oc@meta.data)
+table(integrated_oc$cell_type)
+table(integrated_oc$sample)
+table(integrated_oc$patient)
+
+建议 metadata 至少包含以下列：
+
+cell_type：细胞类型注释，用于定义肿瘤细胞和TME细胞。
+
+sample/orig.ident：样本来源，用于判断 CNV clone 是否样本特异。
+
+patient：多患者合并数据时必须保留，避免把患者差异误判为 clone。
+
+condition：如原发/转移、治疗前/后、高低风险等分组信息。
+
+4. 肿瘤细胞与参考细胞定义
+
+肿瘤细胞推荐从 epithelial/malignant/cancer cell 中筛选，并结合 PAX8、EPCAM、KRT8/KRT18/KRT19、MUC16、WT1、CLDN3/CLDN4 等卵巢癌相关上皮/肿瘤标志物确认。
+
+tumor_cells <- colnames(integrated_oc)[
+  integrated_oc$cell_type %in% c("Epithelial", "Tumor", "Malignant", "Cancer cell")
+]
+
+ref_cells <- colnames(integrated_oc)[
+  integrated_oc$cell_type %in% c("T cell", "NK cell", "B cell", "Endothelial", "Fibroblast")
+]
+
+方案	reference 细胞	说明
+主分析	T/NK + B + Endothelial + Fibroblast	作为主要 reference，稳定性较好
+敏感性分析1	Immune only	验证 CNV 结果是否依赖 stromal reference
+敏感性分析2	Stromal only	验证 CNV 结果是否依赖 immune reference
+不推荐	仅 macrophage	后续要分析 macrophage/M2 互作，不宜把其作为唯一 reference
+
+5. inferCNV 输入文件与运行策略
+
+inferCNV 输入通常包括 raw counts matrix、cell annotation file 和 gene order file。annotation 的设计决定后续能否清晰追踪 sample、cluster 与 CNV clone 的关系。
+
+anno <- data.frame(
+  cell = colnames(integrated_oc),
+  group = integrated_oc$cell_type
+)
+
+# 肿瘤细胞按 sample + 初始 Seurat cluster 标注，便于追踪克隆来源
+anno$group[anno$cell %in% tumor_cells] <- paste0(
+  "Tumor_",
+  integrated_oc$sample[match(anno$cell[anno$cell %in% tumor_cells], colnames(integrated_oc))],
+  "_C",
+  integrated_oc$seurat_clusters[match(anno$cell[anno$cell %in% tumor_cells], colnames(integrated_oc))]
+)
+
+write.table(anno, "cell_annotations.txt", sep = "\t", quote = FALSE,
+            row.names = FALSE, col.names = FALSE)
+
+建议采用“两层运行策略”：
+
+按 sample 或 patient 分别运行 inferCNV，判断每个样本内部的 CNV 结构。
+
+再对合并的 integrated_oc 肿瘤细胞运行 inferCNV，识别跨样本共享或特异 CNV clone。
+
+如多个患者混合，优先 patient 内分析，再做 clone signature 的跨患者比较。
+
+library(infercnv)
+
+infercnv_obj <- CreateInfercnvObject(
+  raw_counts_matrix = counts_mat,
+  annotations_file = "cell_annotations.txt",
+  delim = "\t",
+  gene_order_file = "gene_order_hg38.txt",
+  ref_group_names = c("T cell", "NK cell", "B cell", "Endothelial", "Fibroblast")
+)
+
+infercnv_obj <- infercnv::run(
+  infercnv_obj,
+  cutoff = 0.1,
+  out_dir = "infercnv_integrated_oc",
+  cluster_by_groups = FALSE,
+  denoise = TRUE,
+  HMM = TRUE,
+  analysis_mode = "subcluster",
+  num_threads = 8
+)
+
+6. CNV clone 分组策略
+
+CNV clone 的定义建议同时参考 inferCNV subcluster、CNV score matrix 的聚类结果以及关键染色体事件。不要只依赖 UMAP cluster，因为 UMAP cluster 反映的是表达状态，不一定等同于基因组克隆。
+
+策略	分组依据	适用场景
+方案A	直接使用 inferCNV subcluster	最接近文献流程；便于与 CNV heatmap 对应；需检查是否受 sample batch 影响
+方案B	基于 CNV matrix 重新聚类	适合自定义 clone 数目；可使用 hierarchical clustering 或 graph clustering
+方案C	按关键染色体事件定义	适合机制解释，如 8q/MYC gain、17p/TP53 loss、20q gain、3q gain 等
+
+# 示例：基于 inferCNV 表达/CNV矩阵重新聚类
+cnv_mat <- infercnv_obj@expr.data[, tumor_cells]
+cnv_dist <- dist(t(cnv_mat))
+cnv_hclust <- hclust(cnv_dist, method = "ward.D2")
+cnv_group <- cutree(cnv_hclust, k = 4)
+
+integrated_oc$CNV_clone <- NA
+integrated_oc$CNV_clone[names(cnv_group)] <- paste0("CNV", cnv_group)
+
+DimPlot(integrated_oc, group.by = "CNV_clone", reduction = "umap")
+
+7. CNV clone 的功能注释
+
+每个 CNV clone 应进一步注释为具有生物学意义的状态，例如 epithelial-like、proliferative、EMT/high-CNV、hypoxia-high、KRAS-active 或 M2-associated clone。
+
+integrated_oc <- AddModuleScore(integrated_oc, features = list(EMT_genes), name = "EMT_score")
+integrated_oc <- AddModuleScore(integrated_oc, features = list(Hypoxia_genes), name = "Hypoxia_score")
+integrated_oc <- AddModuleScore(integrated_oc, features = list(KRAS_genes), name = "KRAS_score")
+integrated_oc <- AddModuleScore(integrated_oc, features = list(M2_related_genes), name = "M2_related_score")
+
+VlnPlot(integrated_oc, features = c("EMT_score1", "Hypoxia_score1", "KRAS_score1"),
+        group.by = "CNV_clone", pt.size = 0)
+FeaturePlot(integrated_oc, features = c("LAPTM5", "KRAS", "MRC1", "CD163"))
+
+示例clone	CNV特征	表达特征	微环境关系	建议命名
+CNV1	low CNV / epithelial-like	EPCAM/KRT high，EMT low	weak interaction	epithelial clone
+CNV2	8q gain / MYC high	proliferation high	CAF 或 endothelial 相关	proliferative clone
+CNV3	high CNV / 17p loss	EMT/hypoxia high	M2 macrophage-rich	invasive clone
+CNV4	LAPTM5-high / KRAS-active	immune-modulatory	M2 interaction strong	M2-associated clone
+
+8. 邻近性分析：表达空间/kNN邻近
+
+没有空间转录组或空间病理数据时，scRNA-seq 的“邻近”不能解释为真实组织空间邻近，只能解释为表达空间邻近或 kNN graph 邻近。建议在 PCA 低维空间中计算 kNN，而不是直接用 UMAP 距离作为主要统计依据。
+
+library(FNN)
+
+emb <- Embeddings(integrated_oc, "pca")[, 1:30]
+knn <- get.knn(emb, k = 30)
+meta <- integrated_oc@meta.data
+
+# 对每个 tumor cell，统计其邻居中各 cell_type 的比例
+# 后续按 CNV_clone 聚合，得到 clone x cell_type 的邻近富集矩阵
+
+建议使用 permutation test 检验富集显著性：固定 kNN 结构，随机打乱 cell_type 标签 1000 次，计算每个 CNV clone 周围某 cell_type 比例的经验 P 值和 z-score。
+
+项目	设计
+输入	PCA embedding、CNV_clone、cell_type
+统计对象	每个 tumor cell 的 kNN 邻居组成
+主要指标	neighbor proportion、enrichment ratio、z-score、empirical P value
+主要输出	CNV clone x cell_type 邻近富集 heatmap；CNV clone 周围 M2/CAF/endothelial 比例柱状图
+解释限制	代表表达状态邻近，不代表真实组织空间邻近
+
+9. 互作分析：CellChat / Connectome / NicheNet
+
+互作分析的关键是重新定义 group：肿瘤细胞按 CNV_clone 拆分，非肿瘤细胞保留原 cell_type。这样才能比较不同 tumor clone 与 TME 的通讯差异。
+
+integrated_oc$interaction_group <- integrated_oc$cell_type
+
+tumor_idx <- !is.na(integrated_oc$CNV_clone)
+integrated_oc$interaction_group[tumor_idx] <- paste0(
+  "Tumor_", integrated_oc$CNV_clone[tumor_idx]
+)
+
+table(integrated_oc$interaction_group)
+library(CellChat)
+
+data.input <- GetAssayData(integrated_oc, assay = "RNA", slot = "data")
+meta <- integrated_oc@meta.data
+
+cellchat <- createCellChat(object = data.input, meta = meta, group.by = "interaction_group")
+cellchat@DB <- CellChatDB.human
+
+cellchat <- subsetData(cellchat)
+cellchat <- identifyOverExpressedGenes(cellchat)
+cellchat <- identifyOverExpressedInteractions(cellchat)
+cellchat <- computeCommunProb(cellchat)
+cellchat <- filterCommunication(cellchat, min.cells = 50)
+cellchat <- computeCommunProbPathway(cellchat)
+cellchat <- aggregateNet(cellchat)
+
+重点比较两个方向：
+
+TME -> Tumor_CNV clone：如 M2 macrophage、CAF、endothelial 对不同肿瘤亚克隆的潜在调控。
+
+Tumor_CNV clone -> TME：如不同肿瘤亚克隆是否更强地招募/极化巨噬细胞或塑造免疫抑制微环境。
+
+10. 推荐重点关注的配体-受体通路
+
+比较方向	重点通路/轴
+Tumor clone ↔ Macrophage/M2	SPP1-CD44/ITGAV, MIF-CD74/CXCR4, CSF1-CSF1R, CCL2-CCR2, CCL5-CCR5, TGFB-TGFBR, IL6-IL6R, GAS6-AXL, CD47-SIRPA, APOE-LRP1
+Tumor clone ↔ CAF	TGFB, COLLAGEN, LAMININ, FN1-integrin, CXCL12-CXCR4, PDGF, VEGF, ANGPT
+Tumor clone ↔ Endothelial	VEGFA-VEGFR, ANGPT-TIE, ADM, CXCL, SEMA, NOTCH
+Tumor clone ↔ T/NK cell	CD274-PDCD1, LGALS9-HAVCR2, NECTIN2-TIGIT, MHC-I/II, FAS-FASLG, CXCL9/10-CXCR3
+
+11. 结果图设计
+
+图号	主题	核心内容
+Figure 1	integrated_oc 总体图	UMAP by cell_type/sample/tumor-normal
+Figure 2	inferCNV 结果	CNV heatmap、CNV clone UMAP、各样本 clone 比例
+Figure 3	CNV clone 功能注释	EMT/hypoxia/KRAS/LAPTM5 scores、DEG heatmap
+Figure 4	CNV clone 与 cell_type 邻近分析	kNN neighbor enrichment heatmap、M2/CAF/endothelial 邻近比例
+Figure 5	CellChat/Connectome 互作分析	interaction strength heatmap、bubble plot、pathway circle plot
+Figure 6	机制模型	High-CNV/LAPTM5/KRAS clone -> M2 macrophage -> invasion/metastasis
+
+12. 质量控制与注意事项
+
+inferCNV 使用 RNA raw counts，不使用 integrated assay 或 SCT corrected matrix。
+
+建议按 sample/patient 分别运行 inferCNV，再进行合并分析，以防 batch 或患者差异被误判为 CNV clone。
+
+reference cell 的选择要做敏感性分析，避免单一 reference 引入偏倚。
+
+CNV clone 分组后必须回到原始 UMAP、sample、patient、cell_type 中检查分布合理性。
+
+kNN 邻近只能说明表达空间或图结构邻近，不能替代空间邻近证据。
+
+CellChat/Connectome 只能说明配体-受体表达层面的潜在通讯，不能证明真实物理互作。
+
+最终解释应避免“CNV1 与 M2 互作强”这种孤立表述，更推荐写为“CNV3 是 high-CNV/EMT-high/KRAS-active clone，并与 M2 macrophage 存在更强的 SPP1-MIF-CSF1-TGFB 通讯”。
+
+13. 推荐结论表达模板
+
+如果结果支持你的假设，可以这样组织结论：
+
+“基于 inferCNV，我们在 integrated_oc 肿瘤细胞中识别出多个 CNV-defined subclones。其中一个 high-CNV clone 表现出 LAPTM5-high、KRAS pathway activation、EMT/hypoxia 增强等特征。kNN 邻近分析显示该 clone 在表达空间中更接近 M2 macrophage/CAF/endothelial 细胞。CellChat/Connectome 分析进一步提示该 clone 与 M2 macrophage 之间存在更强的 SPP1-CD44、MIF-CD74、CSF1-CSF1R 和 TGFB-TGFBR 等潜在通讯，提示其可能参与免疫抑制性微环境塑造和卵巢癌侵袭转移。”
+
+14. 参考依据
+
+本设计参考了上传文献中“纵向 scRNA-seq + inferCNV + CNV clone 追踪 + 表达功能注释 + 互作分析”的研究框架。该文献利用 inferCNV 从 scRNA-seq 数据推断 CNV，识别治疗前耐药亚群和治疗后转移前体样克隆，并进一步结合 EMT、hypoxia、转录因子活性和细胞通讯分析解释肿瘤进化。
+
+参考文献：Otsuji K, Takahashi Y, Osako T, et al. Serial single-cell RNA sequencing unveils drug resistance and metastatic traits in stage IV breast cancer. npj Precision Oncology. 2024;8:222.
