@@ -57,6 +57,50 @@ find_one <- function(root_dir, pattern) {
   hits[[1]]
 }
 
+read_10x_h5_rhdf5 <- function(path) {
+  if (!requireNamespace("rhdf5", quietly = TRUE)) {
+    stop("Package hdf5r is unavailable and rhdf5 is not installed; cannot read 10x HDF5")
+  }
+  base <- "matrix"
+  data <- rhdf5::h5read(path, file.path(base, "data"))
+  indices <- rhdf5::h5read(path, file.path(base, "indices"))
+  indptr <- rhdf5::h5read(path, file.path(base, "indptr"))
+  shape <- as.integer(rhdf5::h5read(path, file.path(base, "shape")))
+  barcodes <- as.character(rhdf5::h5read(path, file.path(base, "barcodes")))
+  feature_names <- as.character(rhdf5::h5read(path, file.path(base, "features", "name")))
+  feature_ids <- as.character(rhdf5::h5read(path, file.path(base, "features", "id")))
+  genes <- make.unique(ifelse(nzchar(feature_names), feature_names, feature_ids))
+  mat <- Matrix::sparseMatrix(
+    i = as.integer(indices) + 1L,
+    p = as.integer(indptr),
+    x = as.numeric(data),
+    dims = shape
+  )
+  rownames(mat) <- genes
+  colnames(mat) <- barcodes
+  mat
+}
+
+read_mtx_triplet <- function(matrix_file, feature_file, barcode_file) {
+  counts <- Matrix::readMM(matrix_file)
+  features <- fread(feature_file, header = FALSE)
+  barcodes <- fread(barcode_file, header = FALSE)
+  gene_col <- if (ncol(features) >= 2) 2 else 1
+  rownames(counts) <- make.unique(as.character(features[[gene_col]]))
+  colnames(counts) <- as.character(barcodes[[1]])
+  counts
+}
+
+read_visium_positions <- function(path) {
+  pos <- fread(path, header = FALSE)
+  if (ncol(pos) >= 6) {
+    setnames(pos, names(pos)[1:6], c("barcode", "in_tissue", "array_row", "array_col", "coord_y", "coord_x"))
+  } else {
+    stop("Unexpected tissue position format: ", path)
+  }
+  pos
+}
+
 build_gse203612 <- function(sample_id) {
   sample_dir <- file.path(root, "raw", "GSE203612", sample_id)
   required <- c(
@@ -70,14 +114,22 @@ build_gse203612 <- function(sample_id) {
     stop(sprintf("Missing GSE203612 files: %s", paste(missing, collapse = "; ")))
   }
 
-  object <- Load10X_Spatial(
-    data.dir = sample_dir,
-    filename = "filtered_feature_bc_matrix.h5",
+  counts <- read_10x_h5_rhdf5(file.path(sample_dir, "filtered_feature_bc_matrix.h5"))
+  positions <- read_visium_positions(file.path(sample_dir, "spatial", "tissue_positions_list.csv"))
+  counts <- counts[, intersect(colnames(counts), positions$barcode), drop = FALSE]
+  object <- CreateSeuratObject(
+    counts = counts,
     assay = "Spatial",
-    slice = sample_id,
-    filter.matrix = TRUE,
-    to.upper = FALSE
+    project = sample_id,
+    min.cells = 0,
+    min.features = 0
   )
+  md_pos <- positions[match(colnames(object), barcode)]
+  object$in_tissue <- md_pos$in_tissue
+  object$array_row <- md_pos$array_row
+  object$array_col <- md_pos$array_col
+  object$coord_x <- md_pos$coord_x
+  object$coord_y <- md_pos$coord_y
   object$dataset <- "GSE203612"
   object$sample_id <- sample_id
   object$coordinate_status <- "available"
@@ -92,15 +144,7 @@ build_gse189843 <- function(sample_id, clinical_group) {
   feature_file <- find_one(extract_dir, paste0("^", sample_id, ".*features.*\\.tsv$"))
   barcode_file <- find_one(extract_dir, paste0("^", sample_id, ".*barcodes.*\\.tsv$"))
 
-  counts <- ReadMtx(
-    mtx = matrix_file,
-    features = feature_file,
-    cells = barcode_file,
-    feature.column = 2,
-    cell.column = 1,
-    unique.features = TRUE,
-    strip.suffix = FALSE
-  )
+  counts <- read_mtx_triplet(matrix_file, feature_file, barcode_file)
   object <- CreateSeuratObject(
     counts = counts,
     assay = "Spatial",
@@ -138,10 +182,6 @@ for (i in seq_len(nrow(manifest))) {
   })
 }
 
-if (length(objects) == 0) {
-  stop("No spatial object was built. Inspect processed/spatial_object_build_log.csv.")
-}
-
 qc_summary <- rbindlist(lapply(names(objects), function(sample_id) {
   object <- objects[[sample_id]]
   data.table(
@@ -157,9 +197,14 @@ qc_summary <- rbindlist(lapply(names(objects), function(sample_id) {
   )
 }), fill = TRUE)
 
-saveRDS(objects, file.path(processed_dir, "spatial_objects_curated.rds"))
-fwrite(qc_summary, file.path(processed_dir, "spatial_qc_raw_summary.csv"))
 fwrite(rbindlist(log_rows, fill = TRUE),
        file.path(processed_dir, "spatial_object_build_log.csv"))
+
+if (length(objects) == 0) {
+  stop("No spatial object was built. Inspect processed/spatial_object_build_log.csv.")
+}
+
+saveRDS(objects, file.path(processed_dir, "spatial_objects_curated.rds"))
+fwrite(qc_summary, file.path(processed_dir, "spatial_qc_raw_summary.csv"))
 
 message(sprintf("Built %d curated spatial objects under %s", length(objects), processed_dir))

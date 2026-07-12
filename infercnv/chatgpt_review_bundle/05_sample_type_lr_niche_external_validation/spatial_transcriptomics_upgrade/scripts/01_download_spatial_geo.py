@@ -66,8 +66,10 @@ def parse_args() -> argparse.Namespace:
 def sha256_file(path: Path, chunk_size: int = 1024 * 1024) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as handle:
-        while chunk := handle.read(chunk_size):
+        chunk = handle.read(chunk_size)
+        while chunk:
             digest.update(chunk)
+            chunk = handle.read(chunk_size)
     return digest.hexdigest()
 
 
