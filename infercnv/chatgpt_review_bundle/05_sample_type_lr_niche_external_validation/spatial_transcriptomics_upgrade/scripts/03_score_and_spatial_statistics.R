@@ -70,10 +70,17 @@ adaptive_filter <- function(object) {
     md[[count_col]] >= as.numeric(config$qc$min_counts) &
     md$percent.mt <= as.numeric(config$qc$max_percent_mt)
 
-  object[, rownames(md)[keep], drop = FALSE]
+  subset(object, cells = rownames(md)[keep])
 }
 
 get_coordinates <- function(object) {
+  if (all(c("coord_x", "coord_y") %in% colnames(object@meta.data))) {
+    return(data.table(
+      barcode = colnames(object),
+      coord_x = as.numeric(object$coord_x),
+      coord_y = as.numeric(object$coord_y)
+    ))
+  }
   if (length(Images(object)) == 0) {
     return(NULL)
   }
@@ -249,7 +256,8 @@ for (sample_id in names(objects)) {
     )
   }
 
-  spot_rows[[length(spot_rows) + 1]] <- data.table(
+  coord_for_spots <- get_coordinates(object)
+  spot_dt <- data.table(
     dataset = dataset,
     sample_id = sample_id,
     barcode = colnames(object),
@@ -261,6 +269,12 @@ for (sample_id in names(objects)) {
     SPP1_CD44_expr_product = object$SPP1_CD44_expr_product,
     SPP1_ITGB1_expr_product = object$SPP1_ITGB1_expr_product
   )
+  if (!is.null(coord_for_spots)) {
+    spot_dt <- merge(spot_dt, coord_for_spots, by = "barcode", all.x = TRUE)
+  } else {
+    spot_dt[, `:=`(coord_x = NA_real_, coord_y = NA_real_)]
+  }
+  spot_rows[[length(spot_rows) + 1]] <- spot_dt
 
   qc_rows[[length(qc_rows) + 1]] <- data.table(
     dataset = dataset,
@@ -269,6 +283,7 @@ for (sample_id in names(objects)) {
     n_spots_qc = n_after,
     retained_fraction = n_after / n_before
   )
+  objects[[sample_id]] <- object
 }
 
 cor_dt <- rbindlist(correlation_rows, fill = TRUE)
