@@ -1,7 +1,10 @@
 limitation,interpretation
 sample_type_sample_id_confounding,"In integrated_oc, sample_type is one-to-one with sample_id; integrated sample_type findings are exploratory."
 external_site_treatment_confounding,"Zhang2022 external samples contain tumor and implant-like sites, but treatment phase and anatomical site are not fully balanced."
-spatial_coordinate_availability,GSE203612 OVCA Visium supports coordinate neighborhood analysis; local GSE189843 HGSC matrices lack spot coordinate files and were used only for spot-level score correlations.
-COMMOT_simplified,"Spatial COMMOT deliverables here are expression-product LR score maps/summaries, not full optimal-transport COMMOT inference."
-LR_scores_are_potential_interactions,LR opportunity scores are expression-derived potentials and do not prove ligand-receptor binding or signaling.
-bulk_OS_not_primary,Bulk OS instability does not reject a local sample_type/niche-dependent mechanism.
+gse203612_sample_annotation_error,"GSM6177618 is titled and sourced as pancreatic ductal adenocarcinoma despite inconsistent GEO characteristic fields; it is excluded from every ovarian analysis."
+spatial_coordinate_availability,"Only GSM6177614 and GSM6177617 from GSE203612 provide valid ovarian Visium coordinates. GSE189843 supplementary files do not release tissue_positions or scalefactors and are restricted to expression-level analysis."
+gse203612_small_sample_size,"Coordinate-aware ovarian validation contains only two samples and their correlation/enrichment directions are discordant; no universal spatial colocalization claim is supported."
+COMMOT_simplified,"Existing COMMOT-named deliverables are expression-product maps/summaries, not full optimal-transport COMMOT inference."
+spatial_autocorrelation,"Spot-level correlation P values treat spots as observations and may be anti-conservative under spatial autocorrelation; patient/sample-level replication is the inferential unit."
+LR_scores_are_potential_interactions,"LR opportunity scores are expression-derived potentials and do not prove ligand-receptor binding or signaling."
+bulk_OS_not_primary,"Bulk OS instability does not reject a local sample_type/niche-dependent mechanism."
