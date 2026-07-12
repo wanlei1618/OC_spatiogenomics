@@ -1,0 +1,26 @@
+pattern,cell_type_major,cell_type_subtype,malignant_status
+tumor,Tumor/Epithelial,Tumor,malignant
+malignant,Tumor/Epithelial,Tumor,malignant
+epithelial,Tumor/Epithelial,Epithelial,unknown
+cancer,Tumor/Epithelial,Tumor,malignant
+macrophage,Myeloid/Macrophage,Macrophage,non_malignant
+monocyte,Myeloid/Macrophage,Monocyte,non_malignant
+myeloid,Myeloid/Macrophage,Myeloid,non_malignant
+dendritic,Myeloid/Macrophage,Dendritic cell,non_malignant
+dc,Myeloid/Macrophage,Dendritic cell,non_malignant
+t cell,T/NK,T cell,non_malignant
+t-cell,T/NK,T cell,non_malignant
+cd4,T/NK,CD4 T cell,non_malignant
+cd8,T/NK,CD8 T cell,non_malignant
+nk,T/NK,NK cell,non_malignant
+b cell,B/Plasma,B cell,non_malignant
+b-cell,B/Plasma,B cell,non_malignant
+plasma,B/Plasma,Plasma cell,non_malignant
+fibroblast,CAF/Fibroblast,Fibroblast,non_malignant
+caf,CAF/Fibroblast,CAF,non_malignant
+stromal,CAF/Fibroblast,Stromal,non_malignant
+endothelial,Endothelial,Endothelial,non_malignant
+mesothelial,Mesothelial,Mesothelial,non_malignant
+secretory,Tumor/Epithelial,Normal secretory epithelial,non_malignant
+ciliated,Tumor/Epithelial,Normal ciliated epithelial,non_malignant
+unknown,Unknown,Unknown,unknown

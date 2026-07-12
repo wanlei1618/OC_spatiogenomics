@@ -1,0 +1,19 @@
+data_root: "D:/OC_spatiogenomics/infercnv/external_cell_annotations"
+repo_external_validation_root: "data/external_validation"
+primary_tumor_ecosystem:
+  - GSE154600
+  - GSE158722
+sensitivity_tumor_ecosystem:
+  - GSE154600
+  - GSE158722
+  - GSE147082
+myeloid_source_reference:
+  - GSE154763
+normal_reference:
+  - GSE151214
+minimum_match_fraction_primary: 0.95
+minimum_match_fraction_partial: 0.80
+notes:
+  - "GSE154763 is myeloid_reference_only and must not create a tumor target."
+  - "GSE151214 is normal_fallopian_tube_reference and must not enter tumor LR meta-analysis."
+  - "GSE147082 is secondary_reannotation only and may enter sensitivity analysis, not primary original-annotation analysis."
