@@ -1,0 +1,2 @@
+"dataset_id","input_path","input_type","file_size_bytes","n_genes","n_cells","duplicated_genes","duplicated_cells","integer_like_fraction","metadata_columns"
+"GSE154763","D:/OC_spatiogenomics/公开集/单细胞/OV_GSE154763_expression.h5","10x_h5",75776592,13994,3888,0,0,0,"orig.ident;nCount_RNA;nFeature_RNA;dataset_id;biological_role;cell_type_manual;cell_subtype_manual"

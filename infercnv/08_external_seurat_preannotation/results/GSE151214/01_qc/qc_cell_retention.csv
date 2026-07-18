@@ -1,0 +1,2 @@
+"dataset_id","n_input","n_after_basic_qc","n_after_doublet_filter","retained_fraction","doublet_status"
+"GSE151214",72132,51148,48837,0.677050407586092,"completed"

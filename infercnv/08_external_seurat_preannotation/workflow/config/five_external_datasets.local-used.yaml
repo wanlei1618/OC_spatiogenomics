@@ -1,0 +1,71 @@
+project:
+  output_root: "D:/OC_spatiogenomics/infercnv/external_seurat_preannotation"
+  random_seed: 20260713
+  audit_only: false
+
+analysis:
+  min_cells_after_qc: 200
+  variable_features: 3000
+  n_pcs: 50
+  dims_use: 30
+  resolutions: [0.2, 0.4, 0.6, 0.8, 1.0, 1.2]
+  primary_resolution: 0.6
+  run_clustree: true
+
+qc:
+  min_features: 200
+  min_counts: 500
+  max_percent_mt: 25
+  mad_lower: 3
+  mad_upper: 3
+  remove_doublets: true
+  allow_doublet_skip: true
+
+markers:
+  only_pos: true
+  test_use: "wilcox"
+  min_pct: 0.20
+  logfc_threshold: 0.25
+  adjusted_p_threshold: 0.05
+  export_top_n: [20, 50, 100]
+
+datasets:
+  - dataset_id: "GSE147082"
+    enabled: true
+    biological_role: "ovarian_tumor_ecosystem"
+    input_type: "rds_sce"
+    input_path: "E:/OC_spatiogenomics_archive/external_seurat_preannotation_cleanup_20260716/prepared_inputs/GSE147082_raw_counts_sce.rds"
+    declared_raw_counts: true
+    sample_column: "sample_id"
+
+  - dataset_id: "GSE151214"
+    enabled: true
+    biological_role: "normal_fallopian_tube_reference"
+    input_type: "rds_sce"
+    input_path: "E:/OC_spatiogenomics_archive/external_seurat_preannotation_cleanup_20260716/prepared_inputs/GSE151214_raw_counts_sce.rds"
+    declared_raw_counts: true
+    sample_column: "sample_id"
+
+  - dataset_id: "GSE154600"
+    enabled: true
+    biological_role: "ovarian_tumor_ecosystem"
+    input_type: "rds_sce"
+    input_path: "E:/OC_spatiogenomics_archive/external_seurat_preannotation_cleanup_20260716/prepared_inputs/GSE154600_raw_counts_sce.rds"
+    declared_raw_counts: true
+    sample_column: "sample_id"
+
+  - dataset_id: "GSE154763"
+    enabled: true
+    biological_role: "myeloid_enriched_reference"
+    input_type: "10x_h5"
+    input_path: "D:/OC_spatiogenomics/公开集/单细胞/OV_GSE154763_expression.h5"
+    declared_raw_counts: true
+    sample_column: ""
+
+  - dataset_id: "GSE158722"
+    enabled: true
+    biological_role: "malignant_fluid_tumor_ecosystem"
+    input_type: "rds_sce"
+    input_path: "E:/OC_spatiogenomics_archive/external_seurat_preannotation_cleanup_20260716/prepared_inputs/GSE158722_raw_counts_sce.rds"
+    declared_raw_counts: true
+    sample_column: "sample_id"

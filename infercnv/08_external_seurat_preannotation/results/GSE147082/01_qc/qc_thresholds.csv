@@ -1,0 +1,7 @@
+"sample_id","qc_scope","min_features","max_features","min_counts","max_counts","max_percent_mt","n_before","n_after_basic_qc"
+"PT-2834","sample_wise",241,2533,500,5295,0,1909,1643
+"PT-3232","sample_wise",200,3030.5,500,7636.5,0,1102,914
+"PT-3401","sample_wise",200,2816,500,6294,0,3451,2693
+"PT-4806","sample_wise",200,2615.5,500,5128,0,1108,923
+"PT-5150","sample_wise",200,1900,500,4560,0,1244,937
+"PT-6885","sample_wise",200,2424,500,5593,0,1071,899
