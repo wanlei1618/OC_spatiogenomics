@@ -20,6 +20,7 @@ SPP1+ myeloid/macrophage cells may shape a sample-type/niche-specific invasive e
 | `03_spp1_cd44_itgb1_hypothesis_validation` | Focused SPP1-CD44/ITGB1 validation, CellChat/LIANA/CopyKAT/bulk Cox, and dedicated LR figures. |
 | `04_sample_type_scores` | sample_type-stratified SPP1_TAM and ITGB1/CD44 tumor score analysis. |
 | `05_sample_type_lr_niche_external_validation` | Main sample_type LR niche analysis with Zhang2022 scRNA and GSE203612/GSE189843 spatial validation. |
+| `06_external_seurat_preannotation` | Reproducible QC, clustering, and marker review package for five external ovarian-related scRNA-seq datasets; supplemental/upstream support for external validation, not direct inferCNV evidence. |
 | `90_environment_install_logs` | Package install and environment logs. |
 | `99_codex_results_from_c` | Source archive and migration manifests for inferCNV-related Codex outputs originally found under C drive. |
 
@@ -54,6 +55,7 @@ The classified copies are:
 5. `D:\OC_spatiogenomics\infercnv\03_spp1_cd44_itgb1_hypothesis_validation\LR_SPP1_ITGB1_CD44_figures\README_SPP1_ITGB1_CD44_figures.md`
 6. `D:\OC_spatiogenomics\infercnv\04_sample_type_scores\sample_type_SPP1_TAM_ITGB1_CD44_scores\sample_type_SPP1_TAM_ITGB1_CD44_score_report.md`
 7. `D:\OC_spatiogenomics\infercnv\05_sample_type_lr_niche_external_validation\sample_type_LR_niche_analysis\sample_type_LR_niche_analysis_report.md`
+8. `06_external_seurat_preannotation/README.md`
 
 ## Core evidence files
 
