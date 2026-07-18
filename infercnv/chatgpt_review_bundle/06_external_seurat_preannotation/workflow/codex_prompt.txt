@@ -1,0 +1,44 @@
+﻿请使用 skill：single-cell-seurat-clustering-markers
+
+Skill目录：
+D:\OC_spatiogenomics\.agents\skills\single-cell-seurat-clustering-markers
+
+配置文件：
+D:\OC_spatiogenomics\.agents\skills\single-cell-seurat-clustering-markers\config\five_external_datasets.yaml
+
+目标：分别分析GSE147082、GSE151214、GSE154600、GSE154763和GSE158722，
+完成原始count读取、QC、可选scDblFinder、LogNormalize、高变基因、PCA、
+多分辨率Seurat聚类、UMAP和FindAllMarkers，然后停止，等待人工判断cell type。
+
+强制要求：
+
+1. 五个数据集必须独立分析，禁止先合并。
+2. 首先运行AuditOnly，检查矩阵维度、整数count、重复cell ID和metadata列。
+3. 如路径或输入类型不正确，先修改YAML，不得使用占位数据。
+4. 初始主分辨率使用0.6，同时保留0.2、0.4、0.6、0.8、1.0和1.2。
+5. 导出全部marker及每个cluster的top20、top50和top100 marker。
+6. 生成DotPlot、top-marker heatmap、各分辨率UMAP和clustree。
+7. 每个数据集生成manual_annotation_template.csv。
+8. 不得自动填写cell_type_manual或cell_subtype_manual。
+9. 不运行inferCNV、CopyKAT、CellChat、LIANA、NicheNet或生存分析。
+10. GSE151214只能作为正常输卵管参考。
+11. GSE154763只能作为髓系富集参考。
+12. GSE158722若存在多个样本，裸10x barcode不能作为跨样本唯一ID。
+13. 某个数据集失败时必须标记BLOCKED并说明原因，不能静默替代。
+14. 输出统一保存到：
+    D:\OC_spatiogenomics\infercnv\external_seurat_preannotation
+15. 成功状态必须为：
+    PREANNOTATION_COMPLETE_WAITING_FOR_MANUAL_CELLTYPE
+
+第一步执行：
+
+powershell -ExecutionPolicy Bypass `
+  -File scripts\run_skill.ps1 `
+  -Config config\five_external_datasets.yaml `
+  -AuditOnly
+
+审计确认后执行：
+
+powershell -ExecutionPolicy Bypass `
+  -File scripts\run_skill.ps1 `
+  -Config config\five_external_datasets.yaml

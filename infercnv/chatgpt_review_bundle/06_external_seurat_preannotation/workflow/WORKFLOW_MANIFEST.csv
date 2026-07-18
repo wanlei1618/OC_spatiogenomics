@@ -1,0 +1,8 @@
+﻿file,purpose
+SKILL.md,Skill行为规范和强制边界
+README.md,安装与运行说明
+config/five_external_datasets.yaml,五个数据集的默认配置
+scripts/run_seurat_preannotation.R,Seurat预注释主流程
+scripts/run_skill.ps1,Windows PowerShell启动器
+codex_prompt.txt,可直接粘贴给Codex的执行提示词
+templates/manual_annotation_template.csv,人工注释表格式示例

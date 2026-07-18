@@ -1,0 +1,12 @@
+{
+  "dataset_id": "GSE147082",
+  "status": "PREANNOTATION_COMPLETE_WAITING_FOR_MANUAL_CELLTYPE",
+  "started_at": "2026-07-14 10:50:03.947949",
+  "finished_at": "2026-07-14 11:13:36.734712",
+  "n_input": 9885,
+  "n_after_qc": 7645,
+  "primary_resolution": 0.6,
+  "n_clusters": 21,
+  "n_marker_rows": 15774,
+  "doublet_status": "completed"
+}

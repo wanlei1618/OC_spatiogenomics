@@ -1,0 +1,2 @@
+"dataset_id","input_path","input_type","file_size_bytes","n_genes","n_cells","duplicated_genes","duplicated_cells","integer_like_fraction","metadata_columns"
+"GSE147082","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/prepared/GSE147082_raw_counts_sce.rds","rds_sce",209141155,34646,9885,0,0,1,"orig.ident;nCount_RNA;nFeature_RNA;dataset_id;sample_id;patient_id;timepoint;original_cell_id;biological_role;cell_type_manual;cell_subtype_manual"

@@ -14,6 +14,7 @@ It excludes large binary/intermediate files such as `.RData`, `.rds`, `.infercnv
 4. `03_spp1_cd44_itgb1_hypothesis_validation/SPP1_ITGB1_CD44_hypothesis_validation_complete/SPP1_ITGB1_CD44_complete_validation_report.md`
 5. `04_sample_type_scores/sample_type_SPP1_TAM_ITGB1_CD44_scores/sample_type_SPP1_TAM_ITGB1_CD44_score_report.md`
 6. `05_sample_type_lr_niche_external_validation/sample_type_LR_niche_analysis/sample_type_LR_niche_analysis_report.md`
+7. `06_external_seurat_preannotation/README.md`
 
 ## What to review
 
@@ -28,6 +29,9 @@ Focus especially on:
 - Whether SPP1-CD44 is better supported than SPP1-ITGB1 by ligand-receptor evidence.
 - Whether sample_type effects are exploratory because sample_id is one-to-one with sample_type.
 - Whether external scRNA/spatial validation supports expression-level niche specificity.
+- Whether the independent Seurat QC, clustering, and marker outputs are
+  sufficient for subsequent expert annotation; treat GSE154763 as blocked
+  rather than completed evidence.
 - Whether bulk Cox results should be treated as secondary and unstable.
 
 ## Suggested final output

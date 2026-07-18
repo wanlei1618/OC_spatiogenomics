@@ -1,0 +1,6 @@
+{
+  "dataset_id": "GSE154763",
+  "status": "BLOCKED",
+  "error": "GSE154763: declared raw counts are not integer-like",
+  "finished_at": "2026-07-14 09:55:50.526765"
+}
