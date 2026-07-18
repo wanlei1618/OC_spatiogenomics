@@ -14,7 +14,8 @@ For each completed dataset:
    filtering severity.
 4. Review `02_clustering/umap_primary_resolution.pdf`,
    `umap_by_sample.pdf`, and `clustree.pdf` for cluster/sample structure and
-   resolution stability.
+   resolution stability. Same-basename PNG copies are available for direct
+   browser and ChatGPT preview.
 5. Read `03_markers/top20_markers_per_cluster.csv` and inspect
    `broad_marker_dotplot.pdf` and `top_marker_heatmap.pdf`.
 6. Propose cell types and subtypes in
@@ -64,6 +65,10 @@ marker alone.
    additional references?
 
 ## Files not directly previewable on GitHub
+
+Every PDF figure has a same-basename 200-DPI PNG in the same directory. Use
+the PNG for direct GitHub/ChatGPT inspection; retain the PDF as the
+source-quality figure.
 
 The full marker and average-expression files are gzip-compressed CSVs. They can
 be downloaded and read with R, Python, or standard gzip-aware tools. The

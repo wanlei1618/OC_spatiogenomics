@@ -21,14 +21,18 @@ figures, run logs, and blank manual-annotation templates.
 
 ## Quick review links
 
+Every PDF figure also has a 200-DPI PNG with the same basename in the same
+directory. Use the PNG links for direct GitHub and ChatGPT visual review; the
+PDF files remain the source-quality versions.
+
 ### GSE147082
 
 - [Run status](results/GSE147082/logs/run_status.json)
 - [QC retention](results/GSE147082/01_qc/qc_cell_retention.csv)
 - [Cluster counts](results/GSE147082/02_clustering/cluster_cell_counts.csv)
-- [Primary UMAP](results/GSE147082/02_clustering/umap_primary_resolution.pdf)
+- [Primary UMAP (PNG)](results/GSE147082/02_clustering/umap_primary_resolution.png) ([PDF](results/GSE147082/02_clustering/umap_primary_resolution.pdf))
 - [Top 20 markers](results/GSE147082/03_markers/top20_markers_per_cluster.csv)
-- [Marker dot plot](results/GSE147082/03_markers/broad_marker_dotplot.pdf)
+- [Marker dot plot (PNG)](results/GSE147082/03_markers/broad_marker_dotplot.png) ([PDF](results/GSE147082/03_markers/broad_marker_dotplot.pdf))
 - [Manual annotation template](results/GSE147082/04_manual_annotation/manual_annotation_template.csv)
 
 ### GSE151214
@@ -36,9 +40,9 @@ figures, run logs, and blank manual-annotation templates.
 - [Run status](results/GSE151214/logs/run_status.json)
 - [QC retention](results/GSE151214/01_qc/qc_cell_retention.csv)
 - [Cluster counts](results/GSE151214/02_clustering/cluster_cell_counts.csv)
-- [Primary UMAP](results/GSE151214/02_clustering/umap_primary_resolution.pdf)
+- [Primary UMAP (PNG)](results/GSE151214/02_clustering/umap_primary_resolution.png) ([PDF](results/GSE151214/02_clustering/umap_primary_resolution.pdf))
 - [Top 20 markers](results/GSE151214/03_markers/top20_markers_per_cluster.csv)
-- [Marker dot plot](results/GSE151214/03_markers/broad_marker_dotplot.pdf)
+- [Marker dot plot (PNG)](results/GSE151214/03_markers/broad_marker_dotplot.png) ([PDF](results/GSE151214/03_markers/broad_marker_dotplot.pdf))
 - [Manual annotation template](results/GSE151214/04_manual_annotation/manual_annotation_template.csv)
 
 ### GSE154600
@@ -46,9 +50,9 @@ figures, run logs, and blank manual-annotation templates.
 - [Run status](results/GSE154600/logs/run_status.json)
 - [QC retention](results/GSE154600/01_qc/qc_cell_retention.csv)
 - [Cluster counts](results/GSE154600/02_clustering/cluster_cell_counts.csv)
-- [Primary UMAP](results/GSE154600/02_clustering/umap_primary_resolution.pdf)
+- [Primary UMAP (PNG)](results/GSE154600/02_clustering/umap_primary_resolution.png) ([PDF](results/GSE154600/02_clustering/umap_primary_resolution.pdf))
 - [Top 20 markers](results/GSE154600/03_markers/top20_markers_per_cluster.csv)
-- [Marker dot plot](results/GSE154600/03_markers/broad_marker_dotplot.pdf)
+- [Marker dot plot (PNG)](results/GSE154600/03_markers/broad_marker_dotplot.png) ([PDF](results/GSE154600/03_markers/broad_marker_dotplot.pdf))
 - [Manual annotation template](results/GSE154600/04_manual_annotation/manual_annotation_template.csv)
 
 ### GSE154763
@@ -61,9 +65,9 @@ figures, run logs, and blank manual-annotation templates.
 - [Run status](results/GSE158722/logs/run_status.json)
 - [QC retention](results/GSE158722/01_qc/qc_cell_retention.csv)
 - [Cluster counts](results/GSE158722/02_clustering/cluster_cell_counts.csv)
-- [Primary UMAP](results/GSE158722/02_clustering/umap_primary_resolution.pdf)
+- [Primary UMAP (PNG)](results/GSE158722/02_clustering/umap_primary_resolution.png) ([PDF](results/GSE158722/02_clustering/umap_primary_resolution.pdf))
 - [Top 20 markers](results/GSE158722/03_markers/top20_markers_per_cluster.csv)
-- [Marker dot plot](results/GSE158722/03_markers/broad_marker_dotplot.pdf)
+- [Marker dot plot (PNG)](results/GSE158722/03_markers/broad_marker_dotplot.png) ([PDF](results/GSE158722/03_markers/broad_marker_dotplot.pdf))
 - [Manual annotation template](results/GSE158722/04_manual_annotation/manual_annotation_template.csv)
 
 The complete positive-marker tables are stored as
