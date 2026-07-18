@@ -1,0 +1,5 @@
+dataset_id,lineage,strategy,cluster,n_cells,n_samples,dominant_sample,dominant_sample_n,dominant_sample_fraction,normalized_shannon_entropy,simpson_diversity,effective_sample_number,dominance_label
+"GSE154600","Endothelial_like","B_harmony_sample","0",201,5,"T59",80,0.398009950248756,0.824499006479857,0.693349174525383,3.26103801759626,"mixed"
+"GSE154600","Endothelial_like","B_harmony_sample","1",143,4,"T76",127,0.888111888111888,0.266610499245641,0.203726343586483,1.25584965915372,"strong_sample_dominance"
+"GSE154600","Endothelial_like","B_harmony_sample","3",39,5,"T59",11,0.282051282051282,0.980792025400945,0.787639710716634,4.70897832817338,"mixed"
+"GSE154600","Endothelial_like","B_harmony_sample","2",141,5,"T76",50,0.354609929078014,0.919365839505463,0.747648508626327,3.96272672912099,"mixed"

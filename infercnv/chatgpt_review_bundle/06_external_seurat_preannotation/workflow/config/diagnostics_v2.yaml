@@ -1,0 +1,55 @@
+project:
+  repo_root: "D:/OC_spatiogenomics/sync_compare/clean_clone"
+  data_root: "D:/OC_spatiogenomics/infercnv/external_seurat_preannotation"
+  project_root: "D:/OC_spatiogenomics"
+  prepared_input_root: "E:/OC_spatiogenomics_archive/external_seurat_preannotation_cleanup_20260716/prepared_inputs"
+  raw_count_root: "D:/OC_spatiogenomics/公开集/单细胞/raw_counts"
+  random_seed: 20260718
+  max_object_load_gb: 2.5
+
+datasets:
+  GSE147082:
+    enabled: true
+    diagnose_mt: true
+    diagnose_dominance: false
+    prepared_sce: "GSE147082_raw_counts_sce.rds"
+    sample_column: "sample_id"
+  GSE154600:
+    enabled: true
+    diagnose_mt: false
+    diagnose_dominance: true
+    prepared_sce: "GSE154600_raw_counts_sce.rds"
+    sample_column: "sample_id"
+  GSE158722:
+    enabled: true
+    diagnose_mt: true
+    diagnose_dominance: true
+    prepared_sce: "GSE158722_raw_counts_sce.rds"
+    common_gene_file: "GSE158722_common_genes.rds"
+    sample_column: "sample_id"
+    patient_column: "patient_id"
+    timepoint_column: "timepoint"
+
+qc:
+  min_features: 200
+  min_counts: 500
+  max_percent_mt: 25
+  mad_lower: 3
+  mad_upper: 3
+
+analysis:
+  variable_features: 3000
+  n_pcs: 50
+  dims_use: 30
+  primary_resolution: 0.6
+  resolutions: [0.2, 0.4, 0.6, 0.8, 1.0, 1.2]
+  broad_lineage_min_cells: 100
+  max_cells_per_lineage_strategy: 30000
+
+markers:
+  only_pos: true
+  test_use: "wilcox"
+  min_pct: 0.20
+  logfc_threshold: 0.25
+  adjusted_p_threshold: 0.05
+  export_top_n: [20, 50, 100]

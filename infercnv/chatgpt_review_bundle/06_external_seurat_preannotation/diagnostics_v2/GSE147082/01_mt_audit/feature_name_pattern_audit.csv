@@ -1,0 +1,11 @@
+source,pattern_name,regex,ignore_case,n_features,n_matches
+"prepared_matrix","uppercase_MT_hyphen","^MT-",FALSE,34646,0
+"prepared_matrix","lowercase_mt_hyphen","^mt-",FALSE,34646,0
+"prepared_matrix","mixedcase_Mt_hyphen","^Mt-",FALSE,34646,0
+"prepared_matrix","uppercase_MT_dot","^MT\.",FALSE,34646,33
+"prepared_matrix","ensembl_gene","^ENSG",FALSE,34646,0
+"prepared_matrix","ensembl_transcript","^ENST",FALSE,34646,0
+"prepared_matrix","chrM_text","chrM",TRUE,34646,4
+"prepared_matrix","mitochond_text","mitochond",TRUE,34646,0
+"prepared_matrix","ribosomal_RPS_RPL","^RP[SL]",TRUE,34646,775
+"prepared_matrix","hemoglobin","^HB[ABDEGQZ]",TRUE,34646,8

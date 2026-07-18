@@ -1,0 +1,11 @@
+{
+    "step":  "06_strategy_evaluation",
+    "status":  "COMPLETE",
+    "started_at":  "2026-07-18T21:02:15.1447786+08:00",
+    "finished_at":  "2026-07-18T21:06:34.6744465+08:00",
+    "fingerprint":  "47C27BBDEDD6B76BEAFF43E5B74E5CFEA98AC7831B52AB66DC0C6B819B725B19",
+    "marker_path":  "D:\\OC_spatiogenomics\\infercnv\\external_seurat_preannotation\\diagnostics_v2\\strategy_comparison\\recommended_strategy_by_dataset_and_lineage.csv",
+    "marker_sha256":  "9BDBE79A711CE499B2AF7BC441E3E8E6CA5FDB627562253D0586A17005FF4D49",
+    "script_sha256":  "A0644D04C71CBEA5B9604CC445C4A67A4FC529D6F0DA21EA362029D4F80A8E54",
+    "config_sha256":  "4B278C99B53999D3CD2BFE1327AD83CAC85A3850DE33B3917121EC0E915BC93A"
+}

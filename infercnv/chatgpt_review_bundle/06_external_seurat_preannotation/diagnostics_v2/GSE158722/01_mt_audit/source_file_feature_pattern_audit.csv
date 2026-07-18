@@ -1,0 +1,24 @@
+dataset_id,source_file,status,feature_column,n_features,n_match_uppercase_MT,n_match_dot_MT,n_match_lowercase_mt,n_match_ensembl,message
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P01.counts.txt.gz","complete","Gene Symbol",19371,0,0,0,0,NA
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P02.counts.txt.gz","complete","Gene Symbol",19371,0,0,0,0,NA
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P03.counts.txt.gz","complete","Gene Symbol",19371,0,0,0,0,NA
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P04.counts.txt.gz","complete","Gene Symbol",33538,13,0,0,0,NA
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P05.counts.txt.gz","complete","Gene Symbol",33538,13,0,0,0,NA
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P06.counts.txt.gz","complete","Gene Symbol",32738,13,0,0,0,NA
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P07.counts.txt.gz","complete","Gene Symbol",33538,13,0,0,0,NA
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P08.counts.txt.gz","complete","Gene Symbol",33538,13,0,0,0,NA
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P09.counts.txt.gz","complete","Gene Symbol",32738,13,0,0,0,NA
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P10.counts.txt.gz","complete","Gene Symbol",33538,13,0,0,0,NA
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P11.counts.txt.gz","complete","Gene Symbol",33538,13,0,0,0,NA
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P12.counts.txt.gz","complete","Gene Symbol",33538,13,0,0,0,NA
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P13.counts.txt.gz","complete","Gene Symbol",33538,13,0,0,0,NA
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P14.counts.txt.gz","complete","Gene Symbol",33538,13,0,0,0,NA
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P15.counts.txt.gz","complete","Gene Symbol",33538,13,0,0,0,NA
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P16.counts.txt.gz","complete","Gene Symbol",33538,13,0,0,0,NA
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P17.counts.txt.gz","complete","Gene Symbol",33538,13,0,0,0,NA
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P18.counts.txt.gz","complete","Gene Symbol",33538,13,0,0,0,NA
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P19.counts.txt.gz","complete","Gene Symbol",33538,13,0,0,0,NA
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P20.counts.txt.gz","complete","Gene Symbol",33538,13,0,0,0,NA
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P21.counts.txt.gz","complete","Gene Symbol",33538,13,0,0,0,NA
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P23.counts.txt.gz","complete","Gene Symbol",33538,13,0,0,0,NA
+"GSE158722","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P24.counts.txt.gz","complete","Gene Symbol",33538,13,0,0,0,NA

@@ -1,0 +1,14 @@
+dataset_id,lineage,recommended_strategy,rationale,preserve_uncorrected_parallel
+"GSE154600","B_Plasma_like","B_harmony_sample","Highest balanced score among completed strategies; score combines sample mixing, cluster preservation, broad-lineage purity, and QC association. Score=0.8558.",FALSE
+"GSE154600","Cycling_like","B_harmony_sample","Highest balanced score among completed strategies; score combines sample mixing, cluster preservation, broad-lineage purity, and QC association. Score=0.7617.",FALSE
+"GSE154600","Endothelial_like","B_harmony_sample","Highest balanced score among completed strategies; score combines sample mixing, cluster preservation, broad-lineage purity, and QC association. Score=0.9615.",FALSE
+"GSE154600","Epithelial_like","A_uncorrected","Preserve the uncorrected patient-specific epithelial structure as the primary result. Harmony/RPCA remain parallel shared-state sensitivity outputs when completed.",TRUE
+"GSE154600","Fibroblast_like","B_harmony_sample","Highest balanced score among completed strategies; score combines sample mixing, cluster preservation, broad-lineage purity, and QC association. Score=0.196.",FALSE
+"GSE154600","Myeloid_like","B_harmony_sample","Highest balanced score among completed strategies; score combines sample mixing, cluster preservation, broad-lineage purity, and QC association. Score=0.3755.",FALSE
+"GSE154600","T_NK_like","B_harmony_sample","Highest balanced score among completed strategies; score combines sample mixing, cluster preservation, broad-lineage purity, and QC association. Score=0.4825.",FALSE
+"GSE158722","B_Plasma_like","B_harmony_patient","Highest balanced score among completed strategies; score combines sample mixing, cluster preservation, broad-lineage purity, and QC association. Score=0.5241.",FALSE
+"GSE158722","Cycling_like","B_harmony_sample","Highest balanced score among completed strategies; score combines sample mixing, cluster preservation, broad-lineage purity, and QC association. Score=0.3964.",FALSE
+"GSE158722","Epithelial_like","A_uncorrected","Preserve the uncorrected patient-specific epithelial structure as the primary result. Harmony/RPCA remain parallel shared-state sensitivity outputs when completed.",TRUE
+"GSE158722","Fibroblast_like","A_uncorrected","Highest balanced score among completed strategies; score combines sample mixing, cluster preservation, broad-lineage purity, and QC association. Score=0.8188.",FALSE
+"GSE158722","Myeloid_like","A_uncorrected","Highest balanced score among completed strategies; score combines sample mixing, cluster preservation, broad-lineage purity, and QC association. Score=-0.008601.",FALSE
+"GSE158722","T_NK_like","B_harmony_patient","Highest balanced score among completed strategies; score combines sample mixing, cluster preservation, broad-lineage purity, and QC association. Score=0.1891.",FALSE

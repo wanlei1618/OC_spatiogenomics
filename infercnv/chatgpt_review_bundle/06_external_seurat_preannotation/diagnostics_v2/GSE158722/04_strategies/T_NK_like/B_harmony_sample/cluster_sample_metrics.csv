@@ -1,0 +1,11 @@
+dataset_id,lineage,strategy,cluster,n_cells,n_samples,dominant_sample,dominant_sample_n,dominant_sample_fraction,normalized_shannon_entropy,simpson_diversity,effective_sample_number,dominance_label
+"GSE158722","T_NK_like","B_harmony_sample","0",530,2,"P04_Time3",529,0.99811320754717,0.00450666027711839,0.00376646493414023,1.00378070482629,"strong_sample_dominance"
+"GSE158722","T_NK_like","B_harmony_sample","3",239,3,"P04_Time3",237,0.99163179916318,0.0177897313464074,0.0166313614957722,1.01691264175464,"strong_sample_dominance"
+"GSE158722","T_NK_like","B_harmony_sample","2",296,1,"P04_Time3",296,1,0,0,1,"strong_sample_dominance"
+"GSE158722","T_NK_like","B_harmony_sample","9",61,6,"P04_Time3",37,0.60655737704918,0.322151835488734,0.53319000268745,2.14219919401267,"moderate_sample_dominance"
+"GSE158722","T_NK_like","B_harmony_sample","7",97,9,"P07_Time1",57,0.587628865979382,0.395384849311997,0.586884897438623,2.42063287882686,"mixed"
+"GSE158722","T_NK_like","B_harmony_sample","5",200,14,"P07_Time1",147,0.735,0.356156554874431,0.4425,1.79372197309417,"moderate_sample_dominance"
+"GSE158722","T_NK_like","B_harmony_sample","8",97,3,"P07_Time1",75,0.77319587628866,0.189626967988782,0.355191837602296,1.55084885445855,"moderate_sample_dominance"
+"GSE158722","T_NK_like","B_harmony_sample","4",230,12,"P07_Time1",178,0.773913043478261,0.280833740888423,0.379432892249528,1.61142926769831,"moderate_sample_dominance"
+"GSE158722","T_NK_like","B_harmony_sample","6",127,10,"P23_Post-treatment",90,0.708661417322835,0.360472370458758,0.475416950833902,1.90627585391798,"moderate_sample_dominance"
+"GSE158722","T_NK_like","B_harmony_sample","1",502,5,"P07_Time1",464,0.924302788844621,0.101202906998178,0.141307280836812,1.16456093976728,"strong_sample_dominance"

@@ -1,0 +1,8 @@
+dataset_id,lineage,strategy,cluster,n_cells,n_samples,dominant_sample,dominant_sample_n,dominant_sample_fraction,normalized_shannon_entropy,simpson_diversity,effective_sample_number,dominance_label
+"GSE158722","Myeloid_like","B_harmony_patient","2",582,21,"P07_Time2",442,0.759450171821306,0.326013031559252,0.411089854867089,1.69805191549945,"moderate_sample_dominance"
+"GSE158722","Myeloid_like","B_harmony_patient","0",1495,10,"P07_Time2",1439,0.962541806020067,0.0639265779062299,0.0730237916801825,1.07877633862097,"strong_sample_dominance"
+"GSE158722","Myeloid_like","B_harmony_patient","4",363,10,"P07_Time2",256,0.705234159779614,0.290963855160371,0.467150847316137,1.87670374432085,"moderate_sample_dominance"
+"GSE158722","Myeloid_like","B_harmony_patient","1",622,16,"P07_Time1",554,0.890675241157556,0.176171905886347,0.2047125236505,1.25740694998765,"strong_sample_dominance"
+"GSE158722","Myeloid_like","B_harmony_patient","6",33,4,"P07_Time2",15,0.454545454545455,0.329841985684542,0.622589531680441,2.64963503649635,"mixed"
+"GSE158722","Myeloid_like","B_harmony_patient","3",425,8,"P07_Time2",404,0.950588235294118,0.0871742493421755,0.0959557093425607,1.10614049591838,"strong_sample_dominance"
+"GSE158722","Myeloid_like","B_harmony_patient","5",283,4,"P07_Time2",276,0.975265017667845,0.0427127981250014,0.0486209092384722,1.05110571559814,"strong_sample_dominance"

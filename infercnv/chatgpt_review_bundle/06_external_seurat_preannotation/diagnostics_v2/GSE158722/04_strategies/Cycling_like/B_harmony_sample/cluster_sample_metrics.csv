@@ -1,0 +1,10 @@
+dataset_id,lineage,strategy,cluster,n_cells,n_samples,dominant_sample,dominant_sample_n,dominant_sample_fraction,normalized_shannon_entropy,simpson_diversity,effective_sample_number,dominance_label
+"GSE158722","Cycling_like","B_harmony_sample","4",141,29,"P14_Pre-treatment",35,0.24822695035461,0.73961491135399,0.880136814043559,8.34284515316828,"mixed"
+"GSE158722","Cycling_like","B_harmony_sample","3",385,23,"P08_Time2",201,0.522077922077922,0.46880114873906,0.669212346095463,3.02308743448023,"mixed"
+"GSE158722","Cycling_like","B_harmony_sample","1",583,31,"P07_Time2",212,0.363636363636364,0.627200921821991,0.808934681616645,5.23381222956222,"mixed"
+"GSE158722","Cycling_like","B_harmony_sample","5",117,16,"P24_Post-treatment",56,0.478632478632479,0.52783613339101,0.737818686536635,3.81415436054611,"mixed"
+"GSE158722","Cycling_like","B_harmony_sample","8",41,8,"P04_Time3",24,0.585365853658537,0.369242639105378,0.609161213563355,2.558599695586,"mixed"
+"GSE158722","Cycling_like","B_harmony_sample","0",690,26,"P07_Time2",287,0.415942028985507,0.575986257015936,0.766507036336904,4.28278430455355,"mixed"
+"GSE158722","Cycling_like","B_harmony_sample","7",83,7,"P07_Time2",44,0.530120481927711,0.294490570009399,0.576571345623458,2.36167295166267,"mixed"
+"GSE158722","Cycling_like","B_harmony_sample","2",495,25,"P08_Time2",135,0.272727272727273,0.652739990995037,0.842673196612591,6.35619601027264,"mixed"
+"GSE158722","Cycling_like","B_harmony_sample","6",93,22,"P15_Pre-treatment",22,0.236559139784946,0.675055945714864,0.86576482830385,7.44961240310078,"mixed"

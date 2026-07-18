@@ -1,0 +1,27 @@
+===== GSE158722 =====
+Resuming from completed raw feature audit: D:/OC_spatiogenomics/infercnv/external_seurat_preannotation/diagnostics_v2/GSE158722/01_mt_audit/source_file_feature_pattern_audit.csv
+Resuming raw QC part: P01
+Resuming raw QC part: P02
+Resuming raw QC part: P03
+Resuming raw QC part: P04
+Resuming raw QC part: P05
+Resuming raw QC part: P06
+Resuming raw QC part: P07
+Computing raw-source QC metrics: P08 from D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P08.counts.txt.gz
+Computing raw-source QC metrics: P09 from D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P09.counts.txt.gz
+Computing raw-source QC metrics: P10 from D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P10.counts.txt.gz
+Computing raw-source QC metrics: P11 from D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P11.counts.txt.gz
+Computing raw-source QC metrics: P12 from D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P12.counts.txt.gz
+Computing raw-source QC metrics: P13 from D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P13.counts.txt.gz
+Computing raw-source QC metrics: P14 from D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P14.counts.txt.gz
+Computing raw-source QC metrics: P15 from D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P15.counts.txt.gz
+Computing raw-source QC metrics: P16 from D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P16.counts.txt.gz
+Computing raw-source QC metrics: P17 from D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P17.counts.txt.gz
+Computing raw-source QC metrics: P18 from D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P18.counts.txt.gz
+Computing raw-source QC metrics: P19 from D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P19.counts.txt.gz
+Computing raw-source QC metrics: P20 from D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P20.counts.txt.gz
+Computing raw-source QC metrics: P21 from D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P21.counts.txt.gz
+Computing raw-source QC metrics: P23 from D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P23.counts.txt.gz
+Computing raw-source QC metrics: P24 from D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE158722/GSE158722_P24.counts.txt.gz
+Error: GSE158722: failed to match 41257 existing QC cells to original raw-count QC metrics
+Execution halted

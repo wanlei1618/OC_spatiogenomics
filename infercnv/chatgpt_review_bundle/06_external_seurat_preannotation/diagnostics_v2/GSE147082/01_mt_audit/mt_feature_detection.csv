@@ -1,0 +1,2 @@
+dataset_id,n_features,feature_id_type,n_match_uppercase_MT,n_match_lowercase_mt,n_match_dot_MT,n_match_ensembl,n_feature_metadata_rows,n_feature_metadata_columns,candidate_mt_source,n_mt_features_used,percent_mt_available,n_cells_percent_mt_available,fraction_cells_percent_mt_available,status
+"GSE147082",34646,"gene_symbol_or_symbol_like",0,0,33,0,34646,0,"rownames_gene_symbol_dot_separator",33,TRUE,7645,1,"available_recomputed_explicit_features"

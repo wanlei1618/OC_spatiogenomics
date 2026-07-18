@@ -1,0 +1,11 @@
+{
+    "step":  "04_broad_lineages_GSE158722",
+    "status":  "COMPLETE",
+    "started_at":  "2026-07-18T20:13:42.5395626+08:00",
+    "finished_at":  "2026-07-18T20:18:02.0850126+08:00",
+    "fingerprint":  "FB1FA89D9CBD50316261F4377AD02DEA7D4315E1D32A82AAF478E3338405F6CB",
+    "marker_path":  "D:\\OC_spatiogenomics\\infercnv\\external_seurat_preannotation\\diagnostics_v2\\GSE158722\\03_broad_lineages\\lineage_strategy_input_audit.csv",
+    "marker_sha256":  "4DDC13B6D31366B4FA27EBEC994715FAB6DF27C21734AB99F73DAF42F1ED9DA7",
+    "script_sha256":  "8701AE6E4BD225B4557583A7A0D7CDF5E750A17DBAAC97FE762619057EF07D07",
+    "config_sha256":  "4B278C99B53999D3CD2BFE1327AD83CAC85A3850DE33B3917121EC0E915BC93A"
+}

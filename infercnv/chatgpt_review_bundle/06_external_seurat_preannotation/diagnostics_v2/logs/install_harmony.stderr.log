@@ -1,0 +1,6 @@
+Installing package into 'C:/Users/chenfy12/AppData/Local/R/win-library/4.6'
+(as 'lib' is unspecified)
+also installing the dependency 'RhpcBLASctl'
+
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/RhpcBLASctl_0.23-42.zip'
+trying URL 'https://cloud.r-project.org/bin/windows/contrib/4.6/harmony_2.0.5.zip'

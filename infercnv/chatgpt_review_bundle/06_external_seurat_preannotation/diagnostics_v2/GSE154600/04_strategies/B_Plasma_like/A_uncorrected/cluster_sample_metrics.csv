@@ -1,0 +1,12 @@
+dataset_id,lineage,strategy,cluster,n_cells,n_samples,dominant_sample,dominant_sample_n,dominant_sample_fraction,normalized_shannon_entropy,simpson_diversity,effective_sample_number,dominance_label
+"GSE154600","B_Plasma_like","A_uncorrected","3",213,3,"T59",107,0.502347417840376,0.57154125410421,0.569816394454363,2.32458882000307,"mixed"
+"GSE154600","B_Plasma_like","A_uncorrected","4",206,3,"T59",202,0.980582524271845,0.0662855159864291,0.0382222641153737,1.03974126525212,"strong_sample_dominance"
+"GSE154600","B_Plasma_like","A_uncorrected","10",54,5,"T59",38,0.703703703703704,0.591633309296481,0.473936899862826,1.90091264667536,"moderate_sample_dominance"
+"GSE154600","B_Plasma_like","A_uncorrected","2",276,5,"T77",193,0.699275362318841,0.580536446212822,0.473718756563747,1.90012471938139,"moderate_sample_dominance"
+"GSE154600","B_Plasma_like","A_uncorrected","6",193,3,"T89",114,0.590673575129534,0.596506823697184,0.567209857982765,2.31058867315923,"mixed"
+"GSE154600","B_Plasma_like","A_uncorrected","5",200,2,"T76",197,0.985,0.0483911238882819,0.02955,1.03044979133392,"strong_sample_dominance"
+"GSE154600","B_Plasma_like","A_uncorrected","7",142,4,"T76",136,0.957746478873239,0.135312075144411,0.08202737552073,1.08935710426796,"strong_sample_dominance"
+"GSE154600","B_Plasma_like","A_uncorrected","1",366,4,"T89",209,0.57103825136612,0.480069791310888,0.505733225835349,2.02319891255097,"mixed"
+"GSE154600","B_Plasma_like","A_uncorrected","9",60,3,"T89",51,0.85,0.326668907345698,0.266111111111111,1.36260408781226,"moderate_sample_dominance"
+"GSE154600","B_Plasma_like","A_uncorrected","8",75,4,"T77",72,0.96,0.131653813821522,0.0778666666666666,1.08444187391556,"moderate_sample_dominance"
+"GSE154600","B_Plasma_like","A_uncorrected","0",400,4,"T77",393,0.9825,0.0656859256885064,0.034575,1.03581324287231,"strong_sample_dominance"

@@ -1,0 +1,11 @@
+{
+    "step":  "05_batch_strategies_GSE158722",
+    "status":  "COMPLETE",
+    "started_at":  "2026-07-18T20:58:21.0243352+08:00",
+    "finished_at":  "2026-07-18T21:02:15.1212047+08:00",
+    "fingerprint":  "0FC0C03529E8ABC2B806E95C0653950E13326E9072E1FFCE6D2A4186F9510364",
+    "marker_path":  "D:\\OC_spatiogenomics\\infercnv\\external_seurat_preannotation\\diagnostics_v2\\strategy_comparison\\strategy_run_status_GSE158722.csv",
+    "marker_sha256":  "EFA7B5D19E358D873890E4882D7D766484FCE7EFC0AF560E7528796E78DD5196",
+    "script_sha256":  "83E29FDA12F584270036C45A3EFA2D491E522B933F17D31AF0AA7FC9E8CC0298",
+    "config_sha256":  "4B278C99B53999D3CD2BFE1327AD83CAC85A3850DE33B3917121EC0E915BC93A"
+}

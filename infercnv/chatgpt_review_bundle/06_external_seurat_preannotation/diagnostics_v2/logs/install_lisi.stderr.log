@@ -1,0 +1,8 @@
+Installing package into 'C:/Users/chenfy12/AppData/Local/R/win-library/4.6'
+(as 'lib' is unspecified)
+Warning message:
+package 'lisi' is not available as a binary package for this version of R
+
+A version of this package for your version of R might be available elsewhere,
+see the ideas at
+https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages

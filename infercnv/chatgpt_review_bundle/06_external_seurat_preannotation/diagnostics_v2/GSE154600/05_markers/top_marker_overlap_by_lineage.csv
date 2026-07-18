@@ -1,0 +1,8 @@
+dataset_id,lineage,selected_strategy,n_baseline_top50_union,n_selected_top50_union,n_intersection,top50_union_jaccard
+"GSE154600","B_Plasma_like","B_harmony_sample",415,338,243,0.476470588235294
+"GSE154600","Cycling_like","B_harmony_sample",268,149,122,0.413559322033898
+"GSE154600","Endothelial_like","B_harmony_sample",278,197,101,0.270053475935829
+"GSE154600","Epithelial_like","A_uncorrected",447,447,447,1
+"GSE154600","Fibroblast_like","B_harmony_sample",537,512,414,0.651968503937008
+"GSE154600","Myeloid_like","B_harmony_sample",621,540,447,0.626050420168067
+"GSE154600","T_NK_like","B_harmony_sample",392,405,289,0.568897637795276

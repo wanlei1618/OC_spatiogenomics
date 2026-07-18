@@ -1,0 +1,14 @@
+dataset_id,lineage,strategy,n_marker_rows,assay,test_use,min_pct,logfc_threshold,return_threshold
+"GSE154600","B_Plasma_like","A_uncorrected",4183,"RNA","wilcox",0.2,0.25,0.05
+"GSE154600","B_Plasma_like","B_harmony_sample",3345,"RNA","wilcox",0.2,0.25,0.05
+"GSE154600","Cycling_like","A_uncorrected",2019,"RNA","wilcox",0.2,0.25,0.05
+"GSE154600","Cycling_like","B_harmony_sample",1510,"RNA","wilcox",0.2,0.25,0.05
+"GSE154600","Endothelial_like","A_uncorrected",2906,"RNA","wilcox",0.2,0.25,0.05
+"GSE154600","Endothelial_like","B_harmony_sample",2387,"RNA","wilcox",0.2,0.25,0.05
+"GSE154600","Epithelial_like","A_uncorrected",6008,"RNA","wilcox",0.2,0.25,0.05
+"GSE154600","Fibroblast_like","A_uncorrected",6703,"RNA","wilcox",0.2,0.25,0.05
+"GSE154600","Fibroblast_like","B_harmony_sample",6595,"RNA","wilcox",0.2,0.25,0.05
+"GSE154600","Myeloid_like","A_uncorrected",9245,"RNA","wilcox",0.2,0.25,0.05
+"GSE154600","Myeloid_like","B_harmony_sample",6422,"RNA","wilcox",0.2,0.25,0.05
+"GSE154600","T_NK_like","A_uncorrected",4550,"RNA","wilcox",0.2,0.25,0.05
+"GSE154600","T_NK_like","B_harmony_sample",3333,"RNA","wilcox",0.2,0.25,0.05

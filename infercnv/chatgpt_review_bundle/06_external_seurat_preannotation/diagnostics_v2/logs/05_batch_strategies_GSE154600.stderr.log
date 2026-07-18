@@ -1,0 +1,109 @@
+===== GSE154600 / B_Plasma_like =====
+===== GSE154600 / Combined_broad_lineages =====
+===== GSE154600 / Cycling_like =====
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  pseudoinverse used at -2.428
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  neighborhood radius 0.4969
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  reciprocal condition number  1.4603e-14
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  There are other near singularities as well. 0.090619
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  at  -1.495
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  radius  0.00032015
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  all data on boundary of neighborhood. make span bigger
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  pseudoinverse used at -1.495
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  neighborhood radius 0.017893
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  reciprocal condition number  1
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  zero-width neighborhood. make span bigger
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  There are other near singularities as well. 0.031008
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  pseudoinverse used at -2.2549
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  neighborhood radius 0.32044
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  reciprocal condition number  5.5767e-28
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  There are other near singularities as well. 0.031008
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  pseudoinverse used at -1.8177
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  neighborhood radius 0.31935
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  reciprocal condition number  2.7881e-28
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  There are other near singularities as well. 0.090619
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  pseudoinverse used at -2.2077
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  neighborhood radius 0.31844
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  reciprocal condition number  4.2603e-29
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  There are other near singularities as well. 0.031008
+Warning in svd.function(A = t(x = object), nv = npcs, ...) :
+  You're computing too large a percentage of total singular values, use a standard svd instead.
+Warning: Caught simpleError. Canceling all iterations ...
+===== GSE154600 / Endothelial_like =====
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  pseudoinverse used at -2.1166
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  neighborhood radius 0.49681
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  reciprocal condition number  9.4346e-15
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  There are other near singularities as well. 0.090619
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  pseudoinverse used at -2.1004
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  neighborhood radius 0.30103
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  reciprocal condition number  5.8434e-15
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  pseudoinverse used at -1.8323
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  neighborhood radius 0.32037
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  reciprocal condition number  1.3338e-28
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  There are other near singularities as well. 0.031008
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  pseudoinverse used at -1.7665
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  neighborhood radius 0.31934
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  reciprocal condition number  4.94e-29
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  There are other near singularities as well. 0.090619
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  at  -1.4318
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  radius  0.00028231
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  all data on boundary of neighborhood. make span bigger
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  pseudoinverse used at -1.4318
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  neighborhood radius 0.016802
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  reciprocal condition number  1
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  There are other near singularities as well. 0.031008
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  zero-width neighborhood. make span bigger
+Warning in svd.function(A = t(x = object), nv = npcs, ...) :
+  You're computing too large a percentage of total singular values, use a standard svd instead.
+Warning: Caught simpleError. Canceling all iterations ...
+===== GSE154600 / Epithelial_like =====
+===== GSE154600 / Fibroblast_like =====
+===== GSE154600 / Myeloid_like =====
+===== GSE154600 / T_NK_like =====
+A/B/C strategy comparison complete

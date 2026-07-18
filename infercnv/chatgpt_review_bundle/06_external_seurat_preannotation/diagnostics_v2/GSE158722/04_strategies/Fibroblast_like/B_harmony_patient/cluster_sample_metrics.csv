@@ -1,0 +1,9 @@
+dataset_id,lineage,strategy,cluster,n_cells,n_samples,dominant_sample,dominant_sample_n,dominant_sample_fraction,normalized_shannon_entropy,simpson_diversity,effective_sample_number,dominance_label
+"GSE158722","Fibroblast_like","B_harmony_patient","4",250,18,"P04_Time1",93,0.372,0.520249856926862,0.764576,4.24765529427756,"mixed"
+"GSE158722","Fibroblast_like","B_harmony_patient","0",544,23,"P04_Time1",143,0.262867647058824,0.577743822144242,0.807458369377163,5.19368199368199,"mixed"
+"GSE158722","Fibroblast_like","B_harmony_patient","2",379,12,"P17_Pre-treatment",102,0.269129287598945,0.470681164500527,0.770184000389861,4.35130714004423,"mixed"
+"GSE158722","Fibroblast_like","B_harmony_patient","1",380,18,"P24_Post-treatment",138,0.363157894736842,0.5121913881047,0.76387811634349,4.23510089160019,"mixed"
+"GSE158722","Fibroblast_like","B_harmony_patient","3",257,20,"P08_Time1",54,0.21011673151751,0.708157042647215,0.878317612681494,8.21811621251711,"mixed"
+"GSE158722","Fibroblast_like","B_harmony_patient","5",247,23,"P04_Time1",41,0.165991902834008,0.726735021774875,0.886983887623138,8.84829586656998,"mixed"
+"GSE158722","Fibroblast_like","B_harmony_patient","6",131,15,"P04_Time1",42,0.320610687022901,0.570437990016875,0.802983509119515,5.07571724341911,"mixed"
+"GSE158722","Fibroblast_like","B_harmony_patient","7",106,9,"P24_Post-treatment",40,0.377358490566038,0.449704193539446,0.730687077251691,3.71315267680106,"mixed"

@@ -1,0 +1,2 @@
+dataset_id,n_current_singlets,n_after_repaired_mt_qc,retained_fraction,percent_mt_available,fraction_cells_percent_mt_available,decision
+"GSE158722",98832,68568,0.693783389995143,TRUE,0.988859883438563,"apply_explicit_feature_mt_threshold"
