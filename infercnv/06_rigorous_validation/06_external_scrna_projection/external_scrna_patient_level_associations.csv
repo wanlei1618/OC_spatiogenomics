@@ -1,0 +1,19 @@
+stratum,x,y,n_samples,spearman_r,p_value,p_adj_BH,note
+all_samples,source_myeloid_fraction,Subclone02_like_mean_target_tumor,22,-0.005081874647092038,0.9823270506591967,0.9956037373037443,patient-sample level; site and treatment may be confounded
+tumor,source_myeloid_fraction,Subclone02_like_mean_target_tumor,1,nan,nan,nan,patient-sample level; site and treatment may be confounded
+peritoneal_implant,source_myeloid_fraction,Subclone02_like_mean_target_tumor,21,0.053246753246753244,0.8211075421263075,0.9956037373037443,patient-sample level; site and treatment may be confounded
+all_samples,source_myeloid_fraction,Subclone04_like_mean_target_tumor,22,-0.04121964991530209,0.8573298780341307,0.9956037373037443,patient-sample level; site and treatment may be confounded
+tumor,source_myeloid_fraction,Subclone04_like_mean_target_tumor,1,nan,nan,nan,patient-sample level; site and treatment may be confounded
+peritoneal_implant,source_myeloid_fraction,Subclone04_like_mean_target_tumor,21,-0.0012987012987012987,0.9956037373037443,0.9956037373037443,patient-sample level; site and treatment may be confounded
+all_samples,source_myeloid_fraction,Subclone02_04_common_mean_target_tumor,22,0.05138339920948617,0.8226231007225958,0.9956037373037443,patient-sample level; site and treatment may be confounded
+tumor,source_myeloid_fraction,Subclone02_04_common_mean_target_tumor,1,nan,nan,nan,patient-sample level; site and treatment may be confounded
+peritoneal_implant,source_myeloid_fraction,Subclone02_04_common_mean_target_tumor,21,0.12467532467532468,0.5949205463721239,0.9956037373037443,patient-sample level; site and treatment may be confounded
+all_samples,source_myeloid_fraction,CD44_ITGB1_target_mean_target_tumor,22,0.14398644833427443,0.5273774337953634,0.9956037373037443,patient-sample level; site and treatment may be confounded
+tumor,source_myeloid_fraction,CD44_ITGB1_target_mean_target_tumor,1,nan,nan,nan,patient-sample level; site and treatment may be confounded
+peritoneal_implant,source_myeloid_fraction,CD44_ITGB1_target_mean_target_tumor,21,0.13766233766233765,0.556677417812006,0.9956037373037443,patient-sample level; site and treatment may be confounded
+all_samples,source_myeloid_fraction,KRAS_hypoxia_target_mean_target_tumor,22,0.4827780914737436,0.02171034374135195,0.2605241248962234,patient-sample level; site and treatment may be confounded
+tumor,source_myeloid_fraction,KRAS_hypoxia_target_mean_target_tumor,1,nan,nan,nan,patient-sample level; site and treatment may be confounded
+peritoneal_implant,source_myeloid_fraction,KRAS_hypoxia_target_mean_target_tumor,21,0.43506493506493504,0.047972651182613825,0.28783590709568296,patient-sample level; site and treatment may be confounded
+all_samples,target_tumor_fraction,Subclone02_04_common_mean_target_tumor,22,-0.21626199887069453,0.3381702839161834,0.9956037373037443,patient-sample level; site and treatment may be confounded
+tumor,target_tumor_fraction,Subclone02_04_common_mean_target_tumor,1,nan,nan,nan,patient-sample level; site and treatment may be confounded
+peritoneal_implant,target_tumor_fraction,Subclone02_04_common_mean_target_tumor,21,-0.3012987012987013,0.18708958332739167,0.7483583333095667,patient-sample level; site and treatment may be confounded

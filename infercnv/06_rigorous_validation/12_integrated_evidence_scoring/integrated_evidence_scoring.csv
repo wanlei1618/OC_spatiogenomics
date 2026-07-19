@@ -1,0 +1,9 @@
+evidence_layer,classification,key_stat,limitation
+Gate A clone cross-patient validity,因数据结构无法判断,integrated_oc patient_id missing,cannot call old CNV_Subclone labels cross-patient states
+External SPP1-myeloid vs 02/04-like association,未支持,"Spearman r=0.0514, BH q=0.9956",external signature projection; site/treatment may be confounded
+Spatial co-expression meta,部分支持,"pooled r=0.1356, BH q=0.0113",high heterogeneity; not full spatial deconvolution
+Bulk OS/PFS interaction,未支持,Cox interaction models not significant,OS/PFS not primary endpoint
+Bulk SPP1/KRAS-hypoxia covariation,部分支持,"pooled r=0.1042, BH q=0.0306",bulk signatures are not local cell-cell interaction evidence
+CNV-expression dosage,部分支持,776 RNA-derived candidates; top=MSLN rho=0.822904687096245,RNA-derived inferCNV circularity; no independent DNA CNV validation found locally
+Exploratory mediation,部分支持,5 cohorts with bootstrap CI excluding 0,statistical mediation only; not causal
+NicheNet mechanism,未支持,full NicheNet output absent,requires patient-level stable 02/04 DEG target set
