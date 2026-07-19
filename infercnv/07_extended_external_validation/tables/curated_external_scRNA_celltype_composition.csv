@@ -1,0 +1,7 @@
+dataset_id,analysis_role,cell_type_major,n_cells,fraction
+GSE147082,sensitivity_secondary,T/NK,9796,1.0
+GSE151214,normal_reference,T/NK,59446,1.0
+GSE154600,tumor_ecosystem_primary,Unknown,42253,1.0
+GSE154763,myeloid_reference_only,Myeloid/Macrophage,185,0.04758230452674897
+GSE154763,myeloid_reference_only,Unknown,3703,0.9524176954732511
+GSE158722,tumor_ecosystem_primary,Unknown,63793,1.0

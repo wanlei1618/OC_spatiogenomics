@@ -1,0 +1,129 @@
+Before sessioninfo: 1.2.4 
+Downloading package from url: https://cran.rstudio.com/src/contrib/Archive/sessioninfo/sessioninfo_1.2.2.tar.gz
+Installing 1 packages: mockery
+trying URL 'https://cran.rstudio.com/src/contrib/mockery_0.4.5.tar.gz'
+Content length 21126 bytes (20 KB)
+==================================================
+downloaded 20 KB
+
+
+The downloaded source packages are in
+	'D:\TEMP\RtmpmMttkC\downloaded_packages'
+After sessioninfo: 1.2.2 
+function (pkgs = c("loaded", "attached", "installed")[1], include_base = FALSE, 
+    info = c("auto", "all", "platform", "packages", "python", 
+        "external"), dependencies = NA, to_file = FALSE) 
+NULL
+Downloading GitHub repo saezlab/OmnipathR@HEAD
+Installing 2 packages: bookdown, gprofiler2
+also installing the dependencies 'knitr', 'rmarkdown', 'xfun'
+
+
+  There are binary versions available but the source versions are later:
+           binary source needs_compilation
+knitr        1.38   1.51             FALSE
+rmarkdown    2.13   2.31             FALSE
+xfun         0.30   0.59              TRUE
+bookdown     0.26   0.47             FALSE
+gprofiler2  0.2.1  0.2.4             FALSE
+
+  Binaries will be installed
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.0/xfun_0.30.zip'
+Content length 398028 bytes (388 KB)
+==================================================
+downloaded 388 KB
+
+package 'xfun' successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	D:\TEMP\RtmpmMttkC\downloaded_packages
+installing the source packages 'knitr', 'rmarkdown', 'bookdown', 'gprofiler2'
+
+trying URL 'https://cran.rstudio.com/src/contrib/knitr_1.51.tar.gz'
+Content length 483744 bytes (472 KB)
+==================================================
+downloaded 472 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/rmarkdown_2.31.tar.gz'
+ length 2199845 bytes (2.1 MB)
+==================================================
+downloaded 2.1 MB
+
+trying URL 'https://cran.rstudio.com/src/contrib/bookdown_0.47.tar.gz'
+Content length 864497 bytes (844 KB)
+==================================================
+downloaded 844 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/gprofiler2_0.2.4.tar.gz'
+ length 1518268 bytes (1.4 MB)
+==================================================
+downloaded 1.4 MB
+
+
+The downloaded source packages are in
+	'D:\TEMP\RtmpmMttkC\downloaded_packages'
+         checking for file 'D:\TEMP\RtmpmMttkC\remotes4bd458da62ab\saezlab-OmnipathR-3e11391/DESCRIPTION' ...  v  checking for file 'D:\TEMP\RtmpmMttkC\remotes4bd458da62ab\saezlab-OmnipathR-3e11391/DESCRIPTION' (403ms)
+      -  preparing 'OmnipathR': (1.3s)
+   checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   v  checking DESCRIPTION meta-information
+      -  installing the package to process help pages (688ms)
+      -  saving partial Rd database (35.4s)
+      -  checking for LF line-endings in source and make files and shell scripts (905ms)
+      -  checking for empty or unneeded directories
+     Removed empty directory 'OmnipathR/.github'
+      -  looking to see if a 'data/datalist' file should be added
+      -  building 'OmnipathR_4.1.0.tar.gz'
+     
+Warning messages:
+1: In i.p(...) : installation of package 'knitr' had non-zero exit status
+2: In i.p(...) :
+  installation of package 'gprofiler2' had non-zero exit status
+3: In i.p(...) :
+  installation of package 'rmarkdown' had non-zero exit status
+4: In i.p(...) :
+  installation of package 'bookdown' had non-zero exit status
+5: In i.p(...) :
+  installation of package 'D:/TEMP/RtmpmMttkC/file4bd47b407974/OmnipathR_4.1.0.tar.gz' had non-zero exit status
+Downloading GitHub repo saezlab/liana@HEAD
+Downloading GitHub repo saezlab/OmnipathR@HEAD
+         checking for file 'D:\TEMP\RtmpmMttkC\remotes4bd425f019df\saezlab-OmnipathR-3e11391/DESCRIPTION' ...  v  checking for file 'D:\TEMP\RtmpmMttkC\remotes4bd425f019df\saezlab-OmnipathR-3e11391/DESCRIPTION' (530ms)
+      -  preparing 'OmnipathR': (1.1s)
+   checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   v  checking DESCRIPTION meta-information
+      -  installing the package to process help pages (759ms)
+      -  saving partial Rd database (36s)
+           -  checking for LF line-endings in source and make files and shell scripts (1.1s)
+      -  checking for empty or unneeded directories
+     Removed empty directory 'OmnipathR/.github'
+      -  looking to see if a 'data/datalist' file should be added
+      -  building 'OmnipathR_4.1.0.tar.gz'
+     
+liana failed: Failed to install 'unknown package' from GitHub:
+  Failed to install 'unknown package' from GitHub:
+  HTTP error 403.
+  API rate limit exceeded for 220.196.98.45. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)
+
+  Rate limit remaining: 0/60
+  Rate limit reset at: 2026-07-08 16:05:04 UTC
+
+  To increase your GitHub API rate limit
+  - Use `usethis::browse_github_pat()` to create a Personal Access Token.
+  - Use `usethis::edit_r_environ()` and add the token as `GITHUB_PAT`. 
+Warning message:
+In i.p(...) :
+  installation of package 'D:/TEMP/RtmpmMttkC/file4bd443526807/OmnipathR_4.1.0.tar.gz' had non-zero exit status
+OmnipathR load failed: there is no package called 'OmnipathR' 
+liana load failed: there is no package called 'liana' 
+There were 16 warnings (use warnings() to see them)
+      package load_ok
+1 sessioninfo    TRUE
+2   OmnipathR   FALSE
+3       liana   FALSE
+4     copykat    TRUE
+5      CaSpER    TRUE
+6   nichenetr    TRUE
+      package installed version
+1 sessioninfo      TRUE   1.2.2
+2   OmnipathR     FALSE    <NA>
+3       liana     FALSE    <NA>
+4     copykat      TRUE   1.2.5
+5      CaSpER      TRUE   0.2.0
+6   nichenetr      TRUE 2.2.1.1

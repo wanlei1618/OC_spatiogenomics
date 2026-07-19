@@ -1,0 +1,6 @@
+task,status,reason
+P1-1 external scRNA projection,partially_supported_existing_output,"External Zhang2022 patient_id/sample_id tables exist, but they are expression/signature projections rather than validated CNV program transfer after Gate A."
+P1-2 LR competition,partially_supported_existing_output,"Multiple LR axes are available, but integrated_oc target clone interpretation remains sample_type/sample_id confounded."
+P1-3 full NicheNet ligand-target,not_completed,"No complete NicheNet ligand activity ranking, SPP1 regulatory potential, or SPP1 target gene table was found."
+P1-4 spatial deconvolution/neighborhood,partial_spatial_expression_neighborhood_only,Existing outputs include spot-level correlations and GSE203612 neighborhood enrichment; full deconvolution plus sample-level random-effects meta-analysis was not found.
+P1-5 virtual perturbation,exploratory_score_perturbation_only,"Existing virtual KO outputs are expression-score reductions, not CellOracle/scTenifold/NicheNet causal perturbation."

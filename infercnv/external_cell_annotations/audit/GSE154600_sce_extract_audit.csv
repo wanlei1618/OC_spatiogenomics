@@ -1,0 +1,6 @@
+"dataset_id","author_sample_id","source_file","coldata_file","n_cells","n_genes","status","message"
+"GSE154600","T59","D:/OC_spatiogenomics/infercnv/external_cell_annotations/raw/GSE154600/sample59_sce.rds","D:/OC_spatiogenomics/infercnv/external_cell_annotations/processed/sample59_sce_coldata.csv.gz",13040,18079,"ok",""
+"GSE154600","T76","D:/OC_spatiogenomics/infercnv/external_cell_annotations/raw/GSE154600/sample76_sce.rds","D:/OC_spatiogenomics/infercnv/external_cell_annotations/processed/sample76_sce_coldata.csv.gz",13747,17416,"ok",""
+"GSE154600","T77","D:/OC_spatiogenomics/infercnv/external_cell_annotations/raw/GSE154600/sample77_sce.rds","D:/OC_spatiogenomics/infercnv/external_cell_annotations/processed/sample77_sce_coldata.csv.gz",6903,18543,"ok",""
+"GSE154600","T89","D:/OC_spatiogenomics/infercnv/external_cell_annotations/raw/GSE154600/sample89_sce.rds","D:/OC_spatiogenomics/infercnv/external_cell_annotations/processed/sample89_sce_coldata.csv.gz",4933,17429,"ok",""
+"GSE154600","T90","D:/OC_spatiogenomics/infercnv/external_cell_annotations/raw/GSE154600/sample90_sce.rds","D:/OC_spatiogenomics/infercnv/external_cell_annotations/processed/sample90_sce_coldata.csv.gz",3630,18011,"ok",""

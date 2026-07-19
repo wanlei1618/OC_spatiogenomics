@@ -1,0 +1,6 @@
+dataset,status,n_cells,n_genes_selected,note
+OV_GSE147082,completed,9796,231,10x h5 processed with marker-score cell-type inference; no external metadata embedded in h5.
+OV_GSE151214,completed,59446,233,10x h5 processed with marker-score cell-type inference; no external metadata embedded in h5.
+OV_GSE154600,completed,42583,233,10x h5 processed with marker-score cell-type inference; no external metadata embedded in h5.
+OV_GSE154763,completed,3888,172,10x h5 processed with marker-score cell-type inference; no external metadata embedded in h5.
+OV_GSE158722,completed,96846,227,10x h5 processed with marker-score cell-type inference; no external metadata embedded in h5.

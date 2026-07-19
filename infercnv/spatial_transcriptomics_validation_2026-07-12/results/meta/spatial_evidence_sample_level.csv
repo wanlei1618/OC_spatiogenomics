@@ -1,0 +1,5 @@
+sample_id,target,evidence_layer,effect,p,fdr,note
+GSM6177614,target_subclone_02_04_score_high,coordinate-aware spatial evidence,-0.685737811910543,1,1,Within-sample coordinate-aware neighborhood statistic
+GSM6177614,KRAS_hypoxia_score_high,coordinate-aware spatial evidence,-0.033987822199354,0.727272727272727,0.96969696969697,Within-sample coordinate-aware neighborhood statistic
+GSM6177617,target_subclone_02_04_score_high,coordinate-aware spatial evidence,0.123811677987283,0.025974025974026,0.0579420579420579,Within-sample coordinate-aware neighborhood statistic
+GSM6177617,KRAS_hypoxia_score_high,coordinate-aware spatial evidence,0.247058497730674,0.000999000999000999,0.003996003996004,Within-sample coordinate-aware neighborhood statistic

@@ -1,0 +1,8 @@
+Started 2026-07-11T17:36:30.486906
+Source tables: D:\OC_spatiogenomics\infercnv\05_sample_type_lr_niche_external_validation\sample_type_LR_niche_analysis\tables
+patient_summary rows: 22
+signature rows: 132
+external axis rows: 132
+integrated LR rows: 1520
+spatial rows: 15
+Finished 2026-07-11T17:36:30.557717

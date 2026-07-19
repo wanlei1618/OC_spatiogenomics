@@ -1,0 +1,73 @@
+sample_type,interaction_group,Freq,total_in_sample_type,fraction_in_sample_type
+ascites,DC,92,12422,0.00740621478022863
+blood,DC,27,5921,0.00456004053369363
+pleural_effusion,DC,55,11197,0.00491203000803787
+tumor,DC,37,19786,0.00187000909734155
+ascites,Macrophages,616,12422,0.0495894380937047
+blood,Macrophages,388,5921,0.0655294713730789
+pleural_effusion,Macrophages,355,11197,0.0317049209609717
+tumor,Macrophages,998,19786,0.0504397048418073
+ascites,Monocytes,74,12422,0.00595717275800998
+blood,Monocytes,95,5921,0.0160445870629961
+pleural_effusion,Monocytes,82,11197,0.00732339019380191
+tumor,Monocytes,25,19786,0.00126351966036592
+ascites,Myeloid_cDC1,180,12422,0.0144904202221864
+blood,Myeloid_cDC1,3,5921,0.000506671170410404
+pleural_effusion,Myeloid_cDC1,54,11197,0.00482272037152809
+tumor,Myeloid_cDC1,4,19786,0.000202163145658546
+ascites,Myeloid_cDC2,518,12422,0.0417002093060699
+blood,Myeloid_cDC2,27,5921,0.00456004053369363
+pleural_effusion,Myeloid_cDC2,1,11197,8.93096365097794e-05
+tumor,Myeloid_cDC2,13,19786,0.000657030223390276
+ascites,Myeloid_cDC2-like,3,12422,0.000241507003703107
+blood,Myeloid_cDC2-like,0,5921,0
+pleural_effusion,Myeloid_cDC2-like,364,11197,0.0325087076895597
+tumor,Myeloid_cDC2-like,0,19786,0
+ascites,Myeloid_Interferon-Responsive Myeloid,375,12422,0.0301883754628884
+blood,Myeloid_Interferon-Responsive Myeloid,0,5921,0
+pleural_effusion,Myeloid_Interferon-Responsive Myeloid,3,11197,0.000267928909529338
+tumor,Myeloid_Interferon-Responsive Myeloid,39,19786,0.00197109067017083
+ascites,Myeloid_Macro-C3/CX3CR1,18,12422,0.00144904202221864
+blood,Myeloid_Macro-C3/CX3CR1,0,5921,0
+pleural_effusion,Myeloid_Macro-C3/CX3CR1,1,11197,8.93096365097794e-05
+tumor,Myeloid_Macro-C3/CX3CR1,760,19786,0.0384109976751238
+ascites,Myeloid_Macro-Inflammatory_M1,69,12422,0.00555466108517147
+blood,Myeloid_Macro-Inflammatory_M1,0,5921,0
+pleural_effusion,Myeloid_Macro-Inflammatory_M1,1,11197,8.93096365097794e-05
+tumor,Myeloid_Macro-Inflammatory_M1,1203,19786,0.0608005660568079
+ascites,Myeloid_Macro-Inflammatory_TNF,7,12422,0.000563516341973917
+blood,Myeloid_Macro-Inflammatory_TNF,0,5921,0
+pleural_effusion,Myeloid_Macro-Inflammatory_TNF,0,11197,0
+tumor,Myeloid_Macro-Inflammatory_TNF,1015,19786,0.0512988982108562
+ascites,Myeloid_Macro-LYVE1,15,12422,0.00120753501851554
+blood,Myeloid_Macro-LYVE1,0,5921,0
+pleural_effusion,Myeloid_Macro-LYVE1,1938,11197,0.173082075555952
+tumor,Myeloid_Macro-LYVE1,0,19786,0
+ascites,Myeloid_Macro-M2-like,46,12422,0.00370310739011431
+blood,Myeloid_Macro-M2-like,0,5921,0
+pleural_effusion,Myeloid_Macro-M2-like,5,11197,0.000446548182548897
+tumor,Myeloid_Macro-M2-like,913,19786,0.0461437379965632
+ascites,Myeloid_Macro-MCEMP1,886,12422,0.0713250684269844
+blood,Myeloid_Macro-MCEMP1,1,5921,0.000168890390136801
+pleural_effusion,Myeloid_Macro-MCEMP1,11,11197,0.000982406001607573
+tumor,Myeloid_Macro-MCEMP1,13,19786,0.000657030223390276
+ascites,Myeloid_Macro-THBS1,6,12422,0.000483014007406215
+blood,Myeloid_Macro-THBS1,0,5921,0
+pleural_effusion,Myeloid_Macro-THBS1,1605,11197,0.143341966598196
+tumor,Myeloid_Macro-THBS1,3,19786,0.00015162235924391
+ascites,Myeloid_Macro-TIMD4,1115,12422,0.0897601030429883
+blood,Myeloid_Macro-TIMD4,0,5921,0
+pleural_effusion,Myeloid_Macro-TIMD4,37,11197,0.00330445655086184
+tumor,Myeloid_Macro-TIMD4,57,19786,0.00288082482563429
+ascites,Myeloid_mDC_LAMP3,29,12422,0.00233456770246337
+blood,Myeloid_mDC_LAMP3,0,5921,0
+pleural_effusion,Myeloid_mDC_LAMP3,51,11197,0.00455479146199875
+tumor,Myeloid_mDC_LAMP3,16,19786,0.000808652582634186
+ascites,Myeloid_Monocyte-like,12,12422,0.00096602801481243
+blood,Myeloid_Monocyte-like,735,5921,0.124134436750549
+pleural_effusion,Myeloid_Monocyte-like,0,11197,0
+tumor,Myeloid_Monocyte-like,104,19786,0.00525624178712221
+ascites,Myeloid_Proliferating Myeloid,235,12422,0.0189180486234101
+blood,Myeloid_Proliferating Myeloid,0,5921,0
+pleural_effusion,Myeloid_Proliferating Myeloid,206,11197,0.0183977851210146
+tumor,Myeloid_Proliferating Myeloid,451,19786,0.0227938946730011

@@ -1,0 +1,39 @@
+project_root: "D:/OC_spatiogenomics/infercnv/sample_type_LR_niche_analysis"
+base_infercnv_root: "D:/OC_spatiogenomics/infercnv"
+tmp_dir: "D:/OC_spatiogenomics/tmp"
+
+integrated_oc_rds: "D:/OC_spatiogenomics/infercnv/integrated_oc.RData"
+
+existing_results:
+  metadata: "D:/OC_spatiogenomics/infercnv/integrated_oc_plan_analysis/tables/integrated_oc_metadata_with_cnv_TNK_myeloid_B_subtypes.csv"
+  clone_composition: "D:/OC_spatiogenomics/infercnv/integrated_oc_plan_analysis/tables/cnv_subclone_composition_by_sample_type.csv"
+  focused_lr: "D:/OC_spatiogenomics/infercnv/integrated_oc_plan_analysis/tables/focused_LR_axes_involving_cnv_subclones.csv"
+  function_scores: "D:/OC_spatiogenomics/infercnv/integrated_oc_plan_analysis/tables/cnv_subclone_function_module_score_summary.csv"
+  tumor_scores: "D:/OC_spatiogenomics/infercnv/CNV_expression_joint_analysis_integrated_oc/tables/tumor_cell_CNV_burden_signature_TF_scores.csv"
+  deg_markers: "D:/OC_spatiogenomics/infercnv/CNV_expression_joint_analysis_integrated_oc/tables/CNV_clone_DEG_single_cell_wilcoxon_one_vs_rest.csv"
+  top_markers: "D:/OC_spatiogenomics/infercnv/CNV_expression_joint_analysis_integrated_oc/tables/CNV_clone_top20_markers_per_clone.csv"
+
+axes:
+  primary:
+    - ["SPP1", "CD44"]
+    - ["SPP1", "ITGB1"]
+  controls:
+    - ["MIF", "CD74"]
+    - ["MIF", "CXCR4"]
+    - ["APOE", "LRP1"]
+    - ["TGFB1", "TGFBR1"]
+    - ["TGFB1", "TGFBR2"]
+    - ["CXCL12", "CXCR4"]
+
+target_clones:
+  - "Subclone_02"
+  - "Subclone_04"
+
+all_clones:
+  - "Subclone_01"
+  - "Subclone_02"
+  - "Subclone_03"
+  - "Subclone_04"
+  - "Subclone_05"
+
+min_cells_group: 20

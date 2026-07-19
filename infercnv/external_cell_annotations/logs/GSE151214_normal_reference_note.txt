@@ -1,0 +1,3 @@
+GSE151214 is classified as normal_fallopian_tube_reference.
+It is excluded from tumor-ecosystem LR meta-analysis.
+Normal epithelial CD44/ITGB1 background should be interpreted as reference context only.

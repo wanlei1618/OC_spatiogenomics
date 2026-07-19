@@ -1,0 +1,11 @@
+"variable","definition","required"
+"OS_time","overall survival time",TRUE
+"OS_event","overall survival event, 1=event",TRUE
+"SPP1_TAM_score","bulk score for SPP1+ TAM/macrophage program",TRUE
+"ITGB1_CD44_tumor_score","bulk tumor receptor score, mean/z-score of ITGB1 and CD44 with tumor epithelial deconvolution",TRUE
+"KRAS_Hypoxia_score","combined KRAS activation and hypoxia score",TRUE
+"macrophage_fraction","estimated macrophage fraction, e.g. CIBERSORT/xCell/EPIC",TRUE
+"tumor_purity","tumor purity estimate, e.g. ABSOLUTE/ESTIMATE",TRUE
+"stage","clinical stage",TRUE
+"grade","tumor grade",TRUE
+"residual_disease","residual disease status",TRUE

@@ -1,0 +1,196 @@
+R version: R version 4.0.3 (2020-10-10) 
+R library: D:/Documents/R/win-library/4.0 
+Temp: D:\TEMP\Rtmp4aZNAR 
+
+Base CRAN/Bioc packages from plan
+
+CRAN current: msigdbr, scTenifoldKnk 
+also installing the dependencies 'RhpcBLASctl', 'scTenifoldNet'
+
+trying URL 'https://cran.rstudio.com/src/contrib/RhpcBLASctl_0.23-42.tar.gz'
+Content length 41947 bytes (40 KB)
+==================================================
+downloaded 40 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/scTenifoldNet_1.3.tar.gz'
+Content length 34213 bytes (33 KB)
+==================================================
+downloaded 33 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/scTenifoldKnk_1.0.3.tar.gz'
+Content length 109271 bytes (106 KB)
+==================================================
+downloaded 106 KB
+
+
+The downloaded source packages are in
+	'D:\TEMP\Rtmp4aZNAR\downloaded_packages'
+Warning messages:
+1: package 'msigdbr' is not available for this version of R
+'msigdbr' version 26.1.0 is in the repositories but depends on R (>= 4.1)
+
+A version of this package for your version of R might be available elsewhere,
+see the ideas at
+https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages 
+2: In system2(Sys.getenv("MAKE", "make"), c("-k -j", Ncpus), stdout = output,  :
+  '"make"' not found
+3: In system(paste0("cat ", pkg, ".out")) : 'cat' not found
+4: In system(paste0("cat ", pkg, ".out")) : 'cat' not found
+5: In system(paste0("cat ", pkg, ".out")) : 'cat' not found
+6: In install.packages(miss, lib = lib, dependencies = TRUE, type = "source",  :
+  installation of one or more packages failed,
+  probably 'RhpcBLASctl', 'scTenifoldNet', 'scTenifoldKnk'
+
+Bioconductor: SingleCellExperiment, scDblFinder, UCell, edgeR 
+FAILED bioc: Bioconductor version cannot be validated; no internet connection? 
+Warning messages:
+1: In file(con, "r") : InternetOpenUrl failed: '安全频道支持出错'
+2: In file(con, "r") : InternetOpenUrl failed: '安全频道支持出错'
+
+Compatibility dependencies
+
+Archive: transport 0.15-2 
+Downloading package from url: https://cran.rstudio.com/src/contrib/Archive/transport/transport_0.15-2.tar.gz
+Installing 5 packages: pracma, multicool, mclust, ks, animation
+Warning: dependency 'magick' is not available
+trying URL 'https://cran.rstudio.com/src/contrib/pracma_2.4.6.tar.gz'
+Content length 398691 bytes (389 KB)
+==================================================
+downloaded 389 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/multicool_1.0.1.tar.gz'
+Content length 14969 bytes (14 KB)
+==================================================
+downloaded 14 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/mclust_6.1.3.tar.gz'
+ length 2780882 bytes (2.7 MB)
+==================================================
+downloaded 2.7 MB
+
+trying URL 'https://cran.rstudio.com/src/contrib/ks_1.15.2.tar.gz'
+Content length 888238 bytes (867 KB)
+==================================================
+downloaded 867 KB
+
+trying URL 'https://cran.rstudio.com/src/contrib/animation_2.8.tar.gz'
+Content length 300894 bytes (293 KB)
+==================================================
+downloaded 293 KB
+
+
+The downloaded source packages are in
+	'D:\TEMP\Rtmp4aZNAR\downloaded_packages'
+Warning message:
+In i.p(...) :
+  installation of package 'D:/TEMP/Rtmp4aZNAR/remotes4e8c375d2540/transport' had non-zero exit status
+httr2 already installed 0.1.1 
+randomForest already installed 4.6.14 
+DiagrammeR already installed 1.0.9 
+ggnewscale already installed 0.4.7 
+ggridges already installed 0.5.3 
+bslib already installed 0.3.1 
+shiny already installed 1.7.1 
+mclust already installed 6.1.3 
+signal already installed 0.7.7 
+
+Special packages from plan
+
+GitHub: copykat navinlabcode/copykat 
+Downloading GitHub repo navinlabcode/copykat@HEAD
+      v  checking for file 'D:\TEMP\Rtmp4aZNAR\remotes4e8c37f26d34\navinlabcode-copykat-01924c0/DESCRIPTION' (567ms)
+      -  preparing 'copykat': (1.2s)
+   checking DESCRIPTION meta-information ...  v  checking DESCRIPTION meta-information
+      -  checking for LF line-endings in source and make files and shell scripts
+      -  checking for empty or unneeded directories
+     NB: this package now depends on R (>=        NB: this package now depends on R (>= 3.5.0)
+     WARNING: Added dependency on R >= 3.5.0 because serialized objects in       WARNING: Added dependency on R >= 3.5.0 because serialized objects in  serialize/load version 3 cannot be read in older versions of R.  File(s) containing such objects: 'copykat/data/sysdata.rda'  WARNING: Added dependency on R >= 3.5.0 because serialized objects in  serialize/load version 3 cannot be read in older versions of R.  File(s) containing such objects:  'copykat/vignettes/test_copykat_clustering_results.rds'
+  -  building 'copykat_1.2.5.tar.gz'
+     
+Warning message:
+In i.p(...) :
+  installation of package 'D:/TEMP/Rtmp4aZNAR/file4e8c56922086/copykat_1.2.5.tar.gz' had non-zero exit status
+
+GitHub: CaSpER akdess/CaSpER 
+Downloading GitHub repo akdess/CaSpER@HEAD
+         checking for file 'D:\TEMP\Rtmp4aZNAR\remotes4e8c192c16e0\akdess-CaSpER-8aae116/DESCRIPTION' ...  v  checking for file 'D:\TEMP\Rtmp4aZNAR\remotes4e8c192c16e0\akdess-CaSpER-8aae116/DESCRIPTION' (465ms)
+      -  preparing 'CaSpER': (865ms)
+   checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   v  checking DESCRIPTION meta-information
+-  cleaning src
+      -  checking for LF line-endings in source and make files and shell scripts (374ms)
+      -  checking for empty or unneeded directories
+     NB: this package now depends on R (>=        NB: this package now depends on R (>= 3.5.0)
+       WARNING: Added dependency on R >= 3.5.0 because serialized objects in  serialize/load version 3 cannot be read in older versions of R.  File(s) containing such objects: 'CaSpER/data/hg38_cytoband.rda'
+-  building 'CaSpER_0.2.0.tar.gz'
+     
+
+GitHub: liana saezlab/liana 
+Downloading GitHub repo saezlab/liana@HEAD
+Downloading GitHub repo saezlab/OmnipathR@HEAD
+         checking for file 'D:\TEMP\Rtmp4aZNAR\remotes4e8c4abb215f\saezlab-OmnipathR-3e11391/DESCRIPTION' ...  v  checking for file 'D:\TEMP\Rtmp4aZNAR\remotes4e8c4abb215f\saezlab-OmnipathR-3e11391/DESCRIPTION' (559ms)
+      -  preparing 'OmnipathR': (1.6s)
+   checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   v  checking DESCRIPTION meta-information
+      -  installing the package to process help pages (964ms)
+           -----------------------------------
+  -  installing *source* package 'OmnipathR' ...
+   ** using staged installation
+   ** R
+   ** inst
+   ** byte-compile and prepare package for lazy loading
+   Error in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]) : 
+     namespace 'dplyr' 1.0.8 is being loaded, but >= 1.1.0 is required
+   Calls: <Anonymous> ... namespaceImportFrom -> asNamespace -> loadNamespace
+   停止执行
+   ERROR: lazy loading failed for package 'OmnipathR'
+-  removing 'D:/TEMP/RtmpoPXItg/Rinst19605930724d/OmnipathR'
+         -----------------------------------
+   ERROR: package installation failed
+FAILED github liana : Failed to install 'liana' from GitHub:
+  Failed to install 'OmnipathR' from GitHub:
+  System command 'Rcmd.exe' failed, exit status: 1, stdout + stderr:
+E> * checking for file 'D:\TEMP\Rtmp4aZNAR\remotes4e8c4abb215f\saezlab-OmnipathR-3e11391/DESCRIPTION' ... OK
+E> * preparing 'OmnipathR':
+E> * checking DESCRIPTION meta-information ... OK
+E> * installing the package to process help pages
+E>       -----------------------------------
+E> * installing *source* package 'OmnipathR' ...
+E> ** using staged installation
+E> ** R
+E> ** inst
+E> ** byte-compile and prepare package for lazy loading
+E> Error in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]) : 
+E>   namespace 'dplyr' 1.0.8 is being loaded, but >= 1.1.0 is required
+E> Calls: <Anonymous> ... namespaceImportFrom -> asNamespace -> loadNamespace
+E> 停止执行
+E> ERROR: lazy loading failed for package 'OmnipathR'
+E> * removing 'D:/TEMP/RtmpoPXItg/Rinst19605930724d/OmnipathR'
+E>       -----------------------------------
+E> ERROR: package installation failed 
+nichenetr already installed 2.2.1.1 
+CellChat already installed 1.6.1 
+
+Final status
+                package installed version
+1                Seurat      TRUE   4.0.2
+2                 dplyr      TRUE   1.0.8
+3                 tidyr      TRUE   1.1.3
+4               ggplot2      TRUE   3.3.5
+5             patchwork      TRUE   1.1.1
+6              pheatmap      TRUE  1.0.13
+7               remotes      TRUE   2.4.0
+8  SingleCellExperiment     FALSE    <NA>
+9           scDblFinder     FALSE    <NA>
+10       ComplexHeatmap      TRUE   2.6.2
+11              msigdbr     FALSE    <NA>
+12                UCell     FALSE    <NA>
+13                limma      TRUE  3.46.0
+14                edgeR     FALSE    <NA>
+15                fgsea      TRUE  1.16.0
+16      clusterProfiler      TRUE  3.18.1
+17         org.Hs.eg.db      TRUE  3.12.0
+18                liana     FALSE    <NA>
+19             CellChat      TRUE   1.6.1
+20            nichenetr      TRUE 2.2.1.1
+21        scTenifoldKnk     FALSE    <NA>
+22              copykat     FALSE    <NA>
+23               CaSpER      TRUE   0.2.0

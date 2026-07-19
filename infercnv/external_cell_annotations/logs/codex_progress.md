@@ -1,0 +1,61 @@
+- 2026-07-12 19:51:03 00 download original annotations started
+- 2026-07-12 19:51:03 00 download original annotations finished: 8/8 available
+- 2026-07-12 19:51:17 00 download original annotations started
+- 2026-07-12 19:54:23 00 download original annotations finished: 8/8 available
+- 2026-07-12 19:55:34 02 extract original annotations started
+- 2026-07-12 20:02:21 02 extract original annotations started
+- 2026-07-12 20:03:36 02 extract original annotations finished
+- 2026-07-12 20:03:37 03 harmonize cell annotations started
+- 2026-07-12 20:03:37 03 harmonize cell annotations finished
+- 2026-07-12 20:04:00 04 barcode/composite-key matching started
+- 2026-07-12 20:04:05 04 matching finished for 5 datasets
+- 2026-07-12 20:04:09 07 rerun curated external scRNA summaries started
+- 2026-07-12 20:04:11 07 rerun curated external scRNA summaries finished
+- 2026-07-12 20:04:14 09 generate annotation upgrade report started
+- 2026-07-12 20:04:17 09 generate annotation upgrade report finished
+- 2026-07-12 20:05:38 03 harmonize cell annotations started
+- 2026-07-12 20:06:36 03 harmonize cell annotations finished
+- 2026-07-12 20:06:37 04 barcode/composite-key matching started
+- 2026-07-12 20:06:45 04 matching finished for 5 datasets
+- 2026-07-12 20:06:46 07 rerun curated external scRNA summaries started
+- 2026-07-12 20:06:51 07 rerun curated external scRNA summaries finished
+- 2026-07-12 20:06:52 09 generate annotation upgrade report started
+- 2026-07-12 20:06:56 09 generate annotation upgrade report finished
+- 2026-07-12 20:08:17 04 barcode/composite-key matching started
+- 2026-07-12 20:08:24 04 matching finished for 5 datasets
+- 2026-07-12 20:08:26 07 rerun curated external scRNA summaries started
+- 2026-07-12 20:08:29 07 rerun curated external scRNA summaries finished
+- 2026-07-12 20:08:32 09 generate annotation upgrade report started
+- 2026-07-12 20:08:37 09 generate annotation upgrade report finished
+- 2026-07-12 20:09:01 07 rerun curated external scRNA summaries started
+- 2026-07-12 20:09:05 07 rerun curated external scRNA summaries finished
+- 2026-07-12 20:09:06 09 generate annotation upgrade report started
+- 2026-07-12 20:09:11 09 generate annotation upgrade report finished
+- 2026-07-12 20:10:03 02 extract original annotations started
+- 2026-07-12 20:11:27 02 extract original annotations finished
+- 2026-07-12 20:11:28 04 barcode/composite-key matching started
+- 2026-07-12 20:11:34 04 matching finished for 5 datasets
+- 2026-07-12 20:11:35 07 rerun curated external scRNA summaries started
+- 2026-07-12 20:11:40 07 rerun curated external scRNA summaries finished
+- 2026-07-12 20:11:41 09 generate annotation upgrade report started
+- 2026-07-12 20:11:46 09 generate annotation upgrade report finished
+- 2026-07-12 20:12:19 02 extract original annotations started
+- 2026-07-12 20:13:38 02 extract original annotations finished
+- 2026-07-12 20:13:39 03 harmonize cell annotations started
+- 2026-07-12 20:14:37 03 harmonize cell annotations finished
+- 2026-07-12 20:14:39 04 barcode/composite-key matching started
+- 2026-07-12 20:14:44 04 matching finished for 5 datasets
+- 2026-07-12 20:14:46 07 rerun curated external scRNA summaries started
+- 2026-07-12 20:14:50 07 rerun curated external scRNA summaries finished
+- 2026-07-12 20:14:51 09 generate annotation upgrade report started
+- 2026-07-12 20:14:54 09 generate annotation upgrade report finished
+- 2026-07-12 20:15:52 02 extract original annotations started
+- 2026-07-12 20:17:16 02 extract original annotations finished
+- 2026-07-12 20:17:17 03 harmonize cell annotations started
+- 2026-07-12 20:18:21 03 harmonize cell annotations finished
+- 2026-07-12 20:18:23 04 barcode/composite-key matching started
+- 2026-07-12 20:18:32 04 matching finished for 5 datasets
+- 2026-07-12 20:18:34 07 rerun curated external scRNA summaries started
+- 2026-07-12 20:18:43 07 rerun curated external scRNA summaries finished
+- 2026-07-12 20:18:48 09 generate annotation upgrade report started
+- 2026-07-12 20:18:52 09 generate annotation upgrade report finished

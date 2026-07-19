@@ -1,0 +1,2 @@
+dataset,k_samples,pooled_log_enrichment_ratio,pooled_enrichment_ratio,ci_low_enrichment_ratio,ci_high_enrichment_ratio,p_value,I2,method
+GSE203612_OVCA_coordinate_neighborhood,3,0.03239839759025121,1.0329289397429264,0.8944252966586319,1.1928801639939055,0.6591673454390468,0.7158039055601509,random-effects meta-analysis on log neighborhood enrichment ratios; variance approximation

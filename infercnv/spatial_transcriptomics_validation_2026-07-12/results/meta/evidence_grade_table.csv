@@ -1,0 +1,3 @@
+evidence_layer,n_samples,scope,conclusion_boundary,evidence_grade
+coordinate-aware spatial evidence,2,GSE203612 ovarian Visium samples only,Descriptive because only two coordinate-aware ovarian samples are available.,limited
+expression-level replication,12,GSE189843 pretreatment HGSC samples only,Patient-level expression replication; no coordinate neighborhood claims.,moderate

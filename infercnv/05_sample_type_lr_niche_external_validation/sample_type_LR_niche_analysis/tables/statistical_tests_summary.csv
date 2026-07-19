@@ -1,0 +1,4 @@
+analysis,comparison,n_tumor_samples,n_implant_samples,mean_tumor,mean_peritoneal_implant,interpretation
+external_scRNA_Zhang2022,SPP1-CD44: tumor vs peritoneal_implant descriptive,1,21.0,1.1494572310986865e-06,0.005744113429321465,Descriptive patient-sample level comparison; anatomical site and treatment phase may be confounded.
+external_scRNA_Zhang2022,SPP1-ITGB1: tumor vs peritoneal_implant descriptive,1,21.0,1.864186632306587e-06,0.020217498062246115,Descriptive patient-sample level comparison; anatomical site and treatment phase may be confounded.
+spatial_spot_correlation,SPP1_myeloid_score vs Target_axis_score,15,,0.13304048305385016,,"Mean Spearman correlation across spatial samples; supports co-expression gradients, not physical binding."

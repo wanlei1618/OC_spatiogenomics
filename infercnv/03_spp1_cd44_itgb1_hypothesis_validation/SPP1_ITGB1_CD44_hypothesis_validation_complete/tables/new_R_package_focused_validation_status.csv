@@ -1,0 +1,5 @@
+tool,analysis,status,note
+LIANA,Consensus LR resource check for predefined focus axes,completed,3 of 11 focus pairs present in LIANA Consensus
+NicheNet,Local package gene universe check for focus ligands/receptors/program genes,completed,25 of 25 genes present in nichenetr geneinfo_human
+CopyKAT,Sampled malignant/CNV validation using immune cells as references,completed,completed on 560 cells and 15231 genes
+CaSpER,Secondary CNV validation,package_available_not_rerun,CaSpER is installed; full run was not executed because gene-position/cytoband annotation generation triggers local biomaRt SSL certificate errors in this R environment

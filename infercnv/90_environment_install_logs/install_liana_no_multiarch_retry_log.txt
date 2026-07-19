@@ -1,0 +1,35 @@
+
+Install URL no-multiarch: OmnipathR 
+ https://github.com/saezlab/OmnipathR/archive/refs/heads/master.zip 
+Downloading package from url: https://github.com/saezlab/OmnipathR/archive/refs/heads/master.zip
+Error in utils::download.file(url, path, method = method, quiet = quiet,  : 
+  cannot open URL 'https://github.com/saezlab/OmnipathR/archive/refs/heads/master.zip'
+OmnipathR installed? FALSE 
+
+Install URL no-multiarch: liana 
+ https://github.com/saezlab/liana/archive/refs/heads/master.zip 
+Downloading package from url: https://github.com/saezlab/liana/archive/refs/heads/master.zip
+Error in utils::download.file(url, path, method = method, quiet = quiet,  : 
+  cannot open URL 'https://github.com/saezlab/liana/archive/refs/heads/master.zip'
+liana installed? FALSE 
+OmnipathR load failed: there is no package called 'OmnipathR' 
+liana load failed: there is no package called 'liana' 
+There were 16 warnings (use warnings() to see them)
+      package load_ok
+1   OmnipathR   FALSE
+2       liana   FALSE
+3     copykat    TRUE
+4      CaSpER    TRUE
+5   nichenetr    TRUE
+6       dplyr    TRUE
+7 sessioninfo    TRUE
+8       purrr    TRUE
+      package installed version
+1   OmnipathR     FALSE    <NA>
+2       liana     FALSE    <NA>
+3     copykat      TRUE   1.2.5
+4      CaSpER      TRUE   0.2.0
+5   nichenetr      TRUE 2.2.1.1
+6       dplyr      TRUE   1.1.4
+7 sessioninfo      TRUE   1.2.2
+8       purrr      TRUE   1.0.2

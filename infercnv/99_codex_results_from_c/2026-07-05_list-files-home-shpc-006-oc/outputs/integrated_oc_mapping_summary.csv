@@ -1,0 +1,8 @@
+"item","value"
+"integrated_oc cells","49326"
+"cnv subclone mapped","6507"
+"T/NK subtype mapped","15174"
+"myeloid subtype mapped","13148"
+"B subtype source","D:/OC_spatiogenomics/infercnv/integratedocBcells.RData"
+"B subtype mapped","2274"
+"groups >=20 cells","44"

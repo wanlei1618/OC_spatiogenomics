@@ -1,0 +1,5 @@
+"metric","definition","output"
+"nearest_neighbor_distance","distance from SPP1+CD68+ macrophage to nearest PAX8+ITGB1+/CD44+ tumor cell","per-cell and per-region distance distribution"
+"interface_density","density of SPP1+ macrophages within a fixed radius of receptor-positive tumor cells","region-level interaction score"
+"state_intensity_near_interface","pFAK/HIF1A/CAIX/VEGFA intensity in tumor cells near SPP1+ macrophages","state activation score"
+"clinical_association","association of high-interface regions with ascites/progression/clinical endpoint","statistical model with clinical covariates"

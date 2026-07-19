@@ -1,0 +1,3 @@
+dataset,sample_id,clinical_group,coordinate_status,k_neighbors,top_fraction,observed_neighbor_fraction,expected_global_fraction,enrichment_ratio,empirical_p,n_source_spots,n_target_spots,n_neighbor_edges,analysis_validity,empirical_q
+GSE203612,GSM6177614,not_available,available,6,0.25,0.15530303030303,0.25,0.621212121212121,1,440,440,2640,coordinate_aware_exploratory,1
+GSE203612,GSM6177617,not_available,available,6,0.25,0.2718715393134,0.25,1.0874861572536,0.026973026973027,301,301,1806,coordinate_aware_exploratory,0.0539460539460539

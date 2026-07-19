@@ -1,0 +1,94 @@
+R version: R version 4.0.3 (2020-10-10) 
+Library paths:
+[1] "D:/Documents/R/win-library/4.0" "D:/R/R-4.0.3/library"          
+
+==== BiocManager ====
+BiocManager already installed: 1.30.10 
+[1] TRUE
+
+==== remotes ====
+remotes already installed: 2.4.0 
+[1] TRUE
+
+Bioconductor version info:
+[1] '3.12'
+
+==== copykat ====
+Downloading GitHub repo navinlabcode/copykat@HEAD
+         checking for file 'D:\TEMP\RtmpYlmbNG\remotes217472be61ed\navinlabcode-copykat-01924c0/DESCRIPTION' ...  v  checking for file 'D:\TEMP\RtmpYlmbNG\remotes217472be61ed\navinlabcode-copykat-01924c0/DESCRIPTION' (700ms)
+      -  preparing 'copykat': (827ms)
+   checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   v  checking DESCRIPTION meta-information
+      -  checking for LF line-endings in source and make files and shell scripts
+      -  checking for empty or unneeded directories
+     NB: this package now depends on R (>=        NB: this package now depends on R (>= 3.5.0)
+       WARNING: Added dependency on R >= 3.5.0 because serialized objects in  serialize/load version 3 cannot be read in older versions of R.  File(s) containing such objects: 'copykat/data/sysdata.rda'  WARNING: Added dependency on R >= 3.5.0 because serialized objects in  serialize/load version 3 cannot be read in older versions of R.  File(s) containing such objects:  'copykat/vignettes/test_copykat_clustering_results.rds'
+  -  building 'copykat_1.2.5.tar.gz'
+     
+copykat not installed after attempt.
+Warning message:
+In i.p(...) :
+  installation of package 'D:/TEMP/RtmpYlmbNG/file217475d4810/copykat_1.2.5.tar.gz' had non-zero exit status
+
+==== CaSpER ====
+FAILED: Bioconductor version cannot be validated; no internet connection? 
+CaSpER not installed after attempt.
+Warning messages:
+1: In file(con, "r") : InternetOpenUrl failed: '安全频道支持出错'
+2: In file(con, "r") : InternetOpenUrl failed: '安全频道支持出错'
+
+==== liana ====
+Warning: unable to access index for repository https://cloud.r-project.org/src/contrib:
+  cannot open URL 'https://cloud.r-project.org/src/contrib/PACKAGES'
+Warning: unable to access index for repository https://cloud.r-project.org/bin/windows/contrib/4.0:
+  cannot open URL 'https://cloud.r-project.org/bin/windows/contrib/4.0/PACKAGES'
+Downloading GitHub repo saezlab/liana@HEAD
+Downloading GitHub repo saezlab/OmnipathR@HEAD
+         checking for file 'D:\TEMP\RtmpYlmbNG\remotes21747766737e\saezlab-OmnipathR-3e11391/DESCRIPTION' ...  v  checking for file 'D:\TEMP\RtmpYlmbNG\remotes21747766737e\saezlab-OmnipathR-3e11391/DESCRIPTION' (460ms)
+      -  preparing 'OmnipathR': (1.4s)
+   checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   v  checking DESCRIPTION meta-information
+      -  installing the package to process help pages (759ms)
+           -----------------------------------
+     ERROR: dependencies 'httr2', 'later', 'logger' are not available for package 'OmnipathR'
+-  removing 'D:/TEMP/Rtmpq0fK50/Rinst39ac1e66005/OmnipathR'
+         -----------------------------------
+   ERROR: package installation failed
+FAILED: Failed to install 'liana' from GitHub:
+  Failed to install 'OmnipathR' from GitHub:
+  System command 'Rcmd.exe' failed, exit status: 1, stdout + stderr:
+E> * checking for file 'D:\TEMP\RtmpYlmbNG\remotes21747766737e\saezlab-OmnipathR-3e11391/DESCRIPTION' ... OK
+E> * preparing 'OmnipathR':
+E> * checking DESCRIPTION meta-information ... OK
+E> * installing the package to process help pages
+E>       -----------------------------------
+E> ERROR: dependencies 'httr2', 'later', 'logger' are not available for package 'OmnipathR'
+E> * removing 'D:/TEMP/Rtmpq0fK50/Rinst39ac1e66005/OmnipathR'
+E>       -----------------------------------
+E> ERROR: package installation failed 
+liana not installed after attempt.
+Warning message:
+package 'liana' is not available for this version of R
+
+A version of this package for your version of R might be available elsewhere,
+see the ideas at
+https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages 
+
+==== nichenetr ====
+Downloading GitHub repo saeyslab/nichenetr@HEAD
+         checking for file 'D:\TEMP\RtmpYlmbNG\remotes2174570943a9\saeyslab-nichenetr-66f90d5/DESCRIPTION' ...     checking for file 'D:\TEMP\RtmpYlmbNG\remotes2174570943a9\saeyslab-nichenetr-66f90d5/DESCRIPTION' ...   v  checking for file 'D:\TEMP\RtmpYlmbNG\remotes2174570943a9\saeyslab-nichenetr-66f90d5/DESCRIPTION' (449ms)
+      -  preparing 'nichenetr': (586ms)
+   checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   v  checking DESCRIPTION meta-information
+      -  checking for LF line-endings in source and make files and shell scripts (699ms)
+      -  checking for empty or unneeded directories
+      -  building 'nichenetr_2.2.1.1.tar.gz'
+     
+nichenetr not installed after attempt.
+Warning message:
+In i.p(...) :
+  installation of package 'D:/TEMP/RtmpYlmbNG/file217410b655de/nichenetr_2.2.1.1.tar.gz' had non-zero exit status
+
+==== Final status ====
+    package installed version
+1   copykat     FALSE      NA
+2    CaSpER     FALSE      NA
+3     liana     FALSE      NA
+4 nichenetr     FALSE      NA

@@ -1,0 +1,3 @@
+analysis,statistic,p_value,n_groups,n_cells,p_adj_BH
+myeloid_SPP1_TAM_score,2093.50362299751,0,4,15992,0
+CNV_tumor_ITGB1_CD44_score,193.793772441503,9.2480653740437e-42,4,6507,9.2480653740437e-42

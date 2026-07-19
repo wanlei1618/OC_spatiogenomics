@@ -1,0 +1,6 @@
+dataset_id,analysis_role,annotation_source,n_cells,n_major_celltypes
+GSE147082,sensitivity_secondary,secondary_reannotation_only,9796,1
+GSE151214,normal_reference,original_barcode_annotation_not_public,59446,1
+GSE154600,tumor_ecosystem_primary,author_original_SCE,42253,1
+GSE154763,myeloid_reference_only,author_original_GEO_metadata,3888,2
+GSE158722,tumor_ecosystem_primary,author_original_GEO_annotations,63793,1

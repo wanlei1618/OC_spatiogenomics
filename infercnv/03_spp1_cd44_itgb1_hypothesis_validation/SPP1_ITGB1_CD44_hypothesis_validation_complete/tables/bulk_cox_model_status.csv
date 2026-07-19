@@ -1,0 +1,21 @@
+cohort,endpoint,model,status,n,events,formula
+TCGA_OV,OS,core,ok,377,205,"Surv(OS_time, OS_event) ~ z_spp1_tam * z_itgb1_cd44 + z_kras_hypoxia +      z_macrophage + z_tumor_purity"
+TCGA_OV,OS,adjusted,ok,377,205,"Surv(OS_time, OS_event) ~ z_spp1_tam * z_itgb1_cd44 + z_kras_hypoxia +      z_macrophage + z_tumor_purity + stage + grade + residual_disease"
+TCGA_OV,PFS,core,skipped_low_n_or_events,379,,
+TCGA_OV,PFS,adjusted,skipped_low_n_or_events,379,,
+GSE102094,OS,core,ok,84,19,"Surv(OS_time, OS_event) ~ z_spp1_tam * z_itgb1_cd44 + z_kras_hypoxia +      z_macrophage + z_tumor_purity"
+GSE102094,OS,adjusted,ok,84,19,"Surv(OS_time, OS_event) ~ z_spp1_tam * z_itgb1_cd44 + z_kras_hypoxia +      z_macrophage + z_tumor_purity + stage + residual_disease"
+GSE102094,PFS,core,ok,85,57,"Surv(PFS_time, PFS_event) ~ z_spp1_tam * z_itgb1_cd44 + z_kras_hypoxia +      z_macrophage + z_tumor_purity"
+GSE102094,PFS,adjusted,ok,85,57,"Surv(PFS_time, PFS_event) ~ z_spp1_tam * z_itgb1_cd44 + z_kras_hypoxia +      z_macrophage + z_tumor_purity + stage + residual_disease"
+GSE32062,OS,core,ok,260,121,"Surv(OS_time, OS_event) ~ z_spp1_tam * z_itgb1_cd44 + z_kras_hypoxia +      z_macrophage + z_tumor_purity"
+GSE32062,OS,adjusted,ok,260,121,"Surv(OS_time, OS_event) ~ z_spp1_tam * z_itgb1_cd44 + z_kras_hypoxia +      z_macrophage + z_tumor_purity + stage + grade + residual_disease"
+GSE32062,PFS,core,ok,260,193,"Surv(PFS_time, PFS_event) ~ z_spp1_tam * z_itgb1_cd44 + z_kras_hypoxia +      z_macrophage + z_tumor_purity"
+GSE32062,PFS,adjusted,ok,260,193,"Surv(PFS_time, PFS_event) ~ z_spp1_tam * z_itgb1_cd44 + z_kras_hypoxia +      z_macrophage + z_tumor_purity + stage + grade + residual_disease"
+GSE140082,OS,core,ok,380,96,"Surv(OS_time, OS_event) ~ z_spp1_tam * z_itgb1_cd44 + z_kras_hypoxia +      z_macrophage + z_tumor_purity"
+GSE140082,OS,adjusted,ok,380,96,"Surv(OS_time, OS_event) ~ z_spp1_tam * z_itgb1_cd44 + z_kras_hypoxia +      z_macrophage + z_tumor_purity + stage + grade + residual_disease"
+GSE140082,PFS,core,ok,380,235,"Surv(PFS_time, PFS_event) ~ z_spp1_tam * z_itgb1_cd44 + z_kras_hypoxia +      z_macrophage + z_tumor_purity"
+GSE140082,PFS,adjusted,ok,380,235,"Surv(PFS_time, PFS_event) ~ z_spp1_tam * z_itgb1_cd44 + z_kras_hypoxia +      z_macrophage + z_tumor_purity + stage + grade + residual_disease"
+GSE49997,OS,core,ok,194,57,"Surv(OS_time, OS_event) ~ z_spp1_tam * z_itgb1_cd44 + z_kras_hypoxia +      z_macrophage + z_tumor_purity"
+GSE49997,OS,adjusted,ok,194,57,"Surv(OS_time, OS_event) ~ z_spp1_tam * z_itgb1_cd44 + z_kras_hypoxia +      z_macrophage + z_tumor_purity + stage + grade + residual_disease"
+GSE49997,PFS,core,ok,194,124,"Surv(PFS_time, PFS_event) ~ z_spp1_tam * z_itgb1_cd44 + z_kras_hypoxia +      z_macrophage + z_tumor_purity"
+GSE49997,PFS,adjusted,ok,194,124,"Surv(PFS_time, PFS_event) ~ z_spp1_tam * z_itgb1_cd44 + z_kras_hypoxia +      z_macrophage + z_tumor_purity + stage + grade + residual_disease"

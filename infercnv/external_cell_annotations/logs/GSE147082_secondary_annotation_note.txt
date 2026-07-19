@@ -1,0 +1,3 @@
+GSE147082 is marked secondary_reannotation_only.
+This lightweight implementation preserves expression barcodes when available and labels confidence as secondary_placeholder.
+It is restricted to sensitivity analysis and is not used as author-original primary evidence.

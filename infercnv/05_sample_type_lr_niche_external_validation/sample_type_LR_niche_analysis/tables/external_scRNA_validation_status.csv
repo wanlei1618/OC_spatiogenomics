@@ -1,0 +1,2 @@
+dataset,status,note
+Zhang2022_Ovarian,completed,Used public Zhang2022 ovarian scRNA metadata and streamed selected genes from MatrixMarket.

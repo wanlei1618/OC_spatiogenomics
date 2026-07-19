@@ -1,0 +1,43 @@
+<!doctype html><meta charset='utf-8'><title>P2 integrated evidence</title><body style='font-family:Arial,Microsoft YaHei,sans-serif;line-height:1.55;margin:32px'># P2 bulk, CNV-expression and mediation report<br>
+<br>
+Generated: 2026-07-11T20:12:53<br>
+<br>
+## P2-1 Bulk endpoint repositioning<br>
+<br>
+The five-cohort Cox interaction results were retained as negative or non-significant and are not used as the primary endpoint.<br>
+<br>
+Output: `11_bulk_negative_validation/bulk_survival_interaction_negative_results_retained.csv`<br>
+<br>
+Bulk signature covariation was re-positioned as a co-variation check. Main meta result for `SPP1_TAM_score` vs `KRAS_Hypoxia_score`:<br>
+<br>
+- pooled Spearman r = 0.1042<br>
+- 95% CI = [0.0134, 0.1933]<br>
+- BH q = 0.0306<br>
+- I2 = 0.6098<br>
+<br>
+Output: `11_bulk_negative_validation/bulk_signature_covariation_random_effects_meta.csv`<br>
+<br>
+## P2-2 CNV-expression dosage independent validation status<br>
+<br>
+Local outputs contain 776 positive RNA-derived CNV-expression coupling candidates at the existing threshold. These were relabelled as:<br>
+<br>
+`RNA-derived CNV-expression coupling candidates`<br>
+<br>
+They were not upgraded to DNA dosage drivers because no independent DNA CNV plus RNA validation table was found locally.<br>
+<br>
+Output: `12_integrated_evidence_scoring/RNA_derived_CNV_expression_coupling_candidates.csv`<br>
+<br>
+## P2-3 Statistical mediation exploration<br>
+<br>
+Bulk-level exploratory mediation was run per cohort:<br>
+<br>
+`SPP1_TAM_score -&gt; ITGB1_CD44_tumor_score -&gt; KRAS_Hypoxia_score`<br>
+<br>
+This is explicitly statistical mediation, not causal proof and not local spatial niche evidence. Cohorts with bootstrap CI excluding 0: 5.<br>
+<br>
+Output: `12_integrated_evidence_scoring/bulk_exploratory_mediation_bootstrap.csv`<br>
+<br>
+## Integrated conclusion<br>
+<br>
+The current evidence supports cautious, mixed candidate biology rather than a validated mechanism. The strongest limitation remains unresolved P0/Gate A: integrated_oc lacks `patient_id`, so current CNV_Subclone_02/04 cannot yet be promoted to cross-patient CNV programs.<br>
+</body>

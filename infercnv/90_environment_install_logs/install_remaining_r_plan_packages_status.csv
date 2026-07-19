@@ -1,0 +1,7 @@
+"package","installed","version"
+"dplyr",TRUE,"1.0.8"
+"SingleCellExperiment",TRUE,"1.12.0"
+"scDblFinder",FALSE,NA
+"UCell",FALSE,NA
+"edgeR",FALSE,NA
+"liana",FALSE,NA

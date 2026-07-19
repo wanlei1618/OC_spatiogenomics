@@ -1,0 +1,7 @@
+Starting 01_build_checked_metadata.R at 2026-07-11 12:07:26 
+Config: D:/OC_spatiogenomics/infercnv/06_rigorous_validation/00_config/project_config.yaml 
+Metadata input: D:\OC_spatiogenomics\infercnv\CNV_expression_joint_analysis_integrated_oc\tables\integrated_oc_metadata_with_CNV_clone_and_subtypes.csv 
+Input manifest files: 650 
+Metadata rows: 49326 columns: 19 
+Checked metadata written.
+Missing required fields: patient_id, dataset, doublet_score, S.Score, G2M.Score 

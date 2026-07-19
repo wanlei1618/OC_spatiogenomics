@@ -1,0 +1,6 @@
+cohort,n_samples,x,mediator,outcome,indirect_effect,bootstrap_ci_low,bootstrap_ci_high,status,interpretation
+GSE102094,85,SPP1_TAM_score,ITGB1_CD44_tumor_score,KRAS_Hypoxia_score,0.10052157946691599,0.041775471603902055,0.16765620292470032,exploratory_bulk_statistical_mediation,statistical mediation only; not causal and not spatial niche proof
+GSE140082,380,SPP1_TAM_score,ITGB1_CD44_tumor_score,KRAS_Hypoxia_score,0.0883921866967121,0.05311165341957796,0.12943987196413903,exploratory_bulk_statistical_mediation,statistical mediation only; not causal and not spatial niche proof
+GSE32062,260,SPP1_TAM_score,ITGB1_CD44_tumor_score,KRAS_Hypoxia_score,0.10129704217172204,0.06377290584317495,0.14425165056767544,exploratory_bulk_statistical_mediation,statistical mediation only; not causal and not spatial niche proof
+GSE49997,204,SPP1_TAM_score,ITGB1_CD44_tumor_score,KRAS_Hypoxia_score,0.08738388501256786,0.03324519131929931,0.16094197555848436,exploratory_bulk_statistical_mediation,statistical mediation only; not causal and not spatial niche proof
+TCGA_OV,379,SPP1_TAM_score,ITGB1_CD44_tumor_score,KRAS_Hypoxia_score,0.09253816443187467,0.06368121301366628,0.12420414283447516,exploratory_bulk_statistical_mediation,statistical mediation only; not causal and not spatial niche proof
