@@ -1,0 +1,23 @@
+sample,cancer_type,technology,n_cells,patient,treatment_phase,anatomical_location,histology
+EOC1005_interval_Tumor,Ovarian Cancer,10x,1288,EOC1005,post-NACT,Tumor,HGSOC
+EOC1005_primary_Peritoneum,Ovarian Cancer,10x,3071,EOC1005,treatment-naive,Peritoneum,HGSOC
+EOC136_interval_Omentum,Ovarian Cancer,10x,3602,EOC136,post-NACT,Omentum,HGSOC
+EOC136_primary_Mesentery,Ovarian Cancer,10x,2501,EOC136,treatment-naive,Mesentery,HGSOC
+EOC153_interval_Omentum,Ovarian Cancer,10x,2401,EOC153,post-NACT,Omentum,HGSOC
+EOC153_primary_Omentum,Ovarian Cancer,10x,1380,EOC153,treatment-naive,Omentum,HGSOC
+EOC227_interval_Omentum,Ovarian Cancer,10x,2015,EOC227,post-NACT,Omentum,HGSOC
+EOC227_primary_Omentum,Ovarian Cancer,10x,2178,EOC227,treatment-naive,Omentum,HGSOC
+EOC349_interval_Omentum,Ovarian Cancer,10x,1471,EOC349,post-NACT,Omentum,HGSOC
+EOC349_primary_Peritoneum,Ovarian Cancer,10x,1483,EOC349,treatment-naive,Peritoneum,HGSOC
+EOC372_interval_Peritoneum,Ovarian Cancer,10x,4671,EOC372,post-NACT,Peritoneum,HGSOC
+EOC372_primary_Peritoneum,Ovarian Cancer,10x,711,EOC372,treatment-naive,Peritoneum,HGSOC
+EOC3_interval_Omentum,Ovarian Cancer,10x,2503,EOC3,post-NACT,Omentum,HGSOC
+EOC3_primary_Peritoneum,Ovarian Cancer,10x,3142,EOC3,treatment-naive,Peritoneum,HGSOC
+EOC443_interval_Omentum,Ovarian Cancer,10x,4463,EOC443,post-NACT,Omentum,HGSOC
+EOC443_primary_Omentum,Ovarian Cancer,10x,2122,EOC443,treatment-naive,Omentum,HGSOC
+EOC540_interval_Omentum,Ovarian Cancer,10x,2043,EOC540,post-NACT,Omentum,HGSOC
+EOC540_primary_Omentum,Ovarian Cancer,10x,1921,EOC540,treatment-naive,Omentum,HGSOC
+EOC733_interval_Omentum,Ovarian Cancer,10x,4077,EOC733,post-NACT,Omentum,HGSOC
+EOC733_primary_Peritoneum,Ovarian Cancer,10x,1742,EOC733,treatment-naive,Peritoneum,HGSOC
+EOC87_interval_Omentum,Ovarian Cancer,10x,1491,EOC87,post-NACT,Omentum,HGSOC
+EOC87_primary_Peritoneum,Ovarian Cancer,10x,1510,EOC87,treatment-naive,Peritoneum,HGSOC
