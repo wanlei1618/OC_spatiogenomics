@@ -136,3 +136,16 @@ Use the strategy listed per dataset and non-epithelial lineage in `strategy_comp
 ## Reproducibility
 
 Run `workflow/scripts/run_diagnostics_v2.ps1`. Large RDS/count payloads remain local under `diagnostics_v2/objects` and are excluded from GitHub.
+
+## Marker-ready annotation handoff
+
+The original diagnostics_v2 A/B/C recommendations remain sensitivity analyses.
+They are not used as the final source of cell-type annotation.
+
+A separate marker-ready workflow was run on repaired-QC cells. Broad cell types
+were assigned at cluster level from adjusted-P significant RNA markers. Cycling
+was treated as a state. Epithelial cells remained uncorrected. GSE158722
+non-epithelial correction used patient_id only.
+
+Manual annotation should start from:
+`diagnostics_v2_marker_ready/<dataset>/annotation_ready_cluster_template.csv`
