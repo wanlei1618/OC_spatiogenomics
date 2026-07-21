@@ -149,3 +149,15 @@ non-epithelial correction used patient_id only.
 
 Manual annotation should start from:
 `diagnostics_v2_marker_ready/<dataset>/annotation_ready_cluster_template.csv`
+
+## Lineage-consistent marker-ready refinement
+
+The initial marker-ready pass exposed lineage conflicts caused by mixed global
+clusters. A second-pass refinement propagated only high-confidence marker-based
+labels to all repaired-QC cells, applied a global-cluster consistency gate, and
+reclustered each corrected broad family once.
+
+READY_FOR_ANNOTATION now requires significant markers, moderate/high canonical
+evidence, and no lineage conflict. Every repaired-QC cell is represented in the
+full assignment table. Unresolved cells are retained as Unresolved_review rather
+than force-labelled.
