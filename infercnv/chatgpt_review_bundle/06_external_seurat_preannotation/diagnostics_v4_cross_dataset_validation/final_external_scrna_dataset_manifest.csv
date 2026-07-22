@@ -1,0 +1,6 @@
+dataset_id,dataset_role,evidence_level,tumor_effect_aggregation,n_total_cells,primary_use,exclusion
+"GSE154600","primary_tumor_ecosystem","PRIMARY_SUPPORT",TRUE,31103,"tumor macrophage/epithelial context","None"
+"GSE158722","malignant_fluid_tumor_ecosystem","INCONCLUSIVE",TRUE,68568,"independent malignant-fluid replication if evaluable","Unresolved and non-high-confidence macrophages/epithelium"
+"GSE147082","tumor_sensitivity_validation","SENSITIVITY_SUPPORT",TRUE,6993,"tumor sensitivity validation","cluster 19 and unresolved cells"
+"GSE151214","normal_fallopian_tube_reference","NORMAL_REFERENCE",FALSE,48837,"normal fallopian-tube background","No tumor effect aggregation or tumor LR meta-analysis"
+"GSE154763","author_annotated_myeloid_reference","MYELOID_REFERENCE",FALSE,3888,"author-driven myeloid state reference","No epithelial receiver, tumor effect aggregation, raw-count QC or inferCNV"

@@ -1,0 +1,3 @@
+patient,library_id,tissue,n_cells,SPP1_positive_fraction,SPP1_program_median,C1QC_program_median,FOLR2_program_median,interpretation
+"P20190304","OV-P20190304-T","T",317,0.801261829652997,0.373011889101313,-0.181189280361868,-0.682243615674595,"descriptive paired comparison; no statistical inference"
+"P20190304","OV-P20190304-N","N",201,0.213930348258706,-0.911160731261292,-1.27977584901925,-0.798613392617767,"descriptive paired comparison; no statistical inference"

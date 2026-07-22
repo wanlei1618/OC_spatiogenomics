@@ -133,6 +133,23 @@ author annotations and normalized-expression module scores after a unique ID
 match; it never treats normalized expression as raw counts. Large RDS,
 expression, marker, and full per-cell files remain local and are not committed.
 
+## Steps 15-18: final external scRNA validation
+
+Run the targeted corrections and sample/patient-level validation in order:
+
+```text
+Rscript workflow/scripts/15_targeted_annotation_corrections.R
+Rscript workflow/scripts/16_cross_dataset_macrophage_state_validation.R
+Rscript workflow/scripts/17_build_spp1_cd44_itgb1_context.R
+Rscript workflow/scripts/18_generate_external_scrna_final_report.R
+```
+
+These steps reuse existing results and lineage count inputs; they do not repeat
+whole-dataset QC or clustering. Cross-dataset conclusions use within-dataset
+percentiles, positive fractions, and sample/patient-level prevalence. Local
+outputs are written under `diagnostics_v4_cross_dataset_validation/`; full
+per-cell refinements and score tables stay on the D drive.
+
 ## Excluded large files
 
 The following local files were excluded because they total approximately
