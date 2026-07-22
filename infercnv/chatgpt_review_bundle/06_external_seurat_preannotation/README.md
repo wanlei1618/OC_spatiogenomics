@@ -150,6 +150,23 @@ percentiles, positive fractions, and sample/patient-level prevalence. Local
 outputs are written under `diagnostics_v4_cross_dataset_validation/`; full
 per-cell refinements and score tables stay on the D drive.
 
+## Steps 19-22: evidence calibration and freeze
+
+Run the final calibration after steps 15-18:
+
+```text
+Rscript workflow/scripts/19_recalibrate_macrophage_state_evidence.R
+Rscript workflow/scripts/20_refine_GSE147082_cluster6_and_cnv.R
+Rscript workflow/scripts/21_rebuild_external_evidence_matrix_v2.R
+Rscript workflow/scripts/22_generate_final_external_report_v2.R
+```
+
+These steps separate state presence, cross-patient reproducibility, and
+within-dataset relative enrichment; run real targeted markers for GSE147082
+cluster 6; and add the PT-2834 patient-internal CNV-like sensitivity analysis.
+Outputs are written under `diagnostics_v5_final_calibration/`. The v2 evidence
+matrix and report are the frozen external scRNA interpretation.
+
 ## Excluded large files
 
 The following local files were excluded because they total approximately

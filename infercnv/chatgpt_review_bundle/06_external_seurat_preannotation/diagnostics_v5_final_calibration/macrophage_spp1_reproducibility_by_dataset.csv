@@ -1,0 +1,6 @@
+dataset_id,dataset_role,n_evaluable_patients,n_present_patients,present_patients,SPP1_reproducibility_status
+"GSE147082","tumor_sensitivity_validation",4,4,"PT-3232;PT-5150;PT-6885;PT-3401","REPLICATED"
+"GSE151214","normal_fallopian_tube_reference",5,4,"FT01;FT03;FT-SA23510;FT-SA23515","REPLICATED"
+"GSE154600","primary_tumor_ecosystem",5,5,"T59;T76;T77;T89;T90","REPLICATED"
+"GSE158722","malignant_fluid_tumor_ecosystem",2,1,"P07","SUPPORTIVE_SINGLE_PATIENT"
+"GSE154763","author_annotated_myeloid_reference",2,2,"P20181225;P20190304","REPLICATED"
