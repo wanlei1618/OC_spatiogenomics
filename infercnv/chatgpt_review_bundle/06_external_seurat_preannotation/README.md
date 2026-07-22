@@ -81,6 +81,7 @@ matrices are stored as `cluster_average_expression.csv.gz`.
 - [GEO raw-input preparation](workflow/scripts/prepare_geo_raw_inputs.R)
 - [GSE158722 metadata correction](workflow/scripts/fix_gse158722_metadata.R)
 - [Marker-stage checkpoint recovery](workflow/scripts/resume_markers.R)
+- [Clean artifacts and rescue misassigned lineages](workflow/scripts/11_clean_and_rescue_annotation.R)
 - [Exact local configuration used](workflow/config/five_external_datasets.local-used.yaml)
 - [Portable configuration template](workflow/config/five_external_datasets.example.yaml)
 - [Original workflow instructions](workflow/SKILL.md)
@@ -98,6 +99,22 @@ matrices are stored as `cluster_average_expression.csv.gz`.
    `FindAllMarkers` with `min.pct=0.20`, `logfc.threshold=0.25`, and adjusted
    p-value threshold 0.05.
 8. Leave `cell_type_manual` and `cell_subtype_manual` empty for expert review.
+
+## Step 11: clean and rescue annotation
+
+Run the two datasets sequentially, reviewing GSE154600 before starting
+GSE158722:
+
+```text
+Rscript workflow/scripts/11_clean_and_rescue_annotation.R --datasets GSE154600 --force
+Rscript workflow/scripts/11_clean_and_rescue_annotation.R --datasets GSE158722 --force
+```
+
+The local outputs are written below
+`diagnostics_v2_marker_ready_cleaned/<dataset>/`. Only the small cluster-level
+annotation, rescue, and summary tables are kept in this review bundle; full
+cell assignments, removed-cell tables, marker tables, caches, and logs remain
+local.
 
 ## Excluded large files
 
