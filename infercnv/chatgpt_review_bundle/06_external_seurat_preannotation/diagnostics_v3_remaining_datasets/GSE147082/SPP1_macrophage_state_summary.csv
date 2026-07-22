@@ -1,0 +1,2 @@
+cluster,n_cells,n_samples,module_mean,spp1_mean,spp1_positive_fraction,program_genes_detected,n_positive_samples,positive_samples,cross_sample_replicated,spp1_high
+"2",595,6,0.535784351124948,1.36451197374707,0.364705882352941,6,5,"PT-3232;PT-5150;PT-6885;PT-3401;PT-2834",TRUE,TRUE

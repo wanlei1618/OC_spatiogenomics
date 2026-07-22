@@ -116,6 +116,23 @@ annotation, rescue, and summary tables are kept in this review bundle; full
 cell assignments, removed-cell tables, marker tables, caches, and logs remain
 local.
 
+## Steps 12-14: remaining scRNA datasets
+
+Run these scripts in order:
+
+```text
+Rscript workflow/scripts/12_reanalyze_GSE147082_after_mt_qc.R
+Rscript workflow/scripts/13_clean_normal_reference_GSE151214.R
+python workflow/scripts/14_audit_and_score_GSE154763_reference.py
+```
+
+Outputs are written locally below `diagnostics_v3_remaining_datasets/`.
+GSE147082 starts from the 6,993 repaired-mitochondrial-QC cells. GSE151214 is
+restricted to its normal fallopian-tube reference role. GSE154763 uses only
+author annotations and normalized-expression module scores after a unique ID
+match; it never treats normalized expression as raw counts. Large RDS,
+expression, marker, and full per-cell files remain local and are not committed.
+
 ## Excluded large files
 
 The following local files were excluded because they total approximately
