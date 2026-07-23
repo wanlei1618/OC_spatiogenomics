@@ -1,0 +1,5 @@
+dataset_id,receiver_tier,n_patients,n_evaluable_patients,total_receiver_cells,median_CD44_positive_fraction,median_ITGB1_positive_fraction,median_dual_positive_fraction,median_ITGB1_any_alpha_copositive_fraction,CD44_receiver_status,ITGB1_receiver_status,ITGB1_alpha_partner_status,dual_receiver_status
+"GSE154600","all_final_epithelial",5,5,3458,0.0404624277456647,0.161290322580645,0.00879765395894428,0.00782013685239492,"SUPPORTED","SUPPORTED","DETECTED_LOW","DETECTED_LOW"
+"GSE154600","stable_malignant_supportive",5,4,1696,0.0351672021028037,0.114164719626168,0.00475686331775701,0.00467289719626168,"SUPPORTED","SUPPORTED","DETECTED_LOW","DETECTED_LOW"
+"GSE154600","stable_diploid_like",5,0,6,NA,NA,NA,NA,"NOT_EVALUABLE","NOT_EVALUABLE","NOT_EVALUABLE","NOT_EVALUABLE"
+"GSE154600","unstable_or_not_defined",5,4,1756,0.0520860180412371,0.153568596352102,0.0100918170103093,0.00950303991541105,"SUPPORTED","SUPPORTED","DETECTED_LOW","DETECTED_LOW"

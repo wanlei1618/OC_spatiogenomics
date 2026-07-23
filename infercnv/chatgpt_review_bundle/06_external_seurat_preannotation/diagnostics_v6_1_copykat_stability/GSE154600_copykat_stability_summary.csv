@@ -1,0 +1,2 @@
+dataset_id,n_final_epithelial,n_available_for_copykat,n_submitted_any_run,n_defined_in_at_least_1_run,n_defined_in_at_least_2_runs,n_stable_aneuploid,n_stable_diploid,n_unstable,n_mostly_not_defined,n_not_submitted,target_input_coverage,any_defined_call_rate,stable_defined_call_rate,stable_aneuploid_fraction_all_final,stable_aneuploid_fraction_defined
+"GSE154600",3969,3458,3458,1756,1744,1696,6,42,1714,511,0.871252204585538,0.507807981492192,0.504337767495662,0.427311665406904,0.972477064220184
