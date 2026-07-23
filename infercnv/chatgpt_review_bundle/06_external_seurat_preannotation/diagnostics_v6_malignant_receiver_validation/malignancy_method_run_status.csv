@@ -1,0 +1,8 @@
+dataset_id,patient_id,method,n_target,n_reference,status,error
+"GSE154600","T59","CopyKAT",1397,500,"COMPLETED",NA
+"GSE154600","T76","CopyKAT",37,500,"COMPLETED",NA
+"GSE154600","T77","CopyKAT",867,500,"COMPLETED",NA
+"GSE154600","T89","CopyKAT",168,500,"COMPLETED",NA
+"GSE154600","T90","CopyKAT",790,500,"COMPLETED",NA
+"GSE147082","PT-2834","CopyKAT",945,21,"COMPLETED",NA
+"GSE158722","ALL","CopyKAT",34453,7645,"NOT_EVALUABLE","platform identity unavailable; reliable same-platform reference selection not possible"

@@ -1,0 +1,4 @@
+subcluster,n_cells,n_patients,dominant_sample_fraction,CD3D_CD3E_positive_fraction,TRDC_TRGC_positive_fraction,CD3_TCR_copositive_fraction,NCR1_NCAM1_FCER1G_KLRD1_positive_fraction,final_cell_type,cell_state,patient_enriched,annotation_confidence
+"0",298,6,0.546979865771812,0.664429530201342,0.281879194630873,0.201342281879195,0.335570469798658,"CD8_effector_T","Cytotoxic",FALSE,"Medium"
+"1",99,5,0.333333333333333,0.767676767676768,0.222222222222222,0.181818181818182,0.232323232323232,"CD8_effector_T","Cycling",FALSE,"Medium"
+"2",73,4,0.835616438356164,0.205479452054795,0.643835616438356,0.164383561643836,0.986301369863014,"NK_like_unresolved","NK_like_cytotoxic",TRUE,"Review"

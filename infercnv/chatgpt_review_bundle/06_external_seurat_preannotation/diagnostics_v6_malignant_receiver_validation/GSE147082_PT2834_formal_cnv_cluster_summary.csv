@@ -1,0 +1,4 @@
+target_group,n_cells,n_copykat_evaluated,n_aneuploid,n_diploid,aneuploid_fraction,final_label
+"cluster_4",504,437,0,437,0,"Mesenchymal_stromal_candidate"
+"cluster_7",426,370,0,370,0,"COL2A1_positive_chondrocyte_like_fibroblast_candidate"
+"broad_epithelial",15,12,0,12,0,"Epithelial_single_cell_candidates"
