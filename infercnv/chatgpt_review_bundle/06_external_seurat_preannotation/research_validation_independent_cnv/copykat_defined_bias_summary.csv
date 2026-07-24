@@ -1,0 +1,7 @@
+"dataset_id","patient_id","n_stable_aneuploid","n_mostly_not_defined","stable_to_notdefined_nCount_median_ratio","stable_to_notdefined_nFeature_median_ratio","epithelial_marker_score_median_difference","copykat_defined_bias_status","potential_detection_depth_selection_bias","inference_scope"
+"GSE154600","T59",870,626,4.36734693877551,3.06279287722587,0.395261225023603,"HIGHER_DEPTH_IN_DEFINED_CALLS",TRUE,"descriptive_technical_audit_not_patient_level_biological_evidence"
+"GSE154600","T76",58,47,3.06375579598145,2.30029368575624,0.369012236782261,"HIGHER_DEPTH_IN_DEFINED_CALLS",TRUE,"descriptive_technical_audit_not_patient_level_biological_evidence"
+"GSE154600","T77",610,552,2.04685573366215,1.5902348578492,0.0978871656116126,"HIGHER_DEPTH_IN_DEFINED_CALLS",TRUE,"descriptive_technical_audit_not_patient_level_biological_evidence"
+"GSE154600","T89",44,136,3.65164162493044,2.42177589852008,0.335761069992012,"HIGHER_DEPTH_IN_DEFINED_CALLS",TRUE,"descriptive_technical_audit_not_patient_level_biological_evidence"
+"GSE154600","T90",243,731,3.0974025974026,2.1830985915493,0.217570550650806,"HIGHER_DEPTH_IN_DEFINED_CALLS",TRUE,"descriptive_technical_audit_not_patient_level_biological_evidence"
+"GSE154600","ALL",1825,2092,NA,NA,NA,"HIGHER_DEPTH_IN_DEFINED_CALLS",TRUE,"patient_stratified_descriptive_technical_audit"

@@ -1,0 +1,5 @@
+"dataset_id","receiver_metric","patient_reproducibility","n_evaluable_patients","n_supported_patients","n_detected_low_patients","n_not_detected_patients","patient_heterogeneity_present","malignant_receiver_expression_context","evidence_limit"
+"GSE154600","CD44","REPLICATED_SUPPORTED",5,3,2,0,TRUE,"DESCRIPTIVE_ONLY","no sample-level association statistics; no spatial proximity evidence; no direct ligand-receptor or causal evidence"
+"GSE154600","ITGB1","REPLICATED_SUPPORTED",5,5,0,0,FALSE,"DESCRIPTIVE_ONLY","no sample-level association statistics; no spatial proximity evidence; no direct ligand-receptor or causal evidence"
+"GSE154600","ITGB1_alpha","REPLICATED_LOW",5,0,3,2,TRUE,"DESCRIPTIVE_ONLY","no sample-level association statistics; no spatial proximity evidence; no direct ligand-receptor or causal evidence"
+"GSE154600","dual_CD44_ITGB1","REPLICATED_SUPPORTED",5,2,3,0,TRUE,"DESCRIPTIVE_ONLY","no sample-level association statistics; no spatial proximity evidence; no direct ligand-receptor or causal evidence"
