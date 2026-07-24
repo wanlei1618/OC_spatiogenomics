@@ -1,0 +1,6 @@
+dataset_id,sample_id,n_spots,n_spp1_sender,n_c1qc_sender,n_all_macrophage_sender,n_malignant_receiver,n_itgb1_receiver,n_cd44_receiver,n_epithelial_receiver
+"GSE203612","GSM6177614",1760,245,381,441,264,260,75,441
+"GSE203612","GSM6177617",1204,88,139,240,133,119,99,302
+"GSE211956","GSM6506110",2940,283,594,736,382,357,95,736
+"GSE211956","GSM6506111",1935,286,373,484,331,314,262,484
+"GSE211956","GSM6506112",1504,173,307,377,302,281,148,377

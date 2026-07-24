@@ -1,0 +1,5 @@
+receiver_metric,n_patients_evaluable,n_patients_detection_fraction_ge_0_10,n_patients_detected,receiver_reproducibility_status,interpretation
+"CD44",5,3,5,"REPLICATED_ROBUST","SPP1-associated malignant epithelial ITGB1/CD44 expression context"
+"CD44_ITGB1_dual",5,3,4,"REPLICATED_ROBUST","SPP1-associated malignant epithelial ITGB1/CD44 expression context"
+"ITGB1",5,5,5,"REPLICATED_ROBUST","SPP1-associated malignant epithelial ITGB1/CD44 expression context"
+"ITGB1_any_alpha",5,1,3,"SINGLE_PATIENT_SUPPORT","SPP1-associated malignant epithelial ITGB1/CD44 expression context"
