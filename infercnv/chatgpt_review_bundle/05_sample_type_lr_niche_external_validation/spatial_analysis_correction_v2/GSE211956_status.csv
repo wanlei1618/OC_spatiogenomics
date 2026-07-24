@@ -1,0 +1,2 @@
+dataset_id,status,counts_files_found,coordinate_files_found,tissue_identity_verified,reason,action
+"GSE211956","NOT_RUN_INPUT_INCOMPLETE",8,8,FALSE,"complete matrices and coordinates are present, but an authoritative sample-level HG-SOC identity record is absent from the frozen registry","no download and no spatial replication performed"
