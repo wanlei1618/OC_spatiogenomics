@@ -1,0 +1,8 @@
+lineage,program,q75,threshold_rule
+"Macrophage","SPP1_program",0.535687297534785,"score > max(lineage_q75,0); top-second >= 0.15"
+"Macrophage","C1QC_program",0.676160061942863,"score > max(lineage_q75,0); top-second >= 0.15"
+"Macrophage","FOLR2_program",0.609185008186649,"score > max(lineage_q75,0); top-second >= 0.15"
+"Macrophage","lipid_associated_program",0.474872190991808,"score > max(lineage_q75,0); top-second >= 0.15"
+"Macrophage","GPNMB_hypoxia_program",0.385992498186348,"score > max(lineage_q75,0); top-second >= 0.15"
+"Monocyte","inflammatory_monocyte_program",1.50945741752515,"score > max(lineage_q75,0); top-second >= 0.15"
+"Monocyte","SPP1_program",-0.814382678758361,"score > max(lineage_q75,0); top-second >= 0.15"

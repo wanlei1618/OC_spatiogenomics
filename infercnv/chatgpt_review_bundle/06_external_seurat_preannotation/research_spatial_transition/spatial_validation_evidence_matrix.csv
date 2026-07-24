@@ -1,0 +1,12 @@
+evidence_domain,target,evidence_status,quantitative_summary,interpretation
+"held-out infercnvpy calibration","T59","INFERCNV_THRESHOLD_CALIBRATED","median test FPR=0.0082; 3/3 splits <=0.05","calibrated infercnvpy usable in the primary integrated tier"
+"held-out infercnvpy calibration","T76","INFERCNV_THRESHOLD_CALIBRATED","median test FPR=0.0062; 3/3 splits <=0.05","calibrated infercnvpy usable in the primary integrated tier"
+"held-out infercnvpy calibration","T77","INFERCNV_THRESHOLD_CALIBRATED","median test FPR=0.0116; 3/3 splits <=0.05","calibrated infercnvpy usable in the primary integrated tier"
+"held-out infercnvpy calibration","T89","INFERCNV_THRESHOLD_CALIBRATED","median test FPR=0.0076; 3/3 splits <=0.05","calibrated infercnvpy usable in the primary integrated tier"
+"held-out infercnvpy calibration","T90","INFERCNV_THRESHOLD_CALIBRATED","median test FPR=0.0050; 3/3 splits <=0.05","calibrated infercnvpy usable in the primary integrated tier"
+"receiver expression robustness","CD44","REPLICATED_ROBUST","5 evaluable patients; 3 with detection fraction >=0.10","SPP1-associated malignant epithelial ITGB1/CD44 expression context"
+"receiver expression robustness","CD44_ITGB1_dual","REPLICATED_ROBUST","5 evaluable patients; 3 with detection fraction >=0.10","SPP1-associated malignant epithelial ITGB1/CD44 expression context"
+"receiver expression robustness","ITGB1","REPLICATED_ROBUST","5 evaluable patients; 5 with detection fraction >=0.10","SPP1-associated malignant epithelial ITGB1/CD44 expression context"
+"receiver expression robustness","ITGB1_any_alpha","SINGLE_PATIENT_SUPPORT","5 evaluable patients; 1 with detection fraction >=0.10","SPP1-associated malignant epithelial ITGB1/CD44 expression context"
+"spatial adjacency pilot","SPP1_to_ITGB1","REPLICATED_SPATIAL_SUPPORT","3/5 samples OE>1 and empirical p<0.05","Spatial proximity is associative and does not establish direct SPP1-receptor binding or causal signaling."
+"spatial adjacency pilot","SPP1_to_CD44","REPLICATED_SPATIAL_SUPPORT","3/5 samples OE>1 and empirical p<0.05","Spatial proximity is associative and does not establish direct SPP1-receptor binding or causal signaling."

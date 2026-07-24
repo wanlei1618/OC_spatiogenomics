@@ -1,0 +1,11 @@
+{
+    "step":  "07_rna_markers_GSE154600",
+    "status":  "COMPLETE",
+    "started_at":  "2026-07-18T21:06:34.6963914+08:00",
+    "finished_at":  "2026-07-18T21:37:15.8381779+08:00",
+    "fingerprint":  "8779472C38EA8CA77911175783EE77E797AC5CE22C61DADE74593DCEC8F89202",
+    "marker_path":  "D:\\OC_spatiogenomics\\infercnv\\external_seurat_preannotation\\diagnostics_v2\\GSE154600\\05_markers\\manual_annotation_template.csv",
+    "marker_sha256":  "A8C3812C944E5ADADBAA077E1C2EDF6DE4DA5DBB283201FAACF755BB5CD86E1D",
+    "script_sha256":  "9CF3D17B7626C97E2C8DB346410229633753F8C2E211DE38E69456528F1ACD15",
+    "config_sha256":  "4B278C99B53999D3CD2BFE1327AD83CAC85A3850DE33B3917121EC0E915BC93A"
+}

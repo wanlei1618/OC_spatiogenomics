@@ -1,0 +1,11 @@
+{
+    "step":  "02_mitochondrial_qc",
+    "status":  "COMPLETE",
+    "started_at":  "2026-07-18T20:11:06.7415092+08:00",
+    "finished_at":  "2026-07-18T20:13:42.4129286+08:00",
+    "fingerprint":  "2CDB88FB845300DAD45749FB33125CD0AC24AEED484563EC65FCFE3682484352",
+    "marker_path":  "D:\\OC_spatiogenomics\\infercnv\\external_seurat_preannotation\\diagnostics_v2\\GSE158722\\01_mt_audit\\mt_qc_decision.md",
+    "marker_sha256":  "2C4CB7B23C8AFC8C9C156347BFAC1F6C8ACEF921C25DCBCAB36C1E134850BA47",
+    "script_sha256":  "0201C8D6BEA6F61A4DA53C7D56DAA7AC1E96015AAE3B8CB174EEAF34CBD49054",
+    "config_sha256":  "4B278C99B53999D3CD2BFE1327AD83CAC85A3850DE33B3917121EC0E915BC93A"
+}

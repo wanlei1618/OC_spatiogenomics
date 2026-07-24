@@ -1,0 +1,8 @@
+dataset_id,lineage,strategy,cluster,n_cells,n_samples,dominant_sample,dominant_sample_n,dominant_sample_fraction,normalized_shannon_entropy,simpson_diversity,effective_sample_number,dominance_label
+"GSE158722","B_Plasma_like","B_harmony_patient","6",34,2,"P04_Time3",33,0.970588235294118,0.0435836567324146,0.0570934256055364,1.0605504587156,"moderate_sample_dominance"
+"GSE158722","B_Plasma_like","B_harmony_patient","2",97,4,"P04_Time3",82,0.845360824742268,0.1660973345143,0.267190987352535,1.36461203770848,"moderate_sample_dominance"
+"GSE158722","B_Plasma_like","B_harmony_patient","4",69,7,"P07_Time2",41,0.594202898550725,0.37889579664595,0.577189666036547,2.36512667660209,"mixed"
+"GSE158722","B_Plasma_like","B_harmony_patient","1",103,7,"P07_Time2",65,0.631067961165049,0.298967831705113,0.504477330568385,2.01807114323759,"moderate_sample_dominance"
+"GSE158722","B_Plasma_like","B_harmony_patient","0",131,6,"P07_Time1",119,0.908396946564885,0.13772071385473,0.171551774372123,1.20707603573187,"strong_sample_dominance"
+"GSE158722","B_Plasma_like","B_harmony_patient","5",43,11,"P20_Post-treatment",13,0.302325581395349,0.650289978596453,0.822065981611682,5.62006079027356,"mixed"
+"GSE158722","B_Plasma_like","B_harmony_patient","3",73,10,"P15_Pre-treatment",45,0.616438356164384,0.449086575023334,0.589228748358041,2.43444495203289,"moderate_sample_dominance"

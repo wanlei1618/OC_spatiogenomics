@@ -1,0 +1,15 @@
+[01_forensic_audit] resume check passed; verified fingerprint and marker SHA-256.
+[02_mitochondrial_qc] resume check passed; verified fingerprint and marker SHA-256.
+[03_sample_dominance] stale/incomplete state detected; rerunning.
+[03_sample_dominance] starting
+[03_sample_dominance] complete
+[04_broad_lineages_GSE154600] resume check passed; verified fingerprint and marker SHA-256.
+[05_batch_strategies_GSE154600] resume check passed; verified fingerprint and marker SHA-256.
+[04_broad_lineages_GSE158722] resume check passed; verified fingerprint and marker SHA-256.
+[05_batch_strategies_GSE158722] resume check passed; verified fingerprint and marker SHA-256.
+[06_strategy_evaluation] resume check passed; verified fingerprint and marker SHA-256.
+[07_rna_markers_GSE154600] resume check passed; verified fingerprint and marker SHA-256.
+[07_rna_markers_GSE158722] resume check passed; verified fingerprint and marker SHA-256.
+[08_review_package] starting
+[08_review_package] complete
+diagnostics_v2 workflow complete: D:\OC_spatiogenomics\infercnv\external_seurat_preannotation\diagnostics_v2

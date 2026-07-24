@@ -1,0 +1,6 @@
+"dataset_id","patient_id","n_final_epithelial","n_submitted","n_defined_at_least_once","n_stable_aneuploid","n_stable_diploid","n_unstable","n_mostly_not_defined","n_not_submitted","final_count_coverage","any_defined_call_rate"
+"GSE154600","T59",1513,1513,887,870,3,14,626,0,1,0.586252478519498
+"GSE154600","T76",125,125,78,58,1,19,47,0,1,0.624
+"GSE154600","T77",1175,1175,628,610,4,9,552,0,1,0.534468085106383
+"GSE154600","T89",181,181,48,44,0,1,136,0,1,0.265193370165746
+"GSE154600","T90",975,975,245,243,1,0,731,0,1,0.251282051282051

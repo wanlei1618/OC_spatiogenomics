@@ -1,0 +1,46 @@
+===== GSE158722 / B_Plasma_like =====
+===== GSE158722 / Combined_broad_lineages =====
+===== GSE158722 / Cycling_like =====
+===== GSE158722 / Epithelial_like =====
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  at  -1.5355
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  radius  0.00028832
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  all data on boundary of neighborhood. make span bigger
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  pseudoinverse used at -1.5355
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  neighborhood radius 0.01698
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  reciprocal condition number  1
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  There are other near singularities as well. 0.031008
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  zero-width neighborhood. make span bigger
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  pseudoinverse used at -1.6692
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  neighborhood radius 0.31702
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  reciprocal condition number  8.4027e-29
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  There are other near singularities as well. 0.090619
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  pseudoinverse used at -1.4604
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  neighborhood radius 0.31432
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  reciprocal condition number  1.4304e-28
+Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,  :
+  There are other near singularities as well. 0.031008
+Warning in svd.function(A = t(x = object), nv = npcs, ...) :
+  You're computing too large a percentage of total singular values, use a standard svd instead.
+Warning in svd.function(A = t(x = object), nv = npcs, ...) :
+  You're computing too large a percentage of total singular values, use a standard svd instead.
+Warning in svd.function(A = t(x = object), nv = npcs, ...) :
+  You're computing too large a percentage of total singular values, use a standard svd instead.
+===== GSE158722 / Fibroblast_like =====
+===== GSE158722 / Myeloid_like =====
+===== GSE158722 / T_NK_like =====
+A/B/C strategy comparison complete

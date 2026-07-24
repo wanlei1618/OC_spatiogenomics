@@ -1,0 +1,12 @@
+dataset_id,lineage,strategy,cluster,n_cells,n_samples,dominant_sample,dominant_sample_n,dominant_sample_fraction,normalized_shannon_entropy,simpson_diversity,effective_sample_number,dominance_label
+"GSE154600","Epithelial_like","B_harmony_sample","4",604,4,"T59",450,0.745033112582782,0.4428965203739,0.399066926889172,1.6640788213292,"moderate_sample_dominance"
+"GSE154600","Epithelial_like","B_harmony_sample","2",648,3,"T59",641,0.989197530864197,0.0398198338145469,0.0214001295534219,1.02186810993921,"strong_sample_dominance"
+"GSE154600","Epithelial_like","B_harmony_sample","9",54,3,"T59",45,0.833333333333333,0.316073013799865,0.283264746227709,1.39521531100478,"moderate_sample_dominance"
+"GSE154600","Epithelial_like","B_harmony_sample","3",615,4,"T59",608,0.988617886178862,0.045786517591666,0.0225844404785511,1.02310628295053,"strong_sample_dominance"
+"GSE154600","Epithelial_like","B_harmony_sample","8",101,4,"T59",89,0.881188118811881,0.279768171778739,0.215076953239878,1.27401024103909,"strong_sample_dominance"
+"GSE154600","Epithelial_like","B_harmony_sample","7",192,4,"T77",112,0.583333333333333,0.595568956892202,0.55224609375,2.23336968375136,"mixed"
+"GSE154600","Epithelial_like","B_harmony_sample","5",473,5,"T77",217,0.45877378435518,0.82857696710982,0.689861394812474,3.22436479455806,"mixed"
+"GSE154600","Epithelial_like","B_harmony_sample","6",193,5,"T77",114,0.590673575129534,0.587842403188929,0.535853311498295,2.15449129504309,"mixed"
+"GSE154600","Epithelial_like","B_harmony_sample","10",30,5,"T76",17,0.566666666666667,0.713772455981412,0.597777777777778,2.48618784530387,"mixed"
+"GSE154600","Epithelial_like","B_harmony_sample","1",730,4,"T90",592,0.810958904109589,0.336035705850001,0.311473071870895,1.45237602066958,"strong_sample_dominance"
+"GSE154600","Epithelial_like","B_harmony_sample","0",872,3,"T77",870,0.997706422018349,0.011072362047563,0.00457926521336594,1.00460033135069,"strong_sample_dominance"

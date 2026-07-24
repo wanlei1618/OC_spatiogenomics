@@ -1,0 +1,11 @@
+{
+    "step":  "01_forensic_audit",
+    "status":  "COMPLETE",
+    "started_at":  "2026-07-18T18:57:44.7200427+08:00",
+    "finished_at":  "2026-07-18T18:59:30.0287979+08:00",
+    "fingerprint":  "125085B1A74BEF26C7DB17759BAA1D58E51B6776418220E892CC7255C83B4C5F",
+    "marker_path":  "D:\\OC_spatiogenomics\\infercnv\\external_seurat_preannotation\\diagnostics_v2\\00_forensic\\current_result_snapshot.md",
+    "marker_sha256":  "9F822E0E69F3E018B1F69658A68F706073E3740FB9405F2A16882BB5D67EB8C1",
+    "script_sha256":  "3C60852D5948AE087B6A69CADA1B52B9CF739CEDB4FBFBC1A6AE1DC95D2D4FEB",
+    "config_sha256":  "4B278C99B53999D3CD2BFE1327AD83CAC85A3850DE33B3917121EC0E915BC93A"
+}

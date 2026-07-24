@@ -1,0 +1,6 @@
+"dataset_id","patient_id","n_final_epithelial","n_counts_recovered","n_counts_available_final","final_count_coverage"
+"GSE154600","T59",1513,91,1513,1
+"GSE154600","T76",125,88,125,1
+"GSE154600","T77",1175,152,1175,1
+"GSE154600","T89",181,8,181,1
+"GSE154600","T90",975,172,975,1

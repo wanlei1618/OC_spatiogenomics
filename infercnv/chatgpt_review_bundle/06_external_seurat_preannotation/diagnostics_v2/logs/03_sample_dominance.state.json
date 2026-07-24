@@ -1,0 +1,11 @@
+{
+    "step":  "03_sample_dominance",
+    "status":  "COMPLETE",
+    "started_at":  "2026-07-19T00:42:39.5204320+08:00",
+    "finished_at":  "2026-07-19T00:43:52.1987700+08:00",
+    "fingerprint":  "D50C2ACB4FF04BB7C7C80AA8792CE92A1ADA95BE3EBAEA725164720A16819FA7",
+    "marker_path":  "D:\\OC_spatiogenomics\\infercnv\\external_seurat_preannotation\\diagnostics_v2\\GSE158722\\02_dominance\\cluster_dominance_diagnostic_table.csv",
+    "marker_sha256":  "C354CAA9BD8D656513471852B8029EAA411A07155CBBBB6178446761084C6285",
+    "script_sha256":  "BCC3747B4A4A44CAD9CA9388184A255DCBD3C64231FF9504CAD9C12B8113FB72",
+    "config_sha256":  "4B278C99B53999D3CD2BFE1327AD83CAC85A3850DE33B3917121EC0E915BC93A"
+}

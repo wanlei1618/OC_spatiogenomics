@@ -1,0 +1,8 @@
+attempt,metadata_rows,expression_rows,metadata_unique_ids,expression_unique_ids,metadata_duplicate_ids,expression_duplicate_ids,matched_unique_ids,metadata_match_fraction,expression_match_fraction,selected,status
+exact,3888,3888,3888,3888,0,0,3888,1.0,1.0,True,PASS_ONE_TO_ONE
+strip_quotes_whitespace,3888,3888,3888,3888,0,0,3888,1.0,1.0,False,AUDITED_NOT_SELECTED
+remove_terminal_dash1,3888,3888,3888,3888,0,0,3888,1.0,1.0,False,AUDITED_NOT_SELECTED
+uppercase,3888,3888,3888,3888,0,0,3888,1.0,1.0,False,AUDITED_NOT_SELECTED
+dot_hyphen_normalization,3888,3888,3888,3888,0,0,3888,1.0,1.0,False,AUDITED_NOT_SELECTED
+sample_plus_barcode,3888,3888,3888,3888,0,0,0,0.0,0.0,False,AUDITED_NOT_SELECTED
+patient_plus_barcode,3888,3888,3888,3888,0,0,0,0.0,0.0,False,AUDITED_NOT_SELECTED

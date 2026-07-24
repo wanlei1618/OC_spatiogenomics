@@ -1,0 +1,7 @@
+dataset_id,source_file,status,feature_column,n_features,n_match_uppercase_MT,n_match_dot_MT,n_match_lowercase_mt,n_match_ensembl,message
+"GSE147082","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE147082/extracted/GSM4416534_PT-3232.csv.gz","complete","V1",19297,0,33,0,0,NA
+"GSE147082","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE147082/extracted/GSM4416535_PT-5150.csv.gz","complete","V1",24776,0,32,0,0,NA
+"GSE147082","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE147082/extracted/GSM4416536_PT-6885.csv.gz","complete","V1",24063,0,31,0,0,NA
+"GSE147082","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE147082/extracted/GSM4416537_PT-4806.csv.gz","complete","V1",26499,0,32,0,0,NA
+"GSE147082","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE147082/extracted/GSM4416538_PT-3401.csv.gz","complete","V1",32024,0,33,0,0,NA
+"GSE147082","D:/OC_spatiogenomics/公开集/单细胞/raw_counts/GSE147082/extracted/GSM4416539_PT-2834.csv.gz","complete","V1",26221,0,31,0,0,NA

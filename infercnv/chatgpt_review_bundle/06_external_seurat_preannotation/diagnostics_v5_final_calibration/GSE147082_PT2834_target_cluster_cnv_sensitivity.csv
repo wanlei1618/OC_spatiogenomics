@@ -1,0 +1,4 @@
+patient_id,group,n_cells,method,n_ordered_genes,cnv_intensity,correlation_to_broad_epithelial,cnv_intensity_ratio_to_epithelial,interpretation
+"PT-2834","cluster_4",504,"exploratory_patient_internal_cnv_like",18969,0.00980560753518715,0.069610387614754,28.2529163542208,"Mesenchymal_stromal_candidate"
+"PT-2834","cluster_7",426,"exploratory_patient_internal_cnv_like",18969,0.00699703683001518,0.0836459156863269,20.1605760353377,"COL2A1_positive_chondrocyte_like_fibroblast_candidate"
+"PT-2834","broad_epithelial",15,"exploratory_patient_internal_cnv_like",18969,0.000347065322823648,1,1,"broad_Epithelial_reference_not_uniformly_CNV_confirmed"

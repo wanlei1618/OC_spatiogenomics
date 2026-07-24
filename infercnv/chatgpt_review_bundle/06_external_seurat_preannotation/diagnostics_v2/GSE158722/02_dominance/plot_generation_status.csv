@@ -1,0 +1,2 @@
+dataset_id,status,object_size_gb,message
+"GSE158722","PARTIAL_MEMORY_GUARD",6.24767627287656,"Current object is 6.25 GB, above the configured 2.5 GB memory guard. Aggregate audit retained; new per-lineage UMAPs are generated in step 05."

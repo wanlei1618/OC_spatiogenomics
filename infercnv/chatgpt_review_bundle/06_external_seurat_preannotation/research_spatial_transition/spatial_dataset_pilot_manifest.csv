@@ -1,0 +1,23 @@
+dataset_id,sample_id,platform,ovarian_tumor_relevant,counts_available,coordinates_available,pathology_or_tissue_mask_available,cell_resolved_or_spot_based,selected_for_pilot,exclusion_reason
+"GSE203612","GSM6177614","10x_Visium",TRUE,TRUE,TRUE,TRUE,"spot_based",TRUE,NA
+"GSE203612","GSM6177617","10x_Visium",TRUE,TRUE,TRUE,TRUE,"spot_based",TRUE,NA
+"GSE211956","GSM6506110","10x_Visium",TRUE,TRUE,TRUE,TRUE,"spot_based",TRUE,NA
+"GSE211956","GSM6506111","10x_Visium",TRUE,TRUE,TRUE,TRUE,"spot_based",TRUE,NA
+"GSE211956","GSM6506112","10x_Visium",TRUE,TRUE,TRUE,TRUE,"spot_based",TRUE,NA
+"GSE211956","GSM6506113","10x_Visium",TRUE,TRUE,TRUE,TRUE,"spot_based",FALSE,"three-sample-per-dataset pilot cap"
+"GSE211956","GSM6506114","10x_Visium",TRUE,TRUE,TRUE,TRUE,"spot_based",FALSE,"three-sample-per-dataset pilot cap"
+"GSE211956","GSM6506115","10x_Visium",TRUE,TRUE,TRUE,TRUE,"spot_based",FALSE,"three-sample-per-dataset pilot cap"
+"GSE211956","GSM6506116","10x_Visium",TRUE,TRUE,TRUE,TRUE,"spot_based",FALSE,"three-sample-per-dataset pilot cap"
+"GSE211956","GSM6506117","10x_Visium",TRUE,TRUE,TRUE,TRUE,"spot_based",FALSE,"three-sample-per-dataset pilot cap"
+"GSE189843","GSM5708485","10x_Visium",TRUE,TRUE,FALSE,FALSE,"spot_based",FALSE,"existing object build failed and usable coordinates were unavailable"
+"GSE189843","GSM5708486","10x_Visium",TRUE,TRUE,FALSE,FALSE,"spot_based",FALSE,"existing object build failed and usable coordinates were unavailable"
+"GSE189843","GSM5708487","10x_Visium",TRUE,TRUE,FALSE,FALSE,"spot_based",FALSE,"existing object build failed and usable coordinates were unavailable"
+"GSE189843","GSM5708488","10x_Visium",TRUE,TRUE,FALSE,FALSE,"spot_based",FALSE,"existing object build failed and usable coordinates were unavailable"
+"GSE189843","GSM5708489","10x_Visium",TRUE,TRUE,FALSE,FALSE,"spot_based",FALSE,"existing object build failed and usable coordinates were unavailable"
+"GSE189843","GSM5708490","10x_Visium",TRUE,TRUE,FALSE,FALSE,"spot_based",FALSE,"existing object build failed and usable coordinates were unavailable"
+"GSE189843","GSM5708491","10x_Visium",TRUE,TRUE,FALSE,FALSE,"spot_based",FALSE,"existing object build failed and usable coordinates were unavailable"
+"GSE189843","GSM5708492","10x_Visium",TRUE,TRUE,FALSE,FALSE,"spot_based",FALSE,"existing object build failed and usable coordinates were unavailable"
+"GSE189843","GSM5708493","10x_Visium",TRUE,TRUE,FALSE,FALSE,"spot_based",FALSE,"existing object build failed and usable coordinates were unavailable"
+"GSE189843","GSM5708494","10x_Visium",TRUE,TRUE,FALSE,FALSE,"spot_based",FALSE,"existing object build failed and usable coordinates were unavailable"
+"GSE189843","GSM5708495","10x_Visium",TRUE,TRUE,FALSE,FALSE,"spot_based",FALSE,"existing object build failed and usable coordinates were unavailable"
+"GSE189843","GSM5708496","10x_Visium",TRUE,TRUE,FALSE,FALSE,"spot_based",FALSE,"existing object build failed and usable coordinates were unavailable"

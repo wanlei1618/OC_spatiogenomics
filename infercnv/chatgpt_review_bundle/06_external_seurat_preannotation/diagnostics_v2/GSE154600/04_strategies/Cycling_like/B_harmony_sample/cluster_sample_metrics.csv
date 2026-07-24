@@ -1,0 +1,4 @@
+dataset_id,lineage,strategy,cluster,n_cells,n_samples,dominant_sample,dominant_sample_n,dominant_sample_fraction,normalized_shannon_entropy,simpson_diversity,effective_sample_number,dominance_label
+"GSE154600","Cycling_like","B_harmony_sample","1",226,5,"T59",120,0.530973451327434,0.824073708533745,0.65960529407158,2.93776601863568,"mixed"
+"GSE154600","Cycling_like","B_harmony_sample","0",321,5,"T90",130,0.404984423676012,0.760061044722761,0.664551003969294,2.98107912628381,"mixed"
+"GSE154600","Cycling_like","B_harmony_sample","2",129,5,"T59",85,0.658914728682171,0.650488216241206,0.52629048735052,2.11099835088164,"moderate_sample_dominance"

@@ -1,0 +1,419 @@
+{
+  "task": "patient dominance and mitochondrial QC diagnostics_v2",
+  "generated_at": "2026-07-19T00:58:37+0800",
+  "datasets": ["GSE147082", "GSE154600", "GSE158722"],
+  "excluded_dataset": "GSE154763",
+  "original_stage06_overwritten": false,
+  "final_cell_type_assigned": false,
+  "marker_assay": "RNA",
+  "object_inventory": [
+    {
+      "dataset_id": "GSE147082",
+      "candidate_path": "D:/OC_spatiogenomics/infercnv/external_seurat_preannotation/GSE147082/objects/GSE147082_preannotation.rds",
+      "size_bytes": 436639280,
+      "modified_time": "2026-07-14 03:13:35",
+      "sha256": "9fa54e02b7cf85fdcfc3b1ee58c8338127af3df064f3856439e63f6f6001c602",
+      "exact_expected_path": true,
+      "selected": true,
+      "selection_reason": "exact_expected_path",
+      "run_status_file": "D:/OC_spatiogenomics/infercnv/external_seurat_preannotation/GSE147082/logs/run_status.json",
+      "run_status": "PREANNOTATION_COMPLETE_WAITING_FOR_MANUAL_CELLTYPE",
+      "run_status_n_after_qc": 7645,
+      "run_status_finished_at": "2026-07-14 11:13:36"
+    },
+    {
+      "dataset_id": "GSE154600",
+      "candidate_path": "D:/OC_spatiogenomics/infercnv/external_seurat_preannotation/GSE154600/objects/GSE154600_preannotation.rds",
+      "size_bytes": 1504418370,
+      "modified_time": "2026-07-15 05:14:50",
+      "sha256": "81224f19c1c13f2ad32ccbec67ca3982d4d64a56cfb7b04fb51e8abf5d96897a",
+      "exact_expected_path": true,
+      "selected": true,
+      "selection_reason": "exact_expected_path",
+      "run_status_file": "D:/OC_spatiogenomics/infercnv/external_seurat_preannotation/GSE154600/logs/run_status.json",
+      "run_status": "PREANNOTATION_COMPLETE_WAITING_FOR_MANUAL_CELLTYPE",
+      "run_status_n_after_qc": 31103,
+      "run_status_finished_at": "2026-07-15 13:14:50"
+    },
+    {
+      "dataset_id": "GSE158722",
+      "candidate_path": "D:/OC_spatiogenomics/infercnv/external_seurat_preannotation/GSE158722/objects/GSE158722_preannotation.rds",
+      "size_bytes": 6708391317,
+      "modified_time": "2026-07-15 12:21:12",
+      "sha256": "354c7cbd2db6c9f9e481eafcb6a9e64f4d629212e13b0fa8484829bc856419e0",
+      "exact_expected_path": true,
+      "selected": true,
+      "selection_reason": "exact_expected_path",
+      "run_status_file": "D:/OC_spatiogenomics/infercnv/external_seurat_preannotation/GSE158722/logs/run_status.json",
+      "run_status": "PREANNOTATION_COMPLETE_WAITING_FOR_MANUAL_CELLTYPE",
+      "run_status_n_after_qc": 98832,
+      "run_status_finished_at": "2026-07-16 14:18:40"
+    }
+  ],
+  "strategy_status": [
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "B_Plasma_like",
+      "strategy": "A_uncorrected",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "B_Plasma_like",
+      "strategy": "B_harmony_sample",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "B_Plasma_like",
+      "strategy": "C_RPCA",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "Combined_broad_lineages",
+      "strategy": "A_uncorrected",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "Combined_broad_lineages",
+      "strategy": "B_harmony_sample",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "Combined_broad_lineages",
+      "strategy": "C_RPCA",
+      "status": "SKIPPED_MEMORY_GUARD_COMBINED_SCOPE",
+      "message": "Combined scope is an extra cross-lineage audit; RPCA remains enabled within each individual broad lineage."
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "Cycling_like",
+      "strategy": "A_uncorrected",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "Cycling_like",
+      "strategy": "B_harmony_sample",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "Cycling_like",
+      "strategy": "C_RPCA",
+      "status": "FAILED_CONTINUED",
+      "message": "number of items to replace is not a multiple of replacement length"
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "Endothelial_like",
+      "strategy": "A_uncorrected",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "Endothelial_like",
+      "strategy": "B_harmony_sample",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "Endothelial_like",
+      "strategy": "C_RPCA",
+      "status": "FAILED_CONTINUED",
+      "message": "number of items to replace is not a multiple of replacement length"
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "Epithelial_like",
+      "strategy": "A_uncorrected",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "Epithelial_like",
+      "strategy": "B_harmony_sample",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "Epithelial_like",
+      "strategy": "C_RPCA",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "Fibroblast_like",
+      "strategy": "A_uncorrected",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "Fibroblast_like",
+      "strategy": "B_harmony_sample",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "Fibroblast_like",
+      "strategy": "C_RPCA",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "Myeloid_like",
+      "strategy": "A_uncorrected",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "Myeloid_like",
+      "strategy": "B_harmony_sample",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "Myeloid_like",
+      "strategy": "C_RPCA",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "T_NK_like",
+      "strategy": "A_uncorrected",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "T_NK_like",
+      "strategy": "B_harmony_sample",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE154600",
+      "lineage": "T_NK_like",
+      "strategy": "C_RPCA",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "B_Plasma_like",
+      "strategy": "A_uncorrected",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "B_Plasma_like",
+      "strategy": "B_harmony_sample",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "B_Plasma_like",
+      "strategy": "B_harmony_patient",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "B_Plasma_like",
+      "strategy": "C_RPCA",
+      "status": "FAILED_CONTINUED",
+      "message": "RPCA requires >=10 cells in every sample within lineage"
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "Combined_broad_lineages",
+      "strategy": "A_uncorrected",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "Combined_broad_lineages",
+      "strategy": "B_harmony_sample",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "Combined_broad_lineages",
+      "strategy": "B_harmony_patient",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "Combined_broad_lineages",
+      "strategy": "C_RPCA",
+      "status": "SKIPPED_MEMORY_GUARD_COMBINED_SCOPE",
+      "message": "Combined scope is an extra cross-lineage audit; RPCA remains enabled within each individual broad lineage."
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "Cycling_like",
+      "strategy": "A_uncorrected",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "Cycling_like",
+      "strategy": "B_harmony_sample",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "Cycling_like",
+      "strategy": "B_harmony_patient",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "Cycling_like",
+      "strategy": "C_RPCA",
+      "status": "FAILED_CONTINUED",
+      "message": "RPCA requires >=10 cells in every sample within lineage"
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "Epithelial_like",
+      "strategy": "A_uncorrected",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "Epithelial_like",
+      "strategy": "B_harmony_sample",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "Epithelial_like",
+      "strategy": "B_harmony_patient",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "Epithelial_like",
+      "strategy": "C_RPCA",
+      "status": "FAILED_CONTINUED",
+      "message": "The total size of the 10 globals exported for future expression ('FUN()') is 6.34 GiB. This exceeds the maximum allowed size 6.00 GiB per plan() argument 'maxSizeOfObjects'. This limit is set to protect against transfering too large objects to parallel workers by mistake, which may not be intended and could be costly. See help(\"\"future.globals.maxSize\"\", package = \"\"future\"\") for how to adjust or remove the default threshold via an R option The three largest globals are 'FUN' (4.46 GiB of class 'function'), 'object.list' (1.89 GiB of class 'list') and 'NNHelper' (9.67 KiB of class 'function')"
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "Fibroblast_like",
+      "strategy": "A_uncorrected",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "Fibroblast_like",
+      "strategy": "B_harmony_sample",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "Fibroblast_like",
+      "strategy": "B_harmony_patient",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "Fibroblast_like",
+      "strategy": "C_RPCA",
+      "status": "FAILED_CONTINUED",
+      "message": "RPCA requires >=10 cells in every sample within lineage"
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "Myeloid_like",
+      "strategy": "A_uncorrected",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "Myeloid_like",
+      "strategy": "B_harmony_sample",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "Myeloid_like",
+      "strategy": "B_harmony_patient",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "Myeloid_like",
+      "strategy": "C_RPCA",
+      "status": "FAILED_CONTINUED",
+      "message": "RPCA requires >=10 cells in every sample within lineage"
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "T_NK_like",
+      "strategy": "A_uncorrected",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "T_NK_like",
+      "strategy": "B_harmony_sample",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "T_NK_like",
+      "strategy": "B_harmony_patient",
+      "status": "RESUMED_EXISTING",
+      "message": ""
+    },
+    {
+      "dataset_id": "GSE158722",
+      "lineage": "T_NK_like",
+      "strategy": "C_RPCA",
+      "status": "FAILED_CONTINUED",
+      "message": "RPCA requires >=10 cells in every sample within lineage"
+    }
+  ]
+}

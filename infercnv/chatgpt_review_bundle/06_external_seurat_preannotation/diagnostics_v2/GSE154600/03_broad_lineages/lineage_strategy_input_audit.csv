@@ -1,0 +1,9 @@
+dataset_id,provisional_broad_lineage,n_cells_available,n_cells_strategy_input,n_samples_available,sampling,object_path
+"GSE154600","Myeloid_like",6721,6721,5,"all_cells","D:/OC_spatiogenomics/infercnv/external_seurat_preannotation/diagnostics_v2/objects/GSE154600/lineage_inputs/Myeloid_like_strategy_input.rds"
+"GSE154600","Epithelial_like",4512,4512,5,"all_cells","D:/OC_spatiogenomics/infercnv/external_seurat_preannotation/diagnostics_v2/objects/GSE154600/lineage_inputs/Epithelial_like_strategy_input.rds"
+"GSE154600","Fibroblast_like",7560,7560,5,"all_cells","D:/OC_spatiogenomics/infercnv/external_seurat_preannotation/diagnostics_v2/objects/GSE154600/lineage_inputs/Fibroblast_like_strategy_input.rds"
+"GSE154600","Endothelial_like",524,524,5,"all_cells","D:/OC_spatiogenomics/infercnv/external_seurat_preannotation/diagnostics_v2/objects/GSE154600/lineage_inputs/Endothelial_like_strategy_input.rds"
+"GSE154600","B_Plasma_like",2185,2185,5,"all_cells","D:/OC_spatiogenomics/infercnv/external_seurat_preannotation/diagnostics_v2/objects/GSE154600/lineage_inputs/B_Plasma_like_strategy_input.rds"
+"GSE154600","T_NK_like",7858,7858,5,"all_cells","D:/OC_spatiogenomics/infercnv/external_seurat_preannotation/diagnostics_v2/objects/GSE154600/lineage_inputs/T_NK_like_strategy_input.rds"
+"GSE154600","Cycling_like",676,676,5,"all_cells","D:/OC_spatiogenomics/infercnv/external_seurat_preannotation/diagnostics_v2/objects/GSE154600/lineage_inputs/Cycling_like_strategy_input.rds"
+"GSE154600","Combined_broad_lineages",30036,30000,5,"balanced_cap_by_sample","D:/OC_spatiogenomics/infercnv/external_seurat_preannotation/diagnostics_v2/objects/GSE154600/lineage_inputs/Combined_broad_lineages_strategy_input.rds"

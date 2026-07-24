@@ -81,6 +81,7 @@ matrices are stored as `cluster_average_expression.csv.gz`.
 - [GEO raw-input preparation](workflow/scripts/prepare_geo_raw_inputs.R)
 - [GSE158722 metadata correction](workflow/scripts/fix_gse158722_metadata.R)
 - [Marker-stage checkpoint recovery](workflow/scripts/resume_markers.R)
+- [Clean artifacts and rescue misassigned lineages](workflow/scripts/11_clean_and_rescue_annotation.R)
 - [Exact local configuration used](workflow/config/five_external_datasets.local-used.yaml)
 - [Portable configuration template](workflow/config/five_external_datasets.example.yaml)
 - [Original workflow instructions](workflow/SKILL.md)
@@ -98,6 +99,73 @@ matrices are stored as `cluster_average_expression.csv.gz`.
    `FindAllMarkers` with `min.pct=0.20`, `logfc.threshold=0.25`, and adjusted
    p-value threshold 0.05.
 8. Leave `cell_type_manual` and `cell_subtype_manual` empty for expert review.
+
+## Step 11: clean and rescue annotation
+
+Run the two datasets sequentially, reviewing GSE154600 before starting
+GSE158722:
+
+```text
+Rscript workflow/scripts/11_clean_and_rescue_annotation.R --datasets GSE154600 --force
+Rscript workflow/scripts/11_clean_and_rescue_annotation.R --datasets GSE158722 --force
+```
+
+The local outputs are written below
+`diagnostics_v2_marker_ready_cleaned/<dataset>/`. Only the small cluster-level
+annotation, rescue, and summary tables are kept in this review bundle; full
+cell assignments, removed-cell tables, marker tables, caches, and logs remain
+local.
+
+## Steps 12-14: remaining scRNA datasets
+
+Run these scripts in order:
+
+```text
+Rscript workflow/scripts/12_reanalyze_GSE147082_after_mt_qc.R
+Rscript workflow/scripts/13_clean_normal_reference_GSE151214.R
+python workflow/scripts/14_audit_and_score_GSE154763_reference.py
+```
+
+Outputs are written locally below `diagnostics_v3_remaining_datasets/`.
+GSE147082 starts from the 6,993 repaired-mitochondrial-QC cells. GSE151214 is
+restricted to its normal fallopian-tube reference role. GSE154763 uses only
+author annotations and normalized-expression module scores after a unique ID
+match; it never treats normalized expression as raw counts. Large RDS,
+expression, marker, and full per-cell files remain local and are not committed.
+
+## Steps 15-18: final external scRNA validation
+
+Run the targeted corrections and sample/patient-level validation in order:
+
+```text
+Rscript workflow/scripts/15_targeted_annotation_corrections.R
+Rscript workflow/scripts/16_cross_dataset_macrophage_state_validation.R
+Rscript workflow/scripts/17_build_spp1_cd44_itgb1_context.R
+Rscript workflow/scripts/18_generate_external_scrna_final_report.R
+```
+
+These steps reuse existing results and lineage count inputs; they do not repeat
+whole-dataset QC or clustering. Cross-dataset conclusions use within-dataset
+percentiles, positive fractions, and sample/patient-level prevalence. Local
+outputs are written under `diagnostics_v4_cross_dataset_validation/`; full
+per-cell refinements and score tables stay on the D drive.
+
+## Steps 19-22: evidence calibration and freeze
+
+Run the final calibration after steps 15-18:
+
+```text
+Rscript workflow/scripts/19_recalibrate_macrophage_state_evidence.R
+Rscript workflow/scripts/20_refine_GSE147082_cluster6_and_cnv.R
+Rscript workflow/scripts/21_rebuild_external_evidence_matrix_v2.R
+Rscript workflow/scripts/22_generate_final_external_report_v2.R
+```
+
+These steps separate state presence, cross-patient reproducibility, and
+within-dataset relative enrichment; run real targeted markers for GSE147082
+cluster 6; and add the PT-2834 patient-internal CNV-like sensitivity analysis.
+Outputs are written under `diagnostics_v5_final_calibration/`. The v2 evidence
+matrix and report are the frozen external scRNA interpretation.
 
 ## Excluded large files
 

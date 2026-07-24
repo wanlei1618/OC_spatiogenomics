@@ -1,0 +1,7 @@
+dataset_id,lineage,strategy,cluster,n_cells,n_samples,dominant_sample,dominant_sample_n,dominant_sample_fraction,normalized_shannon_entropy,simpson_diversity,effective_sample_number,dominance_label
+"GSE154600","Endothelial_like","A_uncorrected","1",110,4,"T59",105,0.954545454545455,0.141727439639153,0.0879338842975206,1.09641174338528,"strong_sample_dominance"
+"GSE154600","Endothelial_like","A_uncorrected","3",71,5,"T89",49,0.690140845070423,0.490125939207219,0.451497718706606,1.82314647377939,"moderate_sample_dominance"
+"GSE154600","Endothelial_like","A_uncorrected","4",57,3,"T76",43,0.754385964912281,0.408959853921262,0.385349338257926,1.62694041061592,"moderate_sample_dominance"
+"GSE154600","Endothelial_like","A_uncorrected","2",98,5,"T76",73,0.744897959183674,0.491392930064825,0.409412744689713,1.69322990126939,"moderate_sample_dominance"
+"GSE154600","Endothelial_like","A_uncorrected","0",142,4,"T76",135,0.950704225352113,0.14644320751763,0.0948224558619323,1.10475564321718,"strong_sample_dominance"
+"GSE154600","Endothelial_like","A_uncorrected","5",46,3,"T77",44,0.956521739130435,0.129847659881563,0.0841209829867674,1.09184726522188,"moderate_sample_dominance"

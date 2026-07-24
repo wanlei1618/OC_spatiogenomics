@@ -1,0 +1,6 @@
+dataset_id,patient_id,n_final_epithelial,n_available_in_any_lineage_input,n_missing_from_all_inputs,coverage_fraction,n_original_epi_input,n_rescued_from_other_inputs
+"GSE154600","T59",1513,1422,91,0.939854593522803,1397,25
+"GSE154600","T76",125,37,88,0.296,37,0
+"GSE154600","T77",1175,1023,152,0.87063829787234,867,156
+"GSE154600","T89",181,173,8,0.955801104972376,168,5
+"GSE154600","T90",975,803,172,0.823589743589744,790,13

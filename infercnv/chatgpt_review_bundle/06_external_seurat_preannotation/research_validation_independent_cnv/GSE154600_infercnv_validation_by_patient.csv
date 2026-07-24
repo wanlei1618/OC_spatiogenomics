@@ -1,0 +1,6 @@
+"dataset_id","patient_id","n_epithelial_with_counts","n_infercnv_high","n_copykat_stable_aneuploid","n_dual_method_support","n_copykat_only","n_infercnv_only","n_neither","n_not_evaluable","copykat_infercnv_concordance","independent_cnv_method"
+"GSE154600","T59",1513,1111,870,799,71,312,331,0,0.918390804597701,"infercnvpy_fallback"
+"GSE154600","T76",125,87,58,38,20,49,18,0,0.655172413793103,"infercnvpy_fallback"
+"GSE154600","T77",1175,227,610,118,492,109,456,0,0.19344262295082,"infercnvpy_fallback"
+"GSE154600","T89",181,119,44,33,11,86,51,0,0.75,"infercnvpy_fallback"
+"GSE154600","T90",975,289,243,162,81,127,605,0,0.666666666666667,"infercnvpy_fallback"

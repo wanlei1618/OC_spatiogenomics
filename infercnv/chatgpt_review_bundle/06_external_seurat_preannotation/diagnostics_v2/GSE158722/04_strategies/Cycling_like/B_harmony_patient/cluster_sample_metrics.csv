@@ -1,0 +1,10 @@
+dataset_id,lineage,strategy,cluster,n_cells,n_samples,dominant_sample,dominant_sample_n,dominant_sample_fraction,normalized_shannon_entropy,simpson_diversity,effective_sample_number,dominance_label
+"GSE158722","Cycling_like","B_harmony_patient","5",214,29,"P07_Time2",54,0.252336448598131,0.716368308142064,0.870905755961219,7.74627875507443,"mixed"
+"GSE158722","Cycling_like","B_harmony_patient","3",327,21,"P08_Time2",265,0.81039755351682,0.27847447456241,0.340431501276548,1.51614275383896,"strong_sample_dominance"
+"GSE158722","Cycling_like","B_harmony_patient","2",348,22,"P08_Time1",122,0.350574712643678,0.628518375206464,0.827850442594795,5.80890253261704,"mixed"
+"GSE158722","Cycling_like","B_harmony_patient","1",599,27,"P07_Time2",216,0.360601001669449,0.620403447650719,0.806257507643513,5.16149032582896,"mixed"
+"GSE158722","Cycling_like","B_harmony_patient","6",122,15,"P24_Post-treatment",57,0.467213114754098,0.531911104391777,0.747514109110454,3.96061734965407,"mixed"
+"GSE158722","Cycling_like","B_harmony_patient","8",57,7,"P07_Time2",51,0.894736842105263,0.145420646551816,0.197599261311173,1.24626006904488,"moderate_sample_dominance"
+"GSE158722","Cycling_like","B_harmony_patient","7",92,9,"P04_Time3",70,0.760869565217391,0.248319829194274,0.399574669187146,1.66548602912239,"moderate_sample_dominance"
+"GSE158722","Cycling_like","B_harmony_patient","0",651,26,"P07_Time2",277,0.425499231950845,0.563996802665352,0.755458340117178,4.08928278510571,"mixed"
+"GSE158722","Cycling_like","B_harmony_patient","4",218,23,"P08_Time1",104,0.477064220183486,0.592381944944329,0.751367729989058,4.02200406228842,"mixed"

@@ -1,0 +1,8 @@
+dataset_id,provisional_broad_lineage,n_cells_available,n_cells_strategy_input,n_samples_available,sampling,object_path
+"GSE158722","Epithelial_like",56040,30000,39,"balanced_cap_by_sample","D:/OC_spatiogenomics/infercnv/external_seurat_preannotation/diagnostics_v2/objects/GSE158722/lineage_inputs/Epithelial_like_strategy_input.rds"
+"GSE158722","Cycling_like",2628,2628,37,"all_cells","D:/OC_spatiogenomics/infercnv/external_seurat_preannotation/diagnostics_v2/objects/GSE158722/lineage_inputs/Cycling_like_strategy_input.rds"
+"GSE158722","Fibroblast_like",2294,2294,29,"all_cells","D:/OC_spatiogenomics/infercnv/external_seurat_preannotation/diagnostics_v2/objects/GSE158722/lineage_inputs/Fibroblast_like_strategy_input.rds"
+"GSE158722","Myeloid_like",3803,3803,27,"all_cells","D:/OC_spatiogenomics/infercnv/external_seurat_preannotation/diagnostics_v2/objects/GSE158722/lineage_inputs/Myeloid_like_strategy_input.rds"
+"GSE158722","T_NK_like",2379,2379,21,"all_cells","D:/OC_spatiogenomics/infercnv/external_seurat_preannotation/diagnostics_v2/objects/GSE158722/lineage_inputs/T_NK_like_strategy_input.rds"
+"GSE158722","B_Plasma_like",550,550,21,"all_cells","D:/OC_spatiogenomics/infercnv/external_seurat_preannotation/diagnostics_v2/objects/GSE158722/lineage_inputs/B_Plasma_like_strategy_input.rds"
+"GSE158722","Combined_broad_lineages",67744,30000,39,"balanced_cap_by_sample","D:/OC_spatiogenomics/infercnv/external_seurat_preannotation/diagnostics_v2/objects/GSE158722/lineage_inputs/Combined_broad_lineages_strategy_input.rds"

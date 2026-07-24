@@ -1,0 +1,4 @@
+state,transcript_expression_columns,expression_columns_available,transcript_detection_definition,reference_program_field,terminology_decision
+"SPP1","SPP1_expression",TRUE,"SPP1_expression > 0","SPP1_reference_program_support","true transcript detection plus separate reference program support"
+"C1QC","C1QA_expression;C1QB_expression;C1QC_expression",TRUE,"at least 2 of C1QA/C1QB/C1QC expression > 0","C1QC_reference_program_support","true core transcript detection plus separate reference program support"
+"FOLR2","FOLR2_expression",TRUE,"FOLR2_expression > 0","FOLR2_reference_program_support","true transcript detection plus separate reference program support"

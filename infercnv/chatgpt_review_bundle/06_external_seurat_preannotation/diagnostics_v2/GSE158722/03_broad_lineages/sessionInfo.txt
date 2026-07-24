@@ -1,0 +1,35 @@
+R version 4.6.1 (2026-06-24 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 10 x64 (build 19045)
+
+Matrix products: default
+  LAPACK version 3.12.1
+
+locale:
+[1] LC_COLLATE=Chinese (Simplified)_China.utf8
+[2] LC_CTYPE=Chinese (Simplified)_China.utf8
+[3] LC_MONETARY=Chinese (Simplified)_China.utf8
+[4] LC_NUMERIC=C
+[5] LC_TIME=Chinese (Simplified)_China.utf8
+
+time zone: Asia/Shanghai
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base
+
+loaded via a namespace (and not attached):
+ [1] SparseArray_1.12.2          Matrix_1.7-5
+ [3] lattice_0.22-9              MatrixGenerics_1.24.0
+ [5] matrixStats_1.5.0           abind_1.4-8
+ [7] S4Arrays_1.12.0             R.utils_2.13.0
+ [9] XVector_0.52.0              Biobase_2.72.0
+[11] BiocGenerics_0.58.1         generics_0.1.4
+[13] stats4_4.6.1                Seqinfo_1.2.0
+[15] GenomicRanges_1.64.0        IRanges_2.46.0
+[17] R.methodsS3_1.8.2           grid_4.6.1
+[19] DelayedArray_0.38.2         data.table_1.18.4
+[21] compiler_4.6.1              R.oo_1.27.1
+[23] tools_4.6.1                 yaml_2.3.12
+[25] S4Vectors_0.50.1            SummarizedExperiment_1.42.0
+[27] SingleCellExperiment_1.34.0
